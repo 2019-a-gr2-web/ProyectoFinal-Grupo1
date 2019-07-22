@@ -10,11 +10,41 @@ const common_1 = require("@nestjs/common");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const producto_module_1 = require("./producto/producto.module");
+const typeorm_1 = require("@nestjs/typeorm");
+const producto_entity_1 = require("./Backend/producto/producto.entity");
+const bodega_entity_1 = require("./Backend/bodega/bodega.entity");
+const cliente_entity_1 = require("./Backend/cliente/cliente.entity");
+const pedido_entity_1 = require("./Backend/pedido/pedido.entity");
+const proveedor_entity_1 = require("./Backend/proveedor/proveedor.entity");
+const rol_entity_1 = require("./Backend/rol/rol.entity");
+const tipo_entity_1 = require("./Backend/tipo/tipo.entity");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     common_1.Module({
-        imports: [producto_module_1.ProductoModule],
+        imports: [producto_module_1.ProductoModule,
+            typeorm_1.TypeOrmModule.forRoot({
+                name: 'default',
+                type: 'mysql',
+                host: 'localhost',
+                port: 3306,
+                username: 'root',
+                password: 'root',
+                database: 'proyecto',
+                entities: [
+                    producto_entity_1.ProductoEntity,
+                    bodega_entity_1.BodegaEntity,
+                    cliente_entity_1.ClienteEntity,
+                    pedido_entity_1.PedidoEntity,
+                    proveedor_entity_1.ProveedorEntity,
+                    rol_entity_1.RolEntity,
+                    tipo_entity_1.TipoEntity,
+                ],
+                synchronize: true,
+                insecureAuth: true,
+                dropSchema: false,
+            }),
+        ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
     })
