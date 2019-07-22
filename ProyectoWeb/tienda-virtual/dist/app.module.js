@@ -9,7 +9,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
-const producto_module_1 = require("./producto/producto.module");
 const typeorm_1 = require("@nestjs/typeorm");
 const producto_entity_1 = require("./Backend/producto/producto.entity");
 const bodega_entity_1 = require("./Backend/bodega/bodega.entity");
@@ -18,6 +17,8 @@ const pedido_entity_1 = require("./Backend/pedido/pedido.entity");
 const proveedor_entity_1 = require("./Backend/proveedor/proveedor.entity");
 const rol_entity_1 = require("./Backend/rol/rol.entity");
 const tipo_entity_1 = require("./Backend/tipo/tipo.entity");
+const usuario_rol_entity_1 = require("./Backend/usuarioToRol/usuario_rol.entity");
+const producto_module_1 = require("./Backend/producto/producto.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -39,6 +40,7 @@ AppModule = __decorate([
                     proveedor_entity_1.ProveedorEntity,
                     rol_entity_1.RolEntity,
                     tipo_entity_1.TipoEntity,
+                    usuario_rol_entity_1.UsuarioRolEntity,
                 ],
                 synchronize: true,
                 insecureAuth: true,

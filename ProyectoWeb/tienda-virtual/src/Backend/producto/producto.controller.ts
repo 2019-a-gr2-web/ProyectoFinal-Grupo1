@@ -23,5 +23,16 @@ export class ProductoController {
     return 'Hello world';
   }
 
+  @Get('/all')
+  async getAllProducts(
+    @Res() res
+  ){
+    const productsList = await this._productoService.buscarTodo();
+    res.render('vistas_producto/main-view',
+    {
+      productos : productsList,
+    });
+  }
+
   
 }

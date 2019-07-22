@@ -10,29 +10,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
-const usuario_rol_entity_1 = require("../usuarioToRol/usuario_rol.entity");
-let RolEntity = class RolEntity {
+const cliente_entity_1 = require("../cliente/cliente.entity");
+const rol_entity_1 = require("../rol/rol.entity");
+let UsuarioRolEntity = class UsuarioRolEntity {
 };
 __decorate([
     typeorm_1.PrimaryGeneratedColumn({
-        name: 'id_rol',
+        name: 'id_usuario_rol'
     }),
     __metadata("design:type", Number)
-], RolEntity.prototype, "idRol", void 0);
+], UsuarioRolEntity.prototype, "idusuarioRol", void 0);
 __decorate([
-    typeorm_1.Column({
-        type: 'varchar',
-        length: 32,
-        name: 'tipo_rol',
-    }),
-    __metadata("design:type", String)
-], RolEntity.prototype, "tipoRol", void 0);
+    typeorm_1.ManyToOne(type => cliente_entity_1.ClienteEntity, cliente => cliente.usuarioRol),
+    __metadata("design:type", cliente_entity_1.ClienteEntity)
+], UsuarioRolEntity.prototype, "usuario", void 0);
 __decorate([
-    typeorm_1.OneToMany((type) => usuario_rol_entity_1.UsuarioRolEntity, (usuarioRol) => usuarioRol.rol),
-    __metadata("design:type", Array)
-], RolEntity.prototype, "usuarioRol", void 0);
-RolEntity = __decorate([
-    typeorm_1.Entity('bd_rol')
-], RolEntity);
-exports.RolEntity = RolEntity;
-//# sourceMappingURL=rol.entity.js.map
+    typeorm_1.ManyToOne(type => rol_entity_1.RolEntity, rol => rol.usuarioRol),
+    __metadata("design:type", rol_entity_1.RolEntity)
+], UsuarioRolEntity.prototype, "rol", void 0);
+UsuarioRolEntity = __decorate([
+    typeorm_1.Entity('usuario_rol')
+], UsuarioRolEntity);
+exports.UsuarioRolEntity = UsuarioRolEntity;
+//# sourceMappingURL=usuario_rol.entity.js.map

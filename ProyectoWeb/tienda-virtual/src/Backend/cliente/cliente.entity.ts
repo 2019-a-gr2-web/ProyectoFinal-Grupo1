@@ -1,5 +1,5 @@
 import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn,ManyToMany,JoinTable } from "typeorm";
-import { RolEntity } from "../rol/rol.entity";
+import { UsuarioRolEntity } from "../usuarioToRol/usuario_rol.entity";
 
 @Entity('bd_cliente') // Nombre tabla
 export class ClienteEntity {
@@ -36,20 +36,7 @@ export class ClienteEntity {
         name: 'contraseña',
     })
     contraseña: string;
-    
 
-   /* @ManyToOne(type => TipoEntity, tipo => tipo.producto)
-    tipoId: TipoEntity;
-
-
-    @OneToMany(type => BodegaProductoEntity, bodegaProducto => bodegaProducto)
-    bodegaProductos: BodegaProductoEntity[]
-
-    @OneToMany(type => BodegaProductoEntity, bodegaProducto => bodegaProducto)
-    bodegaProductos: BodegaProductoEntity[]*/
-
-    @ManyToMany(type => RolEntity)
-    @JoinTable()
-    roles: RolEntity[];
-
+    @OneToMany((type) => UsuarioRolEntity, (usuarioRol) => usuarioRol.usuario)
+    public usuarioRol!: UsuarioRolEntity[];
 }

@@ -2,7 +2,7 @@ import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "ty
 
 @Entity('bd_producto') // Nombre tabla
 export class ProductoEntity {
-
+    
     @PrimaryGeneratedColumn({
         name: 'id_producto',
     })

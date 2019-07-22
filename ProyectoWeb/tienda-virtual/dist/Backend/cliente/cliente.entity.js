@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
-const rol_entity_1 = require("../rol/rol.entity");
+const usuario_rol_entity_1 = require("../usuarioToRol/usuario_rol.entity");
 let ClienteEntity = class ClienteEntity {
 };
 __decorate([
@@ -52,10 +52,9 @@ __decorate([
     __metadata("design:type", String)
 ], ClienteEntity.prototype, "contrase\u00F1a", void 0);
 __decorate([
-    typeorm_1.ManyToMany(type => rol_entity_1.RolEntity),
-    typeorm_1.JoinTable(),
+    typeorm_1.OneToMany((type) => usuario_rol_entity_1.UsuarioRolEntity, (usuarioRol) => usuarioRol.usuario),
     __metadata("design:type", Array)
-], ClienteEntity.prototype, "roles", void 0);
+], ClienteEntity.prototype, "usuarioRol", void 0);
 ClienteEntity = __decorate([
     typeorm_1.Entity('bd_cliente')
 ], ClienteEntity);

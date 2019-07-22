@@ -1,4 +1,5 @@
 import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { UsuarioRolEntity } from "../usuarioToRol/usuario_rol.entity";
 
 @Entity('bd_rol') // Nombre tabla
 export class RolEntity {
@@ -14,4 +15,7 @@ export class RolEntity {
         name: 'tipo_rol',
     })
     tipoRol: string;
+
+    @OneToMany((type) => UsuarioRolEntity, (usuarioRol) => usuarioRol.rol)
+    public usuarioRol!: UsuarioRolEntity[];
 }
