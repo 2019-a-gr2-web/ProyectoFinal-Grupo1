@@ -20,7 +20,7 @@ import { ProductoModule } from './Backend/producto/producto.module';
       host: 'localhost',
       port: 3306,
       username: 'root',
-      password: 'root',
+      password: '',
       database: 'proyecto',
       entities: [
         ProductoEntity,

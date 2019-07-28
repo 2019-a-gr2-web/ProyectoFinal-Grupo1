@@ -43,6 +43,14 @@ let ProductoController = class ProductoController {
             });
         });
     }
+    getAllProductsHome(res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const productsList = yield this._productoService.buscarTodo();
+            res.render('vistas_producto/home', {
+                productos: productsList,
+            });
+        });
+    }
     deleteProduct(res, producto) {
         return __awaiter(this, void 0, void 0, function* () {
             yield this._productoService.eliminar(producto);
@@ -103,6 +111,13 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], ProductoController.prototype, "getAllProducts", null);
+__decorate([
+    common_1.Get('/Home'),
+    __param(0, common_1.Res()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
+], ProductoController.prototype, "getAllProductsHome", null);
 __decorate([
     common_1.Post('/delete'),
     __param(0, common_1.Res()), __param(1, common_1.Body('producto')),

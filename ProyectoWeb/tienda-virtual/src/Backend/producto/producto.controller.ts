@@ -34,6 +34,15 @@ export class ProductoController {
       });
   }
 
+  @Get('/Home')
+  async getAllProductsHome(@Res() res) {
+    const productsList = await this._productoService.buscarTodo();
+    res.render('vistas_producto/home',
+    {
+      productos: productsList,
+    });
+  }
+
   @Post('/delete')
   async deleteProduct(@Res() res, @Body('producto') producto) {
 
