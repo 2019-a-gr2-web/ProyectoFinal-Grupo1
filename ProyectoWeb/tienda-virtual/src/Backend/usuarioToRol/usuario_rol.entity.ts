@@ -5,9 +5,9 @@ import { RolEntity } from "../rol/rol.entity";
 @Entity('usuario_rol')
 export class UsuarioRolEntity{
     @PrimaryGeneratedColumn({
-        name:'id_usuario_rol'
+        name:'id'
     })
-    public idusuarioRol!: number;
+    public id!: number;
 
     
     @ManyToOne(type => ClienteEntity, cliente => cliente.usuarioRol)

@@ -1,4 +1,5 @@
 import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { ProductoPedidoEntity } from "../productoToPedido/producto_pedido.entity";
 
 @Entity('bd_pedido') // Nombre tabla
 export class PedidoEntity {
@@ -48,8 +49,12 @@ export class PedidoEntity {
     fecha: Date;
 
     @Column({
-        type: 'boolean',
+        type: 'varchar',
+        length: "10",
         name: 'estado',
     })
-    estado: boolean;
+    estado: 'Por Despachar'|'Iniciado'|'Despachado'|'Cancelado';
+    
+    @OneToMany(type => ProductoPedidoEntity, (productoPedido) => productoPedido.pedido)
+    productoPedido: ProductoPedidoEntity[]
 }

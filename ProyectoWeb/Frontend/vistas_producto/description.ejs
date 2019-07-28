@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <title>Description</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css "
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="<%=producto.imagenProducto%>" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title"><%=producto.nombreProducto%></h5>
+            <p class="card-text"><%=producto.descripcion%></p>
+            <p class="card-text"><%=producto.PVP%></p>
+            <p class="card-text"><%=producto.codigoProducto%></p>
+            <a href="#" class="btn btn-primary">Añadir al carrito</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -54,42 +54,7 @@ export class ProductoService {
     return this._productosRepository.delete(productoEliminado);
   }
 
-  /*actualizar(productoActualizado: Producto, id: number): Producto[] {
-
-    const indice = this.bddTragos.findIndex(
-      (trago) => {
-        return trago.id === id
-      }
-    );
-    tragoActualizado.id = this.bddTragos[indice].id;
-    this.bddTragos[indice] = tragoActualizado;
-
-    return this.bddTragos;
+  getProductById(idProducto): Promise<ProductoEntity> {
+    return this._productosRepository.findOne(idProducto);
   }
-
-  buscarPorId(id: number): Trago {
-    return this.bddTragos.find(
-      (trago) => {
-        return trago.id === id;
-      }
-    );
-  }
-
-  buscarPorNombre(nombre: string): Trago {
-    return this.bddTragos.find(
-      (trago) => {
-        return trago.nombre.toUpperCase().includes(nombre.toUpperCase());
-      }
-    );
-  }
-
-  eliminarPorId(id: number): Trago[] {
-    const indice = this.bddTragos.findIndex(
-      (trago) => {
-        return trago.id === id
-      }
-    );
-    this.bddTragos.splice(indice, 1);
-    return this.bddTragos;
-  }*/
 }

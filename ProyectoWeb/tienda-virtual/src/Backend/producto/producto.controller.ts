@@ -33,14 +33,6 @@ export class ProductoController {
         productos: productsList,
       });
   }
-
-  @Post('/delete')
-  async deleteProduct(@Res() res, @Body('producto') producto) {
-
-    await this._productoService.eliminar(producto);
-    res.redirect('/tiendavirtual/producto/all')
-  }
-
   @Get('/delete/:idProducto')
   async deleteProductGet(@Res() res, @Req() req) {
 
@@ -73,6 +65,18 @@ export class ProductoController {
     await this._productoService.crear(producto);
     res.redirect('/tiendavirtual/producto/all')
   }
+
+  @Get('/ver/:idProducto')
+  async getProductDescription(@Res() res, @Req() req ) {
+    const producto = await this._productoService.getProductById({idProducto: req.params.idProducto});
+    console.log(producto.nombreProducto);
+    res.render('vistas_producto/description',
+    {
+      producto: producto,
+    })
+  }
+
+
 
   /*
   @Get('/edit')
