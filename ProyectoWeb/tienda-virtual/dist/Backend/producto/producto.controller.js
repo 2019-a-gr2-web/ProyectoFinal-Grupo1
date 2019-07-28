@@ -35,27 +35,31 @@ let ProductoController = class ProductoController {
     helloWorld() {
         return 'Hello world';
     }
-    getAllProducts(res, tipo) {
+    getAllProducts(res) {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log(tipo);
             const productsList = yield this._productoService.buscarTodo();
-            const productsListFilter = yield this._productoService.buscarTodo({ tipo: tipo });
-            console.log(productsListFilter);
             res.render('vistas_producto/main-view', {
                 productos: productsList,
-                productosFiltrados: productsListFilter,
             });
         });
     }
     getAllProductsHome(res, tipo) {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log(tipo);
-            const productsList = yield this._productoService.buscarTodo();
-            var productsListFilter = yield this._productoService.buscarTodo({ tipo: tipo });
-            res.render('vistas_producto/home', {
-                productos: productsList,
-                productosFiltrados: productsListFilter,
-            });
+            if (tipo !== "All") {
+                var productsList = yield this._productoService.buscarTodo();
+                var productsListFilter = yield this._productoService.buscarTodo({ tipo: tipo });
+                res.render('vistas_producto/home', {
+                    productos: productsList,
+                    productosFiltrados: productsListFilter,
+                });
+            }
+            else if (tipo === "All" || typeof (tipo) == undefined) {
+                const productsList = yield this._productoService.buscarTodo();
+                res.render('vistas_producto/home', {
+                    productos: productsList,
+                    productosFiltrados: productsList,
+                });
+            }
         });
     }
     deleteProduct(res, producto) {
@@ -122,13 +126,13 @@ __decorate([
 ], ProductoController.prototype, "helloWorld", null);
 __decorate([
     common_1.Get('/all'),
-    __param(0, common_1.Res()), __param(1, common_1.Query('tipo')),
+    __param(0, common_1.Res()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, String]),
+    __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], ProductoController.prototype, "getAllProducts", null);
 __decorate([
-    common_1.Get('/Home'),
+    common_1.Get('/home'),
     __param(0, common_1.Res()), __param(1, common_1.Query('tipo')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, String]),

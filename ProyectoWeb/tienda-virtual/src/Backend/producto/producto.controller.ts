@@ -26,60 +26,32 @@ export class ProductoController {
   }
 
   @Get('/all')
-  async getAllProducts(@Res() res, @Query('tipo') tipo: string, ) {
-    console.log(tipo)
+  async getAllProducts(@Res() res) {
     const productsList = await this._productoService.buscarTodo();
-    const productsListFilter = await this._productoService.buscarTodo({ tipo: tipo });
-    console.log(productsListFilter);
-
     res.render('vistas_producto/main-view',
       {
         productos: productsList,
-        productosFiltrados: productsListFilter,
       });
   }
-  /*
-  @Get('/all/hombre')
-  async getAllProductsMan(@Res() res) {
-    const productsList = await this._productoService.buscarTodo({tipo:'Hombre'});
-    const productsListHombre = await this._productoService.buscarTodo();
-    res.render('vistas_producto/home',
-      {
-        productos: productsList,
-        productosEncontrados: productsListHombre,
-      });
-  }
-  @Get('/all/mujer')
-  async getAllProductsWomen(@Res() res) {
-    const productsList = await this._productoService.buscarTodo();
-    const productsListMujer = await this._productoService.buscarTodo({tipo:'Mujer'});
-    res.render('vistas_producto/home',
-      {
-        productos: productsList,
-        productosEncontrados: productsListMujer,
-      });
-  }
-  @Get('/all/ninio')
-  async getAllProductsChild(@Res() res) {
-    const productsList = await this._productoService.buscarTodo();
-    const productsListNinios = await this._productoService.buscarTodo({tipo:'Niño'});
-    res.render('vistas_producto/home',
-      {
-        productos: productsList,
-        productosEncontrados: productsListNinios,
-      });
-  }*/
-  @Get('/Home')
-  async getAllProductsHome(@Res() res, @Query('tipo') tipo?:string, ) {
-    console.log(tipo)
-    const productsList = await this._productoService.buscarTodo();
-    var productsListFilter = await this._productoService.buscarTodo({ tipo: tipo });
-
-    res.render('vistas_producto/home',
-      {
-        productos: productsList,
-        productosFiltrados: productsListFilter,
-      });
+  @Get('/home')
+  async getAllProductsHome(@Res() res, @Query('tipo') tipo?: string, ) {
+    if (tipo !== "All") {
+      var productsList = await this._productoService.buscarTodo();
+      var productsListFilter = await this._productoService.buscarTodo({ tipo: tipo });
+      res.render('vistas_producto/home',
+        {
+          productos: productsList,
+          productosFiltrados: productsListFilter,
+        });
+    }
+    else if (tipo === "All" || typeof(tipo) == undefined) {
+      const productsList = await this._productoService.buscarTodo();
+      res.render('vistas_producto/home',
+        {
+          productos: productsList,
+          productosFiltrados: productsList,
+        });
+    }
   }
   @Post('/delete')
   async deleteProduct(@Res() res, @Body('producto') producto) {

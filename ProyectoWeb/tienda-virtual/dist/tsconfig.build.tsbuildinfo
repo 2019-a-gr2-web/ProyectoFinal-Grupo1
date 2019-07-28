@@ -2118,8 +2118,8 @@
         "signature": "dcbc8912f5875f232e278ed227f37e5d5bfadb394ed2e96a739d00e002ad41e3"
       },
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.controller.ts": {
-        "version": "a4820a647851ea3f0623d0260bd69fe5e1e47b7847ce367c16196a22d653128a",
-        "signature": "f443bd077285e9acbe3b69462107d3e81eb832270ec576e7e988043ceaa7163a"
+        "version": "835712ede21b4be6dae4c97b9128c777f47dfef15f7d74a962793e9b9c4aee97",
+        "signature": "ccf28b3edfa51a74680e9aed214ee57cc6286b49332bbf362f4d0151c2bf1f03"
       },
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.module.ts": {
         "version": "144d9f98ad6633a7313d798f6b3f7a98d9cfb9bc130c5802ff1e8c104e1b8665",
@@ -10356,7 +10356,6 @@
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/tipo/tipo.entity.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.service.ts",
-      "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.controller.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.module.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.service.ts",
@@ -10417,7 +10416,8 @@
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/jest/index.d.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/json5/index.d.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/superagent/index.d.ts",
-      "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/supertest/index.d.ts"
+      "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/supertest/index.d.ts",
+      "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.controller.ts"
     ]
   },
   "version": "3.4.3"

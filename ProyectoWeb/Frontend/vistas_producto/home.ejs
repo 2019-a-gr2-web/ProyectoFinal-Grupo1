@@ -23,11 +23,6 @@
 <body>
     <%- include('../partials/header') %>
     <% const existenProductosFiltrados = productosFiltrados  %>
-
-    <% if(existenProductosFiltrados){%>
-    <p> Si existe!!</p>
-    <% }%>
-
     <!-- MAIN CONTENT -->
     <div class="container p-4">
         <style>
@@ -58,9 +53,7 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <% productos.forEach((producto) => { %>
-
                 <img src="<%=producto.imagenProducto%>" alt="" width="30px" height="30px" alt="" class="swiper-slide">
-
                 <% })%>
             </div>
 
