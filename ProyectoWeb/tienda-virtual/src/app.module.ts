@@ -11,20 +11,22 @@ import { RolEntity } from './Backend/rol/rol.entity';
 import { TipoEntity } from './Backend/tipo/tipo.entity';
 import { UsuarioRolEntity } from './Backend/usuarioToRol/usuario_rol.entity';
 import { ProductoModule } from './Backend/producto/producto.module';
-import { ProductoPedidoEntity } from './Backend/productoToPedido/producto_pedido.entity';
 import { PedidoModule } from './Backend/pedido/pedido.module';
 import { FacturaModule } from './factura/factura.module';
+import { DetalleEntity } from './Backend/productoToPedido/producto_pedido.entity';
+import { DetalleModule } from './Backend/productoToPedido/producto_pedido.module';
 
 @Module({
   imports: [ProductoModule,
     PedidoModule,
+    DetalleModule,
     TypeOrmModule.forRoot({
       name: 'default', // Nombre cadena conex por defecto de TYPEORM
       type: 'mysql',
       host: 'localhost',
       port: 3306,
       username: 'root',
-      password: '',
+      password: 'root',
       database: 'proyecto',
       entities: [
         ProductoEntity,
@@ -35,7 +37,8 @@ import { FacturaModule } from './factura/factura.module';
         RolEntity,
         TipoEntity,
         UsuarioRolEntity,
-        ProductoPedidoEntity,
+        DetalleEntity,
+
       ],
       synchronize: true,
       insecureAuth : true,

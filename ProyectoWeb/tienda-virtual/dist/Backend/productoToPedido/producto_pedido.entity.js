@@ -12,14 +12,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
 const pedido_entity_1 = require("../pedido/pedido.entity");
 const producto_entity_1 = require("../producto/producto.entity");
-let ProductoPedidoEntity = class ProductoPedidoEntity {
+let DetalleEntity = class DetalleEntity {
 };
 __decorate([
     typeorm_1.PrimaryGeneratedColumn({
         name: 'id_detalle'
     }),
     __metadata("design:type", Number)
-], ProductoPedidoEntity.prototype, "idDetalle", void 0);
+], DetalleEntity.prototype, "idDetalle", void 0);
 __decorate([
     typeorm_1.Column({
         type: 'decimal',
@@ -29,7 +29,7 @@ __decorate([
         default: '0',
     }),
     __metadata("design:type", Number)
-], ProductoPedidoEntity.prototype, "cantidadProducto", void 0);
+], DetalleEntity.prototype, "cantidadProducto", void 0);
 __decorate([
     typeorm_1.Column({
         type: 'decimal',
@@ -39,17 +39,17 @@ __decorate([
         default: '0',
     }),
     __metadata("design:type", Number)
-], ProductoPedidoEntity.prototype, "precioDetalle", void 0);
+], DetalleEntity.prototype, "precioDetalle", void 0);
 __decorate([
     typeorm_1.ManyToOne(type => producto_entity_1.ProductoEntity, producto => producto.productoPedido),
     __metadata("design:type", producto_entity_1.ProductoEntity)
-], ProductoPedidoEntity.prototype, "producto", void 0);
+], DetalleEntity.prototype, "producto", void 0);
 __decorate([
     typeorm_1.ManyToOne(type => pedido_entity_1.PedidoEntity, pedido => pedido.productoPedido),
     __metadata("design:type", pedido_entity_1.PedidoEntity)
-], ProductoPedidoEntity.prototype, "pedido", void 0);
-ProductoPedidoEntity = __decorate([
+], DetalleEntity.prototype, "pedido", void 0);
+DetalleEntity = __decorate([
     typeorm_1.Entity('producto_pedido')
-], ProductoPedidoEntity);
-exports.ProductoPedidoEntity = ProductoPedidoEntity;
+], DetalleEntity);
+exports.DetalleEntity = DetalleEntity;
 //# sourceMappingURL=producto_pedido.entity.js.map

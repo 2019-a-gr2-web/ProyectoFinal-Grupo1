@@ -1,5 +1,5 @@
 import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
-import { ProductoPedidoEntity } from "../productoToPedido/producto_pedido.entity";
+import { DetalleEntity } from "../productoToPedido/producto_pedido.entity";
 
 @Entity('bd_pedido') // Nombre tabla
 export class PedidoEntity {
@@ -44,17 +44,18 @@ export class PedidoEntity {
     @Column({
         type: 'date',
         name: 'fecha',
-        default: '2019-06-19'
+        default: '2019-07-28'
     })
     fecha: Date;
 
     @Column({
         type: 'varchar',
-        length: "10",
+        length:'10',
+        default:'Iniciado',
     })
     estado: 'PorDespachar'|'Iniciado'|'Despachado'|'Cancelado';
 
-    @OneToMany(type => ProductoPedidoEntity, (productoPedido) => productoPedido.pedido)
-    productoPedido: ProductoPedidoEntity[]
+    @OneToMany(type => DetalleEntity, (productoPedido) => productoPedido.pedido)
+    productoPedido: DetalleEntity[]
 
 }

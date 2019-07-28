@@ -10,11 +10,23 @@ export class PedidoService {
   bddPedido: Pedido[] = [];
 
   constructor(@InjectRepository(PedidoEntity)
-  private readonly _pedidoRepository: Repository<PedidoEntity>, ) {
+  private readonly _pedidoRepository: Repository<PedidoEntity>) {
   }
-
   getHello(): string {
     return 'Hello World!';
+  }
+  buscarPedidoIniciado(parametrosBusqueda?): Promise<PedidoEntity> {
+    return this._pedidoRepository.findOne(parametrosBusqueda);
+  }
+  crearPedido(nuevoPedido: Pedido): Promise<Pedido> {
+    const objetoEntidad = this._pedidoRepository.create(nuevoPedido);
+    return this._pedidoRepository.save(objetoEntidad);
+  }
+  actualizarPedido(pedidoActualizado): Promise<PedidoEntity> {
+    return this._pedidoRepository.save(pedidoActualizado);
+  }
+  eliminarPedido(pedidoEliminado) {
+    return this._pedidoRepository.delete(pedidoEliminado);
   }
 
 }

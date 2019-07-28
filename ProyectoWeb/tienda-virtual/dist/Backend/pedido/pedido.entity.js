@@ -59,19 +59,20 @@ __decorate([
     typeorm_1.Column({
         type: 'date',
         name: 'fecha',
-        default: '2019-06-19'
+        default: '2019-07-28'
     }),
     __metadata("design:type", Date)
 ], PedidoEntity.prototype, "fecha", void 0);
 __decorate([
     typeorm_1.Column({
         type: 'varchar',
-        length: "10",
+        length: '10',
+        default: 'Iniciado',
     }),
     __metadata("design:type", String)
 ], PedidoEntity.prototype, "estado", void 0);
 __decorate([
-    typeorm_1.OneToMany(type => producto_pedido_entity_1.ProductoPedidoEntity, (productoPedido) => productoPedido.pedido),
+    typeorm_1.OneToMany(type => producto_pedido_entity_1.DetalleEntity, (productoPedido) => productoPedido.pedido),
     __metadata("design:type", Array)
 ], PedidoEntity.prototype, "productoPedido", void 0);
 PedidoEntity = __decorate([

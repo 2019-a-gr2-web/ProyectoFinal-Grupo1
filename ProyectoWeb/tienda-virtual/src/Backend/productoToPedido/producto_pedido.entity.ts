@@ -3,7 +3,7 @@ import { PedidoEntity } from "../pedido/pedido.entity";
 import { ProductoEntity } from "../producto/producto.entity";
 
 @Entity('producto_pedido')
-export class ProductoPedidoEntity{
+export class DetalleEntity{
     @PrimaryGeneratedColumn({
         name:'id_detalle'
     })

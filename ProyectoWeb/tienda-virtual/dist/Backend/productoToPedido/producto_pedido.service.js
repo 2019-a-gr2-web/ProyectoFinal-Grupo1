@@ -15,33 +15,35 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
-const pedido_entity_1 = require("./pedido.entity");
-let PedidoService = class PedidoService {
-    constructor(_pedidoRepository) {
-        this._pedidoRepository = _pedidoRepository;
-        this.bddPedido = [];
+const producto_pedido_entity_1 = require("./producto_pedido.entity");
+let DetalleService = class DetalleService {
+    constructor(_detalleRepository) {
+        this._detalleRepository = _detalleRepository;
     }
     getHello() {
         return 'Hello World!';
     }
-    buscarPedidoIniciado(parametrosBusqueda) {
-        return this._pedidoRepository.findOne(parametrosBusqueda);
+    crear(nuevoDetalle) {
+        const objetoEntidad = this._detalleRepository.create(nuevoDetalle);
+        return this._detalleRepository.save(objetoEntidad);
     }
-    crearPedido(nuevoPedido) {
-        const objetoEntidad = this._pedidoRepository.create(nuevoPedido);
-        return this._pedidoRepository.save(objetoEntidad);
+    buscarTodo(parametrosBusqueda) {
+        return this._detalleRepository.find(parametrosBusqueda);
     }
-    actualizarPedido(pedidoActualizado) {
-        return this._pedidoRepository.save(pedidoActualizado);
+    actualizar(productoActualizado) {
+        return this._detalleRepository.save(productoActualizado);
     }
-    eliminarPedido(pedidoEliminado) {
-        return this._pedidoRepository.delete(pedidoEliminado);
+    eliminar(productoEliminado) {
+        return this._detalleRepository.delete(productoEliminado);
+    }
+    getProductById(idProducto) {
+        return this._detalleRepository.findOne(idProducto);
     }
 };
-PedidoService = __decorate([
+DetalleService = __decorate([
     common_1.Injectable(),
-    __param(0, typeorm_1.InjectRepository(pedido_entity_1.PedidoEntity)),
+    __param(0, typeorm_1.InjectRepository(producto_pedido_entity_1.DetalleEntity)),
     __metadata("design:paramtypes", [typeorm_2.Repository])
-], PedidoService);
-exports.PedidoService = PedidoService;
-//# sourceMappingURL=pedido.service.js.map
+], DetalleService);
+exports.DetalleService = DetalleService;
+//# sourceMappingURL=producto_pedido.service.js.map

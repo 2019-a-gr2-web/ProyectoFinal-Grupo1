@@ -6,4 +6,8 @@ export declare class PedidoService {
     bddPedido: Pedido[];
     constructor(_pedidoRepository: Repository<PedidoEntity>);
     getHello(): string;
+    buscarPedidoIniciado(parametrosBusqueda?: any): Promise<PedidoEntity>;
+    crearPedido(nuevoPedido: Pedido): Promise<Pedido>;
+    actualizarPedido(pedidoActualizado: any): Promise<PedidoEntity>;
+    eliminarPedido(pedidoEliminado: any): Promise<import("typeorm").DeleteResult>;
 }

@@ -2,11 +2,14 @@ import { Controller, Get, Res, Render, Post, Req, Body, Delete, Query } from '@n
 import { ProductoService } from './producto.service';
 import { async } from 'rxjs/internal/scheduler/async';
 import { Producto } from './producto';
+import { Pedido } from '../pedido/pedido';
 
 
 @Controller('tiendavirtual/producto')
 export class ProductoController {
-  constructor(private readonly _productoService: ProductoService) { }
+  constructor(private readonly _productoService: ProductoService) {
+
+   }
 
   @Get()
   getHello(): string {
@@ -93,8 +96,8 @@ export class ProductoController {
 
   @Get('/ver/:idProducto')
   async getProductDescription(@Res() res, @Req() req) {
+    console.log(req.params.idProducto)
     const producto = await this._productoService.getProductById({ idProducto: req.params.idProducto });
-    console.log(producto.nombreProducto);
     res.render('vistas_producto/description',
       {
         producto: producto,

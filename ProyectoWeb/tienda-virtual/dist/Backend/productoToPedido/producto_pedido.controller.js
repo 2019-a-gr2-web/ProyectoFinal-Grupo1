@@ -8,9 +8,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -21,22 +18,16 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
-const pedido_service_1 = require("./pedido.service");
-let PedidoController = class PedidoController {
-    constructor(_pedidoService) {
-        this._pedidoService = _pedidoService;
+const producto_pedido_service_1 = require("./producto_pedido.service");
+let DetalleController = class DetalleController {
+    constructor(_detalleService) {
+        this._detalleService = _detalleService;
     }
     getHello() {
         return "Hola Producto";
     }
-    crearPedido(res, req, idProducto) {
+    crearDetalle() {
         return __awaiter(this, void 0, void 0, function* () {
-            const pedido = {
-                direccionCliente: "Barrio San Carlos",
-                identificacion: "1723882039",
-            };
-            const response = yield this._pedidoService.crearPedido(pedido);
-            console.log(response.idPedido);
         });
     }
 };
@@ -45,19 +36,16 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", String)
-], PedidoController.prototype, "getHello", null);
+], DetalleController.prototype, "getHello", null);
 __decorate([
     common_1.Post('/crear'),
-    __param(0, common_1.Res()),
-    __param(1, common_1.Req()),
-    __param(2, common_1.Query('idProducto')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, Object, Number]),
+    __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
-], PedidoController.prototype, "crearPedido", null);
-PedidoController = __decorate([
-    common_1.Controller('tiendavirtual/pedido'),
-    __metadata("design:paramtypes", [pedido_service_1.PedidoService])
-], PedidoController);
-exports.PedidoController = PedidoController;
-//# sourceMappingURL=pedido.controller.js.map
+], DetalleController.prototype, "crearDetalle", null);
+DetalleController = __decorate([
+    common_1.Controller('tiendavirtual/detalle'),
+    __metadata("design:paramtypes", [producto_pedido_service_1.DetalleService])
+], DetalleController);
+exports.DetalleController = DetalleController;
+//# sourceMappingURL=producto_pedido.controller.js.map
