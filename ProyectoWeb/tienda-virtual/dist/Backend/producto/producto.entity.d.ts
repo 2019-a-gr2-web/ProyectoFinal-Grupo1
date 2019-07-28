@@ -4,7 +4,8 @@ export declare class ProductoEntity {
     nombreProducto: string;
     descripcion: string;
     codigoProducto: string;
-    PVP: number;
+    PVP: any;
     imagenProducto: any;
+    tipo: 'Hombre' | 'Mujer' | 'Niño';
     productoPedido: ProductoPedidoEntity[];
 }

@@ -67,7 +67,6 @@ __decorate([
     typeorm_1.Column({
         type: 'varchar',
         length: "10",
-        name: 'estado',
     }),
     __metadata("design:type", String)
 ], PedidoEntity.prototype, "estado", void 0);
