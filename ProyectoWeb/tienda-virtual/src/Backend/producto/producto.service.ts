@@ -12,20 +12,20 @@ export class ProductoService {
   constructor(@InjectRepository(ProductoEntity)
   private readonly _productosRepository: Repository<ProductoEntity>, ) {
 
-    /*const producto: Producto = {
-      idProducto: 2,
+    const producto: Producto = {
+      //idProducto: 2,
       nombreProducto: 'Producto 1',
       descripcion: 'Producto 1',
       codigoProducto: 'Producto 1',
       PVP: 25.20,
-    };*/
-
+    };
+    this.crear(producto);
     const respuestaUpdate = this.buscarTodo();
     respuestaUpdate
       .then(
         (datos) => {
           this.bddProductos = datos;
-          console.log('Base', datos);
+          //console.log('Base', datos);
         })
       .catch((error) => {
         console.error('Error:', error);

@@ -4,4 +4,5 @@ export interface Producto {
     descripcion: string;
     codigoProducto: string;
     PVP: number;
+    imagenProducto?: string;
 }

@@ -43,6 +43,28 @@ let ProductoController = class ProductoController {
             });
         });
     }
+    deleteProduct(res, producto) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield this._productoService.eliminar(producto);
+            res.redirect('/tiendavirtual/producto/all');
+        });
+    }
+    deleteProductGet(res, req) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield this._productoService.eliminar(req.params.idProducto);
+            res.redirect('/tiendavirtual/producto/all');
+        });
+    }
+    editarProductGet(res, req) {
+        return __awaiter(this, void 0, void 0, function* () {
+            res.redirect('/tiendavirtual/producto/all');
+        });
+    }
+    createProductGet(res, req) {
+        return __awaiter(this, void 0, void 0, function* () {
+            res.render('vistas_producto/new');
+        });
+    }
 };
 __decorate([
     common_1.Get(),
@@ -70,6 +92,34 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], ProductoController.prototype, "getAllProducts", null);
+__decorate([
+    common_1.Post('/delete'),
+    __param(0, common_1.Res()), __param(1, common_1.Body('producto')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], ProductoController.prototype, "deleteProduct", null);
+__decorate([
+    common_1.Get('/delete/:idProducto'),
+    __param(0, common_1.Res()), __param(1, common_1.Req()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], ProductoController.prototype, "deleteProductGet", null);
+__decorate([
+    common_1.Get('/update/:idProducto'),
+    __param(0, common_1.Res()), __param(1, common_1.Req()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], ProductoController.prototype, "editarProductGet", null);
+__decorate([
+    common_1.Get('/create'),
+    __param(0, common_1.Res()), __param(1, common_1.Req()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], ProductoController.prototype, "createProductGet", null);
 ProductoController = __decorate([
     common_1.Controller('tiendavirtual/producto'),
     __metadata("design:paramtypes", [producto_service_1.ProductoService])

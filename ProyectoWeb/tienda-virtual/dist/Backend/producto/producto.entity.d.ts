@@ -4,4 +4,5 @@ export declare class ProductoEntity {
     descripcion: string;
     codigoProducto: string;
     PVP: number;
+    imagenProducto: string;
 }
