@@ -11,8 +11,6 @@ export class PedidoService {
 
   constructor(@InjectRepository(PedidoEntity)
   private readonly _pedidoRepository: Repository<PedidoEntity>, ) {
-
-  
   }
 
   getHello(): string {

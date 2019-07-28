@@ -33,7 +33,6 @@ let ProductoService = class ProductoService {
         respuestaUpdate
             .then((datos) => {
             this.bddProductos = datos;
-            console.log('Base', datos);
         })
             .catch((error) => {
             console.error('Error:', error);

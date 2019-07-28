@@ -43,12 +43,23 @@ let ProductoController = class ProductoController {
             });
         });
     }
-    getAllProductsHome(res) {
+    getAllProductsHome(res, tipo) {
         return __awaiter(this, void 0, void 0, function* () {
-            const productsList = yield this._productoService.buscarTodo();
-            res.render('vistas_producto/home', {
-                productos: productsList,
-            });
+            if (tipo !== "All") {
+                var productsList = yield this._productoService.buscarTodo();
+                var productsListFilter = yield this._productoService.buscarTodo({ tipo: tipo });
+                res.render('vistas_producto/home', {
+                    productos: productsList,
+                    productosFiltrados: productsListFilter,
+                });
+            }
+            else if (tipo === "All" || typeof (tipo) == undefined) {
+                const productsList = yield this._productoService.buscarTodo();
+                res.render('vistas_producto/home', {
+                    productos: productsList,
+                    productosFiltrados: productsList,
+                });
+            }
         });
     }
     deleteProduct(res, producto) {
@@ -121,10 +132,10 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], ProductoController.prototype, "getAllProducts", null);
 __decorate([
-    common_1.Get('/Home'),
-    __param(0, common_1.Res()),
+    common_1.Get('/home'),
+    __param(0, common_1.Res()), __param(1, common_1.Query('tipo')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
+    __metadata("design:paramtypes", [Object, String]),
     __metadata("design:returntype", Promise)
 ], ProductoController.prototype, "getAllProductsHome", null);
 __decorate([
