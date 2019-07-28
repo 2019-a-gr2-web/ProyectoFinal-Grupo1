@@ -26,7 +26,7 @@ let ProductoService = class ProductoService {
             codigoProducto: 'Producto 1',
             PVP: 25.20,
             imagenProducto: '',
-            tipo: 'Hombre',
+            tipo: 'Hombre'
         };
         this.crear(producto);
         const respuestaUpdate = this.buscarTodo();
@@ -39,7 +39,7 @@ let ProductoService = class ProductoService {
         });
     }
     getHello() {
-        return 'ME GUSTAS ABIGAIL JEJE !♥ ♥!';
+        return 'Hello World!';
     }
     crear(nuevoProducto) {
         const objetoEntidad = this._productosRepository.create(nuevoProducto);

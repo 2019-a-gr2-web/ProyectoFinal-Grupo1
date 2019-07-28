@@ -68,7 +68,7 @@ __decorate([
     __metadata("design:type", String)
 ], ProductoEntity.prototype, "tipo", void 0);
 __decorate([
-    typeorm_1.OneToMany(type => producto_pedido_entity_1.ProductoPedidoEntity, (productoPedido) => productoPedido.producto),
+    typeorm_1.OneToMany(type => producto_pedido_entity_1.DetalleEntity, (productoPedido) => productoPedido.producto),
     __metadata("design:type", Array)
 ], ProductoEntity.prototype, "productoPedido", void 0);
 ProductoEntity = __decorate([

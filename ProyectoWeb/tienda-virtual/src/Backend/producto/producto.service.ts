@@ -19,7 +19,7 @@ export class ProductoService {
       codigoProducto: 'Producto 1',
       PVP: 25.20,
       imagenProducto:'',
-      tipo:'Hombre',
+      tipo:'Hombre'
     };
     this.crear(producto);
     const respuestaUpdate = this.buscarTodo();

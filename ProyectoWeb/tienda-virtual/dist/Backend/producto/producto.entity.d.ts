@@ -1,4 +1,4 @@
-import { ProductoPedidoEntity } from "../productoToPedido/producto_pedido.entity";
+import { DetalleEntity } from "../productoToPedido/producto_pedido.entity";
 export declare class ProductoEntity {
     idProducto: number;
     nombreProducto: string;
@@ -7,5 +7,5 @@ export declare class ProductoEntity {
     PVP: any;
     imagenProducto: any;
     tipo: 'Hombre' | 'Mujer' | 'Niño';
-    productoPedido: ProductoPedidoEntity[];
+    productoPedido: DetalleEntity[];
 }

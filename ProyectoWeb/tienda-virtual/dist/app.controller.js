@@ -18,9 +18,6 @@ let AppController = class AppController {
     constructor(appService) {
         this.appService = appService;
     }
-    getHello() {
-        return this.appService.getHello();
-    }
     loginVista(res) {
         res.render('vistas_login/login');
     }
@@ -28,15 +25,9 @@ let AppController = class AppController {
         return 'Hello world';
     }
     homeVista(res) {
-        res.render('vistas_login/home');
+        res.redirect('/tiendavirtual/producto/home?tipo=All');
     }
 };
-__decorate([
-    common_1.Get(),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
-    __metadata("design:returntype", String)
-], AppController.prototype, "getHello", null);
 __decorate([
     common_1.Get('/login'),
     __param(0, common_1.Res()),
@@ -51,14 +42,14 @@ __decorate([
     __metadata("design:returntype", String)
 ], AppController.prototype, "helloWorld", null);
 __decorate([
-    common_1.Get('/home'),
+    common_1.Get(),
     __param(0, common_1.Res()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "homeVista", null);
 AppController = __decorate([
-    common_1.Controller('tiendavirtual'),
+    common_1.Controller(''),
     __metadata("design:paramtypes", [app_service_1.AppService])
 ], AppController);
 exports.AppController = AppController;
