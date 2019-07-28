@@ -27,7 +27,7 @@ export class ProductoService {
       .then(
         (datos) => {
           this.bddProductos = datos;
-          console.log('Base', datos);
+          //console.log('Base', datos);
         })
       .catch((error) => {
         console.error('Error:', error);

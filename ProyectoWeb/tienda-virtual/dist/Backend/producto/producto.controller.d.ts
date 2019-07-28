@@ -6,8 +6,8 @@ export declare class ProductoController {
     getHello(): string;
     loginVista(res: any): void;
     helloWorld(): string;
-    getAllProducts(res: any): Promise<void>;
-    getAllProductsHome(res: any): Promise<void>;
+    getAllProducts(res: any, tipo: string): Promise<void>;
+    getAllProductsHome(res: any, tipo?: string): Promise<void>;
     deleteProduct(res: any, producto: any): Promise<void>;
     deleteProductGet(res: any, req: any): Promise<void>;
     editarProductGet(res: any, req: any): Promise<void>;

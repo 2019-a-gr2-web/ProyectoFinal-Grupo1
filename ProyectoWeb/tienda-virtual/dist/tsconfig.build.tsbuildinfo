@@ -2114,12 +2114,12 @@
         "signature": "c8683eb758ad95ce727ac946c4beb1ab19921bbae4676e7cf4a4773e7ecbfc2b"
       },
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.service.ts": {
-        "version": "43af739275c1f048ca8d99eccd5afa0eff2c2e9a35e75d6b3706c30af9817f22",
+        "version": "630d89151b62e4da5366d565f6ab439c51b5936dd36a2d6c5827107bb875e466",
         "signature": "dcbc8912f5875f232e278ed227f37e5d5bfadb394ed2e96a739d00e002ad41e3"
       },
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.controller.ts": {
-        "version": "6d9505c252cd8629b4d68a8eb80ce526e7f7f85c264a38ef6c7feaf8e65659b1",
-        "signature": "925845864f9cb10b883cb4d444d6f9f4da46aae488198b45eb1d9f064885f404"
+        "version": "a4820a647851ea3f0623d0260bd69fe5e1e47b7847ce367c16196a22d653128a",
+        "signature": "f443bd077285e9acbe3b69462107d3e81eb832270ec576e7e988043ceaa7163a"
       },
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.module.ts": {
         "version": "144d9f98ad6633a7313d798f6b3f7a98d9cfb9bc130c5802ff1e8c104e1b8665",
@@ -2130,7 +2130,7 @@
         "signature": "12d3fb37583ef4764e357c3c4b1cfa1a8dfdff6fb223661c2d12e7b792d201f7"
       },
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.service.ts": {
-        "version": "0bba898969cdb78c6b8a1a87acdb2e83d4ad14dde457fda4b6a3829ebf689801",
+        "version": "51f7008aa5089ee8fb846ed6cb7b52d64916a715d0eb05329d8b22fe29d8a4db",
         "signature": "9b5e4e1c16fdf726f64a6cd655184594a46116e28ec4aad1c5fd4d0c6db21fbd"
       },
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.controller.ts": {
