@@ -9,6 +9,6 @@ async function bootstrap() {
   app.setViewEngine('ejs');
   app.setBaseViewsDir(join(__dirname, '..','..','Frontend'));
 
-  await app.listen(3008);
+  await app.listen(3000);
 }
 bootstrap();
