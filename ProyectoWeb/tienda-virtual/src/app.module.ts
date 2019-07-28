@@ -23,7 +23,7 @@ import { PedidoModule } from './Backend/pedido/pedido.module';
       host: 'localhost',
       port: 3306,
       username: 'root',
-      password: 'root',
+      password: '',
       database: 'proyecto',
       entities: [
         ProductoEntity,

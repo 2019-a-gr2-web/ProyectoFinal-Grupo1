@@ -15,28 +15,61 @@
 </head>
 
 <body>
-    <Row>
-        <Col md="6">
-            <img src="<%=producto.imagenProducto%>" alt="Card image cap">
-        </Col>
-        <Col md="6">
-            <Row>
+    <%- include('../partials/header') %>
+    <div class="container-fluid">
 
-            </Row>
-        <Row>
-                
-            </Row>
-        </Col>
-    </Row>
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-            <h5 class="card-title"><%=producto.nombreProducto%></h5>
-            <p class="card-text"><%=producto.descripcion%></p>
-            <p class="card-text"><%=producto.PVP%></p>
-            <p class="card-text"><%=producto.codigoProducto%></p>
-            <a href="#" class="btn btn-primary">Añadir al carrito</a>
+        <div class="row d-flex justify-content-center">
+            <div class="card text-center">
+
+                <div class="card-header bg-dark text-white ">
+                    <h3>Informacion detallada Producto <i class="fas fa-leaf"></i> </h3>
+                </div>
+
+            </div>
+            <br><br>
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-5 center">
+
+
+                    <img src="<%=producto.imagenProducto%>" width="400px" height="400px">
+
+                </div>
+                <div class="col-md-4 center">
+                    <h5 class="card-title"><%=producto.nombreProducto%></h5>
+                    <p class="card-text"><%=producto.descripcion%></p>
+                    <p class="card-text"><%=producto.PVP%></p>
+                    <p class="card-text"><%=producto.codigoProducto%></p>
+                    <a href="#" class="btn btn-primary">Añadir al carrito</a>
+                </div>
+                <div class="col-md-3 center">
+                    <div class="card text-center">
+
+                        <div class="card-body">
+                            <div class="card mb-2">
+                                <div class="card-header bg-dark text-white">
+                                    <h5>
+                                        <i class="far fa-chart-bar"></i> Tienda
+                                    </h5>
+
+                                </div>
+                                <div class="card-body">
+                                    <img src="https://i.blogs.es/c8ceab/movistar/450_1000.jpg"
+                                        class="card-img-top mx-auto  ">
+                                    <p>Promoción: Podrá promocionar todos sus servicios enfocado en el segmento objetivo
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+
+
 </body>
 
 </html>

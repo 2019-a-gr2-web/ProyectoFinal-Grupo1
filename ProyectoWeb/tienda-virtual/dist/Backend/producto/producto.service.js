@@ -40,7 +40,7 @@ let ProductoService = class ProductoService {
         });
     }
     getHello() {
-        return 'Hello World!';
+        return 'ME GUSTAS ABIGAIL JEJE !♥ ♥!';
     }
     crear(nuevoProducto) {
         const objetoEntidad = this._productosRepository.create(nuevoProducto);
