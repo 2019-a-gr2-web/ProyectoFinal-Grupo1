@@ -12,20 +12,21 @@ export class ProductoService {
   constructor(@InjectRepository(ProductoEntity)
   private readonly _productosRepository: Repository<ProductoEntity>, ) {
 
-    /*const producto: Producto = {
-      idProducto: 2,
+    const producto: Producto = {
+      //idProducto: 2,
       nombreProducto: 'Producto 1',
       descripcion: 'Producto 1',
       codigoProducto: 'Producto 1',
       PVP: 25.20,
-    };*/
-
-    const respuestaUpdate = this.buscarTodo();
+      imagenProducto:'',
+    };
+    this.crear(producto);
+    const respuestaUpdate = this.buscarTodo({ idProducto: "2" });
     respuestaUpdate
       .then(
         (datos) => {
           this.bddProductos = datos;
-          console.log('Base', datos);
+          //console.log('Base', datos);
         })
       .catch((error) => {
         console.error('Error:', error);
@@ -36,7 +37,7 @@ export class ProductoService {
     return 'Hello World!';
   }
 
-  crear(nuevoProducto: Producto): Promise<Producto> {
+  crear(nuevoProducto?: Producto): Promise<Producto> {
     const objetoEntidad = this._productosRepository.create(nuevoProducto);
     return this._productosRepository.save(objetoEntidad);
   }
@@ -53,42 +54,7 @@ export class ProductoService {
     return this._productosRepository.delete(productoEliminado);
   }
 
-  /*actualizar(productoActualizado: Producto, id: number): Producto[] {
-
-    const indice = this.bddTragos.findIndex(
-      (trago) => {
-        return trago.id === id
-      }
-    );
-    tragoActualizado.id = this.bddTragos[indice].id;
-    this.bddTragos[indice] = tragoActualizado;
-
-    return this.bddTragos;
+  getProductById(idProducto): Promise<ProductoEntity> {
+    return this._productosRepository.findOne(idProducto);
   }
-
-  buscarPorId(id: number): Trago {
-    return this.bddTragos.find(
-      (trago) => {
-        return trago.id === id;
-      }
-    );
-  }
-
-  buscarPorNombre(nombre: string): Trago {
-    return this.bddTragos.find(
-      (trago) => {
-        return trago.nombre.toUpperCase().includes(nombre.toUpperCase());
-      }
-    );
-  }
-
-  eliminarPorId(id: number): Trago[] {
-    const indice = this.bddTragos.findIndex(
-      (trago) => {
-        return trago.id === id
-      }
-    );
-    this.bddTragos.splice(indice, 1);
-    return this.bddTragos;
-  }*/
 }

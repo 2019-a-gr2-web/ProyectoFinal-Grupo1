@@ -6,8 +6,9 @@ export declare class ProductoService {
     bddProductos: Producto[];
     constructor(_productosRepository: Repository<ProductoEntity>);
     getHello(): string;
-    crear(nuevoProducto: Producto): Promise<Producto>;
+    crear(nuevoProducto?: Producto): Promise<Producto>;
     buscarTodo(parametrosBusqueda?: any): Promise<ProductoEntity[]>;
     actualizar(productoActualizado: any): Promise<ProductoEntity>;
     eliminar(productoEliminado: any): Promise<import("typeorm").DeleteResult>;
+    getProductById(idProducto: any): Promise<ProductoEntity>;
 }

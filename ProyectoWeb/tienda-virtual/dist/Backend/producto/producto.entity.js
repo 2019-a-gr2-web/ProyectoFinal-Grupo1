@@ -51,6 +51,13 @@ __decorate([
     }),
     __metadata("design:type", Number)
 ], ProductoEntity.prototype, "PVP", void 0);
+__decorate([
+    typeorm_1.Column({
+        type: 'longtext',
+        name: 'imagen_producto',
+    }),
+    __metadata("design:type", Object)
+], ProductoEntity.prototype, "imagenProducto", void 0);
 ProductoEntity = __decorate([
     typeorm_1.Entity('bd_producto')
 ], ProductoEntity);

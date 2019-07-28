@@ -1,24 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
 
-<table>
-    <tr>
-        <th>Nombre</th>
-        <th>Grados</th>
-        <th>Caduca</th>
-        <th>Precio</th>
-        <th>Tipo</th>
-        <th>Acciones</th>
-    </tr>
-    <% productos.forEach((producto)=>{ %>
-        <tr>
-            <td> <%=producto.idProducto%> </td>
-            <td> <%=producto.nombreProducto%> </td>
-            <td> <%=producto.descripcion%> </td>
-            <td> <%=producto.codigoProducto%> </td>
-            <td> <%=producto.PVP%> </td>
-            <td>
-                <button>Editar</button>
-                <button>Eliminar</button>
-            </td>
-        </tr>
-    <% })%>
-</table>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tienda Virtual</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <row backgroundcolor>
+            <col> Login </col>
+
+            <col> Ver </col>
+
+            <col> Nuevo </col>
+        </row>
+    </div>
+
+
+    <div>
+        <div class="jumbotron">
+            <h1 class="display-4">Hello, world!</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention
+                to featured content or information.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </div>
+
+    </div>
+    <div class="container">
+
+        <div>
+            <a href="/tiendavirtual/producto/create">
+                <button type="button"> Crear </button>
+            </a>
+        </div>
+        <br>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th>Codigo</th>
+                    <th>Precio</th>
+                    <th>Imagen</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <% productos.forEach((producto)=>{ %>
+            <tr>
+                <td> <%=producto.idProducto%> </td>
+                <td> <%=producto.nombreProducto%> </td>
+                <td> <%=producto.descripcion%> </td>
+                <td> <%=producto.codigoProducto%> </td>
+                <td> <%=producto.PVP%> </td>
+                <td> 
+                    <img src="<%=producto.imagenProducto%>" alt="" width="300px" height="300px">
+                </td>
+                <td>
+                    <a href="delete/<%=producto.idProducto%>">
+                        <button type="button">Borrar</button>
+                    </a>
+                    <a href="update/<%=producto.idProducto%>">
+                        <button type="button">Editar</button>
+                    </a>
+                    <a href="ver/<%=producto.idProducto%>">
+                        <button type="button">Ver</button>
+                    </a>
+                </td>
+            </tr>
+            <% })%>
+        </table>
+    </div>
+
+
+</body>
+
+</html>

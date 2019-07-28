@@ -20,11 +20,18 @@ let ProductoService = class ProductoService {
     constructor(_productosRepository) {
         this._productosRepository = _productosRepository;
         this.bddProductos = [];
-        const respuestaUpdate = this.buscarTodo();
+        const producto = {
+            nombreProducto: 'Producto 1',
+            descripcion: 'Producto 1',
+            codigoProducto: 'Producto 1',
+            PVP: 25.20,
+            imagenProducto: '',
+        };
+        this.crear(producto);
+        const respuestaUpdate = this.buscarTodo({ idProducto: "2" });
         respuestaUpdate
             .then((datos) => {
             this.bddProductos = datos;
-            console.log('Base', datos);
         })
             .catch((error) => {
             console.error('Error:', error);
@@ -45,6 +52,9 @@ let ProductoService = class ProductoService {
     }
     eliminar(productoEliminado) {
         return this._productosRepository.delete(productoEliminado);
+    }
+    getProductById(idProducto) {
+        return this._productosRepository.findOne(idProducto);
     }
 };
 ProductoService = __decorate([
