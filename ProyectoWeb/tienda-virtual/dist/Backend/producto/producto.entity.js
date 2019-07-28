@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
+const producto_pedido_entity_1 = require("../productoToPedido/producto_pedido.entity");
 let ProductoEntity = class ProductoEntity {
 };
 __decorate([
@@ -58,6 +59,10 @@ __decorate([
     }),
     __metadata("design:type", Object)
 ], ProductoEntity.prototype, "imagenProducto", void 0);
+__decorate([
+    typeorm_1.OneToMany(type => producto_pedido_entity_1.ProductoPedidoEntity, (productoPedido) => productoPedido.producto),
+    __metadata("design:type", Array)
+], ProductoEntity.prototype, "productoPedido", void 0);
 ProductoEntity = __decorate([
     typeorm_1.Entity('bd_producto')
 ], ProductoEntity);

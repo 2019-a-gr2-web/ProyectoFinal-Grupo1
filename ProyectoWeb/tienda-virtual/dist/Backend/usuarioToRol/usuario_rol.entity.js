@@ -16,10 +16,10 @@ let UsuarioRolEntity = class UsuarioRolEntity {
 };
 __decorate([
     typeorm_1.PrimaryGeneratedColumn({
-        name: 'id_usuario_rol'
+        name: 'id'
     }),
     __metadata("design:type", Number)
-], UsuarioRolEntity.prototype, "idusuarioRol", void 0);
+], UsuarioRolEntity.prototype, "id", void 0);
 __decorate([
     typeorm_1.ManyToOne(type => cliente_entity_1.ClienteEntity, cliente => cliente.usuarioRol),
     __metadata("design:type", cliente_entity_1.ClienteEntity)

@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
+const producto_pedido_entity_1 = require("../productoToPedido/producto_pedido.entity");
 let PedidoEntity = class PedidoEntity {
 };
 __decorate([
@@ -64,11 +65,16 @@ __decorate([
 ], PedidoEntity.prototype, "fecha", void 0);
 __decorate([
     typeorm_1.Column({
-        type: 'boolean',
+        type: 'varchar',
+        length: "10",
         name: 'estado',
     }),
-    __metadata("design:type", Boolean)
+    __metadata("design:type", String)
 ], PedidoEntity.prototype, "estado", void 0);
+__decorate([
+    typeorm_1.OneToMany(type => producto_pedido_entity_1.ProductoPedidoEntity, (productoPedido) => productoPedido.pedido),
+    __metadata("design:type", Array)
+], PedidoEntity.prototype, "productoPedido", void 0);
 PedidoEntity = __decorate([
     typeorm_1.Entity('bd_pedido')
 ], PedidoEntity);

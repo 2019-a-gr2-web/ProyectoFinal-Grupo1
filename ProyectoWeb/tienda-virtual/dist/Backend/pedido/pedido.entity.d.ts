@@ -1,3 +1,4 @@
+import { ProductoPedidoEntity } from "../productoToPedido/producto_pedido.entity";
 export declare class PedidoEntity {
     idPedido: number;
     direccionCliente: string;
@@ -5,5 +6,6 @@ export declare class PedidoEntity {
     subtotal: number;
     total: number;
     fecha: Date;
-    estado: boolean;
+    estado: 'Por Despachar' | 'Iniciado' | 'Despachado' | 'Cancelado';
+    productoPedido: ProductoPedidoEntity[];
 }
