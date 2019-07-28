@@ -10,8 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
-const product_entity_1 = require("dist/Backend/producto/product.entity");
 const pedido_entity_1 = require("../pedido/pedido.entity");
+const producto_entity_1 = require("../producto/producto.entity");
 let ProductoPedidoEntity = class ProductoPedidoEntity {
 };
 __decorate([
@@ -41,8 +41,8 @@ __decorate([
     __metadata("design:type", Number)
 ], ProductoPedidoEntity.prototype, "precioDetalle", void 0);
 __decorate([
-    typeorm_1.ManyToOne(type => product_entity_1.ProductEntity, producto => producto.productoPedido),
-    __metadata("design:type", product_entity_1.ProductEntity)
+    typeorm_1.ManyToOne(type => producto_entity_1.ProductoEntity, producto => producto.productoPedido),
+    __metadata("design:type", producto_entity_1.ProductoEntity)
 ], ProductoPedidoEntity.prototype, "producto", void 0);
 __decorate([
     typeorm_1.ManyToOne(type => pedido_entity_1.PedidoEntity, pedido => pedido.productoPedido),

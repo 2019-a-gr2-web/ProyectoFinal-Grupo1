@@ -19,6 +19,7 @@ const rol_entity_1 = require("./Backend/rol/rol.entity");
 const tipo_entity_1 = require("./Backend/tipo/tipo.entity");
 const usuario_rol_entity_1 = require("./Backend/usuarioToRol/usuario_rol.entity");
 const producto_module_1 = require("./Backend/producto/producto.module");
+const producto_pedido_entity_1 = require("./Backend/productoToPedido/producto_pedido.entity");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -30,7 +31,7 @@ AppModule = __decorate([
                 host: 'localhost',
                 port: 3306,
                 username: 'root',
-                password: '',
+                password: 'root',
                 database: 'proyecto',
                 entities: [
                     producto_entity_1.ProductoEntity,
@@ -41,6 +42,7 @@ AppModule = __decorate([
                     rol_entity_1.RolEntity,
                     tipo_entity_1.TipoEntity,
                     usuario_rol_entity_1.UsuarioRolEntity,
+                    producto_pedido_entity_1.ProductoPedidoEntity,
                 ],
                 synchronize: true,
                 insecureAuth: true,

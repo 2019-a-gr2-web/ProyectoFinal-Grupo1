@@ -1,9 +1,9 @@
-import { ProductEntity } from "dist/Backend/producto/product.entity";
 import { PedidoEntity } from "../pedido/pedido.entity";
+import { ProductoEntity } from "../producto/producto.entity";
 export declare class ProductoPedidoEntity {
     idDetalle: number;
     cantidadProducto: number;
     precioDetalle: number;
-    producto: ProductEntity;
+    producto: ProductoEntity;
     pedido: PedidoEntity;
 }
