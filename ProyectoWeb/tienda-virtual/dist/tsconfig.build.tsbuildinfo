@@ -2073,9 +2073,21 @@
         "version": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f"
       },
+      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/dist/backend/producto/product.entity.d.ts": {
+        "version": "99eed1b6947637a1618d8f520c2bb2f399a954ad8d71673d808e8224edb7941a",
+        "signature": "99eed1b6947637a1618d8f520c2bb2f399a954ad8d71673d808e8224edb7941a"
+      },
+      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.entity.ts": {
+        "version": "da9f595c8b1b6bca1f917782a95c171d1e6bcae41b29f798c78a153d2a8ff38e",
+        "signature": "bf0cef41e7c5a3d3394ed2addfda977c840c8845b1eadaede03451e863c864aa"
+      },
+      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts": {
+        "version": "d25a50fd4f6244e8aed321abad5d737050b04e4edbf988ebac33dbdd03af2a36",
+        "signature": "7bf89a30b839d7c49bee873f0e765e8ad9bd96ea63871ea6d34be9473eaef0c2"
+      },
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.entity.ts": {
-        "version": "582e0b8a9e4b69261eed1f1202b9155552f5e30d5516b4c04f01835d9ce4a0e8",
-        "signature": "62d4c2358ff7592ee606f4549865a2ee66678310c724fd2153447dabd58c39a9"
+        "version": "513addfdf3f4b6cef5a384b381179ea9a7737ad0e733b640f5e86638801a6e5c",
+        "signature": "eea7f7f8cbc3c22eb924679b40bcc0189dc043a157bbe10fc6ef48133f96af18"
       },
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/bodega/bodega.entity.ts": {
         "version": "a389ab1f88489a4dabcbc7d694589750ed162d4556142598b47bc4312aa07195",
@@ -2086,16 +2098,12 @@
         "signature": "02c4e131ec95facafbb81ff5ae1b915729acae05c3fc88ff0293007c0791f070"
       },
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuariotorol/usuario_rol.entity.ts": {
-        "version": "52f4f33115ba059ee6712c4c31001fd84a2df3db1cc3f013ba70dff3f2cd5932",
-        "signature": "ea73197cce0b2cb7e18e15af889458fd81f8a6ea1f4c3dcc14f9e5a3f5b1b909"
+        "version": "106e65cec08ad3e04bf1523b3e1bcf216a8c5acd284be8285b32c12801453b67",
+        "signature": "9386d60521a09cec520cd69e4d2d67efd5a312a069fdc20149f6718d799af1ae"
       },
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/cliente/cliente.entity.ts": {
         "version": "062760297a1f4e76c5adeadead8b1f94c36a6dba6f58ece0fd073b07b9c50ec1",
         "signature": "29996579cb2039a07da4f6c3c5e5e337b8666340367feb0768251998b1f60970"
-      },
-      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.entity.ts": {
-        "version": "63efc6afad193215f3af32b295c9785c096a138860328e6ba455f27bdb2b6483",
-        "signature": "5b182def26072ef71486b23160fee1ea961c65978681ce0a9c1c31fd7fc7a2a7"
       },
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/proveedor/proveedor.entity.ts": {
         "version": "3d40cd7d1726e622861b47ff6c40480e997b6a510c20966747a61e9f6a8bc150",
@@ -2110,12 +2118,12 @@
         "signature": "150a45eec889a31e108f3da4ed2b429efbb201b07b68f79aa4948eb4016ee766"
       },
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.service.ts": {
-        "version": "8a0bfad0e10d6518dbe2b0dc988dd44e0dc61bde421eb1e748a68989dcccb087",
-        "signature": "7790fd54310c03ec00f48635b5e940bc01f94a7eb89cbbfae81a5325cf0ee287"
+        "version": "36e3f469525bcad02b56596e7882b58069d8224a95134f72e0356faac02a0551",
+        "signature": "dcbc8912f5875f232e278ed227f37e5d5bfadb394ed2e96a739d00e002ad41e3"
       },
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.controller.ts": {
-        "version": "89ace121a756e3414cb74b0abfa85f136ff7bfccc4b5b0bdd4c52b9b0b5b6296",
-        "signature": "d6189054feaf31b8cecde1eebf0da543780bd8b1256a846e06813f8ce00a17c2"
+        "version": "6d9505c252cd8629b4d68a8eb80ce526e7f7f85c264a38ef6c7feaf8e65659b1",
+        "signature": "925845864f9cb10b883cb4d444d6f9f4da46aae488198b45eb1d9f064885f404"
       },
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.module.ts": {
         "version": "144d9f98ad6633a7313d798f6b3f7a98d9cfb9bc130c5802ff1e8c104e1b8665",
@@ -5655,8 +5663,26 @@
         "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
         "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/dist/backend/producto/product.entity.d.ts": [
+        "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
+        "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.entity.ts": [
+        "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/index.d.ts",
+        "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts",
+        "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
+        "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts": [
+        "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/index.d.ts",
+        "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/dist/backend/producto/product.entity.d.ts",
+        "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.entity.ts",
+        "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
+        "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.entity.ts": [
         "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/index.d.ts",
+        "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts",
         "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
         "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -5681,11 +5707,6 @@
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/cliente/cliente.entity.ts": [
         "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/index.d.ts",
         "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuariotorol/usuario_rol.entity.ts",
-        "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
-        "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.entity.ts": [
-        "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/index.d.ts",
         "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
         "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -9384,6 +9405,20 @@
         "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
         "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/dist/backend/producto/product.entity.d.ts": [
+        "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
+        "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.entity.ts": [
+        "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts"
+      ],
+      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts": [
+        "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/dist/backend/producto/product.entity.d.ts",
+        "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.entity.ts"
+      ],
+      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.entity.ts": [
+        "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts"
+      ],
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/rol/rol.entity.ts": [
         "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuariotorol/usuario_rol.entity.ts"
       ],
@@ -10266,19 +10301,10 @@
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/typeorm/dist/typeorm.module.d.ts",
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/typeorm/dist/index.d.ts",
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/typeorm/index.d.ts",
-      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.entity.ts",
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/bodega/bodega.entity.ts",
-      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/rol/rol.entity.ts",
-      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuariotorol/usuario_rol.entity.ts",
-      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/cliente/cliente.entity.ts",
-      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.entity.ts",
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/proveedor/proveedor.entity.ts",
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/tipo/tipo.entity.ts",
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.ts",
-      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.service.ts",
-      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.controller.ts",
-      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.module.ts",
-      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/app.module.ts",
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/core/adapters/index.d.ts",
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/core/constants.d.ts",
@@ -10321,7 +10347,6 @@
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/platform-express/multer/multer.module.d.ts",
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/platform-express/multer/index.d.ts",
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/platform-express/index.d.ts",
-      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/main.ts",
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/connect/index.d.ts",
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/body-parser/index.d.ts",
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/cookiejar/index.d.ts",
@@ -10333,7 +10358,31 @@
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/jest/index.d.ts",
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/json5/index.d.ts",
       "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/superagent/index.d.ts",
-      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/supertest/index.d.ts"
+      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/supertest/index.d.ts",
+      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/dist/backend/producto/product.entity.d.ts",
+      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.entity.ts",
+      [
+        "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts",
+        [
+          {
+            "file": "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts",
+            "start": 800,
+            "length": 14,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'productoPedido' does not exist on type 'ProductEntity'."
+          }
+        ]
+      ],
+      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.entity.ts",
+      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/rol/rol.entity.ts",
+      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuariotorol/usuario_rol.entity.ts",
+      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/cliente/cliente.entity.ts",
+      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.service.ts",
+      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.controller.ts",
+      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.module.ts",
+      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/app.module.ts",
+      "c:/users/davil/onedrive/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/main.ts"
     ]
   },
   "version": "3.4.3"

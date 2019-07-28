@@ -13,4 +13,5 @@ export declare class ProductoController {
     editarProductGet(res: any, req: any): Promise<void>;
     createProductGet(res: any, req: any): Promise<void>;
     createProductPost(res: any, producto: Producto): Promise<void>;
+    getProductDescription(res: any, req: any): Promise<void>;
 }

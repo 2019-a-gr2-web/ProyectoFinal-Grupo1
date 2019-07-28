@@ -84,6 +84,15 @@ let ProductoController = class ProductoController {
             res.redirect('/tiendavirtual/producto/all');
         });
     }
+    getProductDescription(res, req) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const producto = yield this._productoService.getProductById({ idProducto: req.params.idProducto });
+            console.log(producto.nombreProducto);
+            res.render('vistas_producto/description', {
+                producto: producto,
+            });
+        });
+    }
 };
 __decorate([
     common_1.Get(),
@@ -154,6 +163,13 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], ProductoController.prototype, "createProductPost", null);
+__decorate([
+    common_1.Get('/ver/:idProducto'),
+    __param(0, common_1.Res()), __param(1, common_1.Req()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], ProductoController.prototype, "getProductDescription", null);
 ProductoController = __decorate([
     common_1.Controller('tiendavirtual/producto'),
     __metadata("design:paramtypes", [producto_service_1.ProductoService])

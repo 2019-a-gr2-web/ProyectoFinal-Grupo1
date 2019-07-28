@@ -10,4 +10,5 @@ export declare class ProductoService {
     buscarTodo(parametrosBusqueda?: any): Promise<ProductoEntity[]>;
     actualizar(productoActualizado: any): Promise<ProductoEntity>;
     eliminar(productoEliminado: any): Promise<import("typeorm").DeleteResult>;
+    getProductById(idProducto: any): Promise<ProductoEntity>;
 }

@@ -53,6 +53,9 @@ let ProductoService = class ProductoService {
     eliminar(productoEliminado) {
         return this._productosRepository.delete(productoEliminado);
     }
+    getProductById(idProducto) {
+        return this._productosRepository.findOne(idProducto);
+    }
 };
 ProductoService = __decorate([
     common_1.Injectable(),
