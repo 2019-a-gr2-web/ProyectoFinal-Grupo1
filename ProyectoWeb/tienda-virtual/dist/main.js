@@ -17,7 +17,7 @@ function bootstrap() {
             .create(app_module_1.AppModule);
         app.setViewEngine('ejs');
         app.setBaseViewsDir(path_1.join(__dirname, '..', '..', 'Frontend'));
-        yield app.listen(3000);
+        yield app.listen(3005);
     });
 }
 bootstrap();
