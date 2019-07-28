@@ -13,6 +13,7 @@ import { UsuarioRolEntity } from './Backend/usuarioToRol/usuario_rol.entity';
 import { ProductoModule } from './Backend/producto/producto.module';
 import { ProductoPedidoEntity } from './Backend/productoToPedido/producto_pedido.entity';
 import { PedidoModule } from './Backend/pedido/pedido.module';
+import { FacturaModule } from './factura/factura.module';
 
 @Module({
   imports: [ProductoModule,
@@ -40,6 +41,7 @@ import { PedidoModule } from './Backend/pedido/pedido.module';
       insecureAuth : true,
       dropSchema: false,
   }),
+    FacturaModule,
   ],
   controllers: [AppController],
   providers: [AppService],
