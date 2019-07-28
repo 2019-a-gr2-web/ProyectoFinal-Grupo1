@@ -38,11 +38,10 @@ export class ProductoEntity {
     PVP: number;
 
     @Column({
-        type: 'varchar',
+        type: 'longtext',
         name: 'imagen_producto',
-        default:'',
     })
-    imagenProducto: string;
+    imagenProducto: any;
 
    /* @ManyToOne(type => TipoEntity, tipo => tipo.producto)
     tipoId: TipoEntity;

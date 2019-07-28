@@ -25,9 +25,10 @@ let ProductoService = class ProductoService {
             descripcion: 'Producto 1',
             codigoProducto: 'Producto 1',
             PVP: 25.20,
+            imagenProducto: '',
         };
         this.crear(producto);
-        const respuestaUpdate = this.buscarTodo();
+        const respuestaUpdate = this.buscarTodo({ idProducto: "2" });
         respuestaUpdate
             .then((datos) => {
             this.bddProductos = datos;

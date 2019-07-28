@@ -18,9 +18,10 @@ export class ProductoService {
       descripcion: 'Producto 1',
       codigoProducto: 'Producto 1',
       PVP: 25.20,
+      imagenProducto:'',
     };
     this.crear(producto);
-    const respuestaUpdate = this.buscarTodo();
+    const respuestaUpdate = this.buscarTodo({ idProducto: "2" });
     respuestaUpdate
       .then(
         (datos) => {
@@ -36,7 +37,7 @@ export class ProductoService {
     return 'Hello World!';
   }
 
-  crear(nuevoProducto: Producto): Promise<Producto> {
+  crear(nuevoProducto?: Producto): Promise<Producto> {
     const objetoEntidad = this._productosRepository.create(nuevoProducto);
     return this._productosRepository.save(objetoEntidad);
   }

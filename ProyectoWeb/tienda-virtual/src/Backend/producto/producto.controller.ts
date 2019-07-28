@@ -1,6 +1,7 @@
 import { Controller, Get, Res, Render, Post, Req, Body, Delete } from '@nestjs/common';
 import { ProductoService } from './producto.service';
 import { async } from 'rxjs/internal/scheduler/async';
+import { Producto } from './producto';
 
 
 @Controller('tiendavirtual/producto')
@@ -25,12 +26,12 @@ export class ProductoController {
   }
 
   @Get('/all')
-  async getAllProducts(@Res() res){
+  async getAllProducts(@Res() res) {
     const productsList = await this._productoService.buscarTodo();
     res.render('vistas_producto/main-view',
-    {
-      productos : productsList,
-    });
+      {
+        productos: productsList,
+      });
   }
 
   @Post('/delete')
@@ -56,10 +57,39 @@ export class ProductoController {
 
   @Get('/create')
   async createProductGet(@Res() res, @Req() req) {
-
-    //await this._productoService.eliminar(req.params.idProducto);
     res.render('vistas_producto/new')
   }
 
-  
+  @Post('/create')
+  async createProductPost(
+    @Res() res,
+    @Body() producto: Producto,
+  ) {
+    producto.nombreProducto = producto.nombreProducto;
+    producto.descripcion = producto.descripcion;
+    producto.codigoProducto = producto.codigoProducto;
+    producto.PVP = producto.PVP;
+    producto.imagenProducto = producto.imagenProducto;
+    await this._productoService.crear(producto);
+    res.redirect('/tiendavirtual/producto/all')
+  }
+
+  /*
+  @Get('/edit')
+  async getProductById(@Res() res) {
+    const product = await this._productoService.
+    res.render('vistas_producto/new')
+  }
+
+  @Get('/all')
+  async getAllProducts(@Res() res) {
+    const productsList = await this._productoService.buscarTodo();
+    res.render('vistas_producto/main-view',
+      {
+        productos: productsList,
+      });
+  }
+*/
+
+
 }

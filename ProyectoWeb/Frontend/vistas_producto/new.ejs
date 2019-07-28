@@ -3,41 +3,40 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Tienda virtual - Create New</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css "
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+
+<body>
 
     <script>
         function validarArchivos() {
             const archivo = document.getElementById('archivo');
-
+            console.log(archivo.files);
             const label = document.getElementById('texto-archivo');
+            const imagenProducto = document.getElementById('imagenProducto')
             if (archivo.files.length > 0) {
                 label.className = 'boton boton-seleccionado';
-                label.innerText = 'Archivos Seleccionados';
+                label.innerText = 'Archivos seleccionados :) ';
+                ///// EMPIEZA
                 const file = archivo.files[0];
                 const reader = new FileReader();
-                
-                render.onload = (eventoLecturaArchivo) => {
-                    console.log(eventoLecturaArchivo)
+                reader.onload = (eventoLecturaArchivo) => {
                     const url = eventoLecturaArchivo.target.result;
-                    const imagenMuestra = document.getElementById("imagen-muestra")
+                    const imagenMuestra = document.getElementById('imagen-muestra');
                     imagenMuestra.src = url;
-                }
-                //render.readAsDataURL(file)
-            } else {
-
-                label.className = 'boton boton-sin-seleccion';
-                label.innerText = 'Seleccionar archivos';
+                    imagenProducto.value = url;
+                };
+                reader.readAsDataURL(file);
             }
         }
-    </script>
-</head>
 
-<body>
+    </script>
+
     <div>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
@@ -49,43 +48,47 @@
     </div>
 
     <div class="container">
-        <form>
+        <form  action="/tiendavirtual/producto/create" method="post">
             <div class="form-group">
-                <label for="exampleInputEmail1">Nombre del Producto</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Nombre del producto">
+                <label for="nombreProducto">Nombre del Producto</label>
+                <input type="name" class="form-control" id="nombreProducto" name="nombreProducto"
+                    placeholder="Nombre del producto">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Descripcion</label>
-                <input type="password" class="form-control" id="exampleInputPassword1"
+                <label for="descripcionProducto">Descripcion</label>
+                <input type="description" class="form-control" id="descripcion" name="descripcion"
                     placeholder="Descripcion del producto">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Codigo</label>
-                <input type="password" class="form-control" id="exampleInputPassword1"
-                    placeholder="Codigo del producto">
+                <label for="codigoProducto">Codigo</label>
+                <input type="code" class="form-control" id="codigoProducto" name="codigoProducto" placeholder="Codigo del producto">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">PVP</label>
-                <input type="password" class="form-control" id="exampleInputPassword1"
-                    placeholder="Precio de Venta al Publico">
+                <label for="precioProducto">PVP</label>
+                <input type="number" 
+                class="form-control" id="precioProducto" 
+                name="PVP" placeholder="Precio de Venta al Publico">
             </div>
-            <div class="form-group">
 
-                <label id="texto-archivo" for="archivo" class="boton boton-sin-seleccion">Seleccionar Archivo</label>
-                <input id="archivo" hidden type="file" name="imagen" accept=".pptx, .jpg" 
-                    onchange="validarArchivos()">
+            <div class="form-group">
+                <label id="texto-archivo" for="archivo">
+                    Seleccionar Archivo
+                </label>
+                <input id="archivo"  hidden type="file" accept=".jpg" onchange="validarArchivos()">
             </div>
-            <div>
-                <img 
-                id="imagen-muestra" 
-                src="" 
-                width="300px" 
-                height="300px" 
-                alt="">
+            <div hidden>
+                <input id="imagenProducto" type="text" name="imagenProducto" >
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+
+            <div class="form-group">
+                <img id="imagen-muestra" name="imagenProducto" src="" width="300px" height="300px" alt="">
+            </div>
+
+            <button id="create" type="submit" class="btn btn-primary">Crear</button>
         </form>
     </div>
+
+
 </body>
 
 </html>
