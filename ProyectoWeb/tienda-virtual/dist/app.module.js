@@ -20,11 +20,13 @@ const tipo_entity_1 = require("./Backend/tipo/tipo.entity");
 const usuario_rol_entity_1 = require("./Backend/usuarioToRol/usuario_rol.entity");
 const producto_module_1 = require("./Backend/producto/producto.module");
 const producto_pedido_entity_1 = require("./Backend/productoToPedido/producto_pedido.entity");
+const pedido_module_1 = require("./Backend/pedido/pedido.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     common_1.Module({
         imports: [producto_module_1.ProductoModule,
+            pedido_module_1.PedidoModule,
             typeorm_1.TypeOrmModule.forRoot({
                 name: 'default',
                 type: 'mysql',

@@ -1,4 +1,5 @@
 import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { ProductoEntity } from "../producto/producto.entity";
 
 @Entity('bd_tipo') // Nombre tabla
 export class TipoEntity {
@@ -14,4 +15,5 @@ export class TipoEntity {
         name: 'nombre_tipo',
     })
     nombreTipo: string;
+
 }

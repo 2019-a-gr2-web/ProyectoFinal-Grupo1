@@ -51,10 +51,10 @@ export class PedidoEntity {
     @Column({
         type: 'varchar',
         length: "10",
-        name: 'estado',
     })
-    estado: 'Por Despachar'|'Iniciado'|'Despachado'|'Cancelado';
-    
+    estado: 'PorDespachar'|'Iniciado'|'Despachado'|'Cancelado';
+
     @OneToMany(type => ProductoPedidoEntity, (productoPedido) => productoPedido.pedido)
     productoPedido: ProductoPedidoEntity[]
+
 }

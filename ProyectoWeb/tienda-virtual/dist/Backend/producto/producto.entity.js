@@ -50,7 +50,7 @@ __decorate([
         scale: 2,
         default: '0',
     }),
-    __metadata("design:type", Number)
+    __metadata("design:type", Object)
 ], ProductoEntity.prototype, "PVP", void 0);
 __decorate([
     typeorm_1.Column({
@@ -59,6 +59,14 @@ __decorate([
     }),
     __metadata("design:type", Object)
 ], ProductoEntity.prototype, "imagenProducto", void 0);
+__decorate([
+    typeorm_1.Column({
+        type: 'varchar',
+        length: "10",
+        name: 'tipo',
+    }),
+    __metadata("design:type", String)
+], ProductoEntity.prototype, "tipo", void 0);
 __decorate([
     typeorm_1.OneToMany(type => producto_pedido_entity_1.ProductoPedidoEntity, (productoPedido) => productoPedido.producto),
     __metadata("design:type", Array)

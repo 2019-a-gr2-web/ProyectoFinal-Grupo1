@@ -12,9 +12,11 @@ import { TipoEntity } from './Backend/tipo/tipo.entity';
 import { UsuarioRolEntity } from './Backend/usuarioToRol/usuario_rol.entity';
 import { ProductoModule } from './Backend/producto/producto.module';
 import { ProductoPedidoEntity } from './Backend/productoToPedido/producto_pedido.entity';
+import { PedidoModule } from './Backend/pedido/pedido.module';
 
 @Module({
   imports: [ProductoModule,
+    PedidoModule,
     TypeOrmModule.forRoot({
       name: 'default', // Nombre cadena conex por defecto de TYPEORM
       type: 'mysql',

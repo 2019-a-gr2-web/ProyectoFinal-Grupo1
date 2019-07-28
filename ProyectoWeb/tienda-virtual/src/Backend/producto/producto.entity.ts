@@ -36,7 +36,7 @@ export class ProductoEntity {
         scale: 2,
         default: '0',
     })
-    PVP: number;
+    PVP: any;
 
 
     @Column({
@@ -44,6 +44,13 @@ export class ProductoEntity {
         name: 'imagen_producto',
     })
     imagenProducto: any;
+
+    @Column({
+        type: 'varchar',
+        length: "10",
+        name: 'tipo',
+    })
+    tipo: 'Hombre'|'Mujer'|'Niño';
 
    /* @ManyToOne(type => TipoEntity, tipo => tipo.producto)
     tipoId: TipoEntity; 
