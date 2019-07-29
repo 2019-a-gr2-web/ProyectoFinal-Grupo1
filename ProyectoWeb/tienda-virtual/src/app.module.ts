@@ -37,15 +37,16 @@ import { DetalleModule } from './Backend/productoToPedido/producto_pedido.module
         TipoEntity,
         UsuarioRolEntity,
         DetalleEntity,
-
       ],
       synchronize: true,
-      insecureAuth : true,
+      insecureAuth: true,
       dropSchema: false,
+
   }),
-    
+
+
   ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }

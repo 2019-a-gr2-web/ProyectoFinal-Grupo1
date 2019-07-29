@@ -97,7 +97,6 @@ let ProductoController = class ProductoController {
     }
     getProductDescription(res, req) {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log(req.params.idProducto);
             const producto = yield this._productoService.getProductById({ idProducto: req.params.idProducto });
             res.render('vistas_producto/description', {
                 producto: producto,

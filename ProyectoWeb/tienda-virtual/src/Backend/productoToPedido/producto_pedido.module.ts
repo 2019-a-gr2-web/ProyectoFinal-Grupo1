@@ -7,9 +7,9 @@ import { DetalleService } from './producto_pedido.service';
 @Module({
   imports: [TypeOrmModule.forFeature(
     [
-      DetalleEntity
+      DetalleEntity,
     ],
-    'default'
+    'default',
   ),
   ],
   controllers: [DetalleController],

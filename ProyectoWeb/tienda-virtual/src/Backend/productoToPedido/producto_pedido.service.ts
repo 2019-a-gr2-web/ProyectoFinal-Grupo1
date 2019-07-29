@@ -34,7 +34,7 @@ export class DetalleService {
     return this._detalleRepository.delete(productoEliminado);
   }
 
-  getProductById(idProducto): Promise<DetalleEntity> {
-    return this._detalleRepository.findOne(idProducto);
+  getDetailById(idDetalle): Promise<DetalleEntity> {
+    return this._detalleRepository.findOne(idDetalle);
   }
 }

@@ -6,9 +6,9 @@ import { ProductoEntity } from './producto.entity';
 @Module({
   imports: [TypeOrmModule.forFeature(
     [
-      ProductoEntity
+      ProductoEntity,
     ],
-    'default'
+    'default',
   ),
   ],
   controllers: [ProductoController],
