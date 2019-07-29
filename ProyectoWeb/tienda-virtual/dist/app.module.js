@@ -20,7 +20,6 @@ const tipo_entity_1 = require("./Backend/tipo/tipo.entity");
 const usuario_rol_entity_1 = require("./Backend/usuarioToRol/usuario_rol.entity");
 const producto_module_1 = require("./Backend/producto/producto.module");
 const pedido_module_1 = require("./Backend/pedido/pedido.module");
-const factura_module_1 = require("./factura/factura.module");
 const producto_pedido_entity_1 = require("./Backend/productoToPedido/producto_pedido.entity");
 const producto_pedido_module_1 = require("./Backend/productoToPedido/producto_pedido.module");
 let AppModule = class AppModule {
@@ -36,7 +35,7 @@ AppModule = __decorate([
                 host: 'localhost',
                 port: 3306,
                 username: 'root',
-                password: 'root',
+                password: '',
                 database: 'proyecto',
                 entities: [
                     producto_entity_1.ProductoEntity,
@@ -53,7 +52,6 @@ AppModule = __decorate([
                 insecureAuth: true,
                 dropSchema: false,
             }),
-            factura_module_1.FacturaModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
