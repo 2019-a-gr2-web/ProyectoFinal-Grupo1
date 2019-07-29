@@ -12,7 +12,6 @@ import { TipoEntity } from './Backend/tipo/tipo.entity';
 import { UsuarioRolEntity } from './Backend/usuarioToRol/usuario_rol.entity';
 import { ProductoModule } from './Backend/producto/producto.module';
 import { PedidoModule } from './Backend/pedido/pedido.module';
-import { FacturaModule } from './factura/factura.module';
 import { DetalleEntity } from './Backend/productoToPedido/producto_pedido.entity';
 import { DetalleModule } from './Backend/productoToPedido/producto_pedido.module';
 
@@ -38,15 +37,13 @@ import { DetalleModule } from './Backend/productoToPedido/producto_pedido.module
         TipoEntity,
         UsuarioRolEntity,
         DetalleEntity,
-
       ],
       synchronize: true,
-      insecureAuth : true,
+      insecureAuth: true,
       dropSchema: false,
-  }),
-    FacturaModule,
+    }),
   ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }

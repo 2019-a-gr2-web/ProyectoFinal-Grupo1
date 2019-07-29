@@ -9,5 +9,5 @@ export declare class DetalleService {
     buscarTodo(parametrosBusqueda?: any): Promise<DetalleEntity[]>;
     actualizar(productoActualizado: any): Promise<DetalleEntity>;
     eliminar(productoEliminado: any): Promise<import("typeorm").DeleteResult>;
-    getProductById(idProducto: any): Promise<DetalleEntity>;
+    getDetailById(idDetalle: any): Promise<DetalleEntity>;
 }

@@ -36,8 +36,8 @@ let DetalleService = class DetalleService {
     eliminar(productoEliminado) {
         return this._detalleRepository.delete(productoEliminado);
     }
-    getProductById(idProducto) {
-        return this._detalleRepository.findOne(idProducto);
+    getDetailById(idDetalle) {
+        return this._detalleRepository.findOne(idDetalle);
     }
 };
 DetalleService = __decorate([

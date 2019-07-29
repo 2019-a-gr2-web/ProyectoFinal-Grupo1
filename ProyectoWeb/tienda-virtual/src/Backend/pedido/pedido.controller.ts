@@ -9,19 +9,22 @@ import { ProductoService } from '../producto/producto.service';
 
 @Controller('tiendavirtual/pedido')
 export class PedidoController {
-  constructor(private readonly _pedidoService: PedidoService) {
+  constructor(private readonly _pedidoService: PedidoService,
+    private readonly _productoService: ProductoService,
+    private readonly _detalleService: DetalleService) {
 }
 
 @Get()
 getHello(): string {
   return "Hola Producto";
 }
-@Post('/crear')
+
+@Get('/crear/:idProducto')
 async crearPedido(
   @Res() res,
   @Req() req,
-  @Query('idProducto') idProducto: number,
   ) {
+
   const pedido: Pedido = {
     direccionCliente: "Barrio San Carlos",
     identificacion: "1723882039",
@@ -31,18 +34,26 @@ async crearPedido(
     //estado ?: 'PorDespachar' | 'Iniciado' | 'Despachado' | 'Cancelado';
   }
   const response = await this._pedidoService.crearPedido(pedido);
-  console.log(response.idPedido)
+  console.log(response.idPedido);
 
-  //const producto = await this._productService.getProductById({idProducto:idProducto})
-  //console.log(producto)
-  /*const detalle: Detalle = {
-    idDetalle?: ,
+  const producto = await this._productoService.getProductById(req.params.idProducto);
+  console.log(producto);
+  console.log("Producto ID",req.params.idProducto);
+
+  const detalle: Detalle = {
+    //idDetalle?: ,
     cantidadProducto:2,
-    precioDetalle: ;
-    productoIdProducto: number;
-    productoIdPedido: number;
-  }*/
-  //const responseDetalle = await this._detalleService.crear();
+    precioDetalle: producto.PVP * 2,
+    producto: producto.idProducto,
+    pedido: response.idPedido,
+  }
+  
+  const responseDetalle = await this._detalleService.crear(detalle); 
+  console.log(responseDetalle);
+
+  const respon = await this._detalleService.buscarTodo({idDetalle: responseDetalle.idDetalle});
+  console.log("Detalles",respon)
+
 
 
 }

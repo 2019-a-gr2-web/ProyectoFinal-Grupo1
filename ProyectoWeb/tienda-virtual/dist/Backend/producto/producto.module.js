@@ -16,7 +16,7 @@ let ProductoModule = class ProductoModule {
 ProductoModule = __decorate([
     common_1.Module({
         imports: [typeorm_1.TypeOrmModule.forFeature([
-                producto_entity_1.ProductoEntity
+                producto_entity_1.ProductoEntity,
             ], 'default'),
         ],
         controllers: [producto_controller_1.ProductoController],

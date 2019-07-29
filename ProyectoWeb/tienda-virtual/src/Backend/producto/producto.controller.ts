@@ -96,7 +96,6 @@ export class ProductoController {
 
   @Get('/ver/:idProducto')
   async getProductDescription(@Res() res, @Req() req) {
-    console.log(req.params.idProducto)
     const producto = await this._productoService.getProductById({ idProducto: req.params.idProducto });
     res.render('vistas_producto/description',
       {
