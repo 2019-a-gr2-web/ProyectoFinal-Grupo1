@@ -7,9 +7,10 @@ import { DetalleService } from './producto_pedido.service';
 export class DetalleController {
   constructor(private readonly _detalleService: DetalleService) { }
 
-  @Get()
-  getHello(): string {
-    return "Hola Producto";
+  @Get('/factura')
+  async getAllProducts(@Res() res) {
+    //const productsList = await this._productoService.buscarTodo();
+    res.render('vistas_factura/gestion_factura');
   }
   @Post('/crear')
   async crearDetalle(){

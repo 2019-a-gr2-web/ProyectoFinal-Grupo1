@@ -2150,15 +2150,15 @@
         "signature": "8b512ac7f3d67a76a1ebea9bd903eaa9588e882b2799d1ade066a559bd0764a1"
       },
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.controller.ts": {
-        "version": "29a94df4103708a119626f184ad8db5237a62f87ed8912e6b3ddeba6c8639a77",
-        "signature": "fc65480b5c14576f96b77952ad89a37c31f7c8cb994e1e64fecff0a502ef438a"
+        "version": "17a8b4dec067c5cdc0082b6f34d3efbcae281b7676fe27265acfdf3d2f3456b9",
+        "signature": "d3e30cdc3ca8888a8aea3ab7bb4cbfe049efac4dfe0df784538b403e1aa00983"
       },
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.module.ts": {
         "version": "acfcaaf162690020c45d34e32d0776d1f6b1203bb2b48800177f75e78165ee76",
         "signature": "6f322b6ff408e2ad83f2065b8fcbdbdf011f504869af062cd80af949ec192238"
       },
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/app.module.ts": {
-        "version": "3ad66ee20e3247c6df664bf17547043aff8212b7bab63b7fc0d473bb3ada1ac3",
+        "version": "c527e8c5ce299d4630e3ffe7d8602fff60e7aff479d4cef479ffcbb3737dd092",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88"
       },
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/core/adapters/http-adapter.d.ts": {
@@ -2330,7 +2330,7 @@
         "signature": "e3cd60be3c4f95c43420be67eaa21637585b7c1a8129f9b39983bbd294f9513c"
       },
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/main.ts": {
-        "version": "c665da31f05e1606d4881fbff1e3070e30612b61f0c8e8c6f49fb514b2173b32",
+        "version": "898d2d77e306b8275f15b27fd5a838b38ea03bda722a05866a4ec7736ceb1711",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
       },
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/connect/index.d.ts": {
@@ -10453,10 +10453,8 @@
           }
         ]
       ],
+      "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.controller.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.module.ts",
-      "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.controller.ts",
-      "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.module.ts",
-      "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/app.module.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/core/adapters/index.d.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/core/constants.d.ts",
@@ -10499,7 +10497,6 @@
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/platform-express/multer/multer.module.d.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/platform-express/multer/index.d.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/platform-express/index.d.ts",
-      "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/main.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/connect/index.d.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/body-parser/index.d.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/cookiejar/index.d.ts",
@@ -10512,7 +10509,10 @@
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/json5/index.d.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/superagent/index.d.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/supertest/index.d.ts",
-      "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.controller.ts"
+      "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.controller.ts",
+      "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.module.ts",
+      "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/app.module.ts",
+      "c:/users/jose1/documents/github/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/main.ts"
     ]
   },
   "version": "3.4.3"
