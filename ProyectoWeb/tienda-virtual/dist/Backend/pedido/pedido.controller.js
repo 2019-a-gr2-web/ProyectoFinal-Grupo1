@@ -35,25 +35,18 @@ let PedidoController = class PedidoController {
     }
     crearPedido(res, req) {
         return __awaiter(this, void 0, void 0, function* () {
-            const pedido = {
-                direccionCliente: "Barrio San Carlos",
-                identificacion: "1723882039",
-            };
-            const response = yield this._pedidoService.crearPedido(pedido);
-            console.log(response.idPedido);
-            const producto = yield this._productoService.getProductById(req.params.idProducto);
-            console.log(producto);
-            console.log("Producto ID", req.params.idProducto);
-            const detalle = {
-                cantidadProducto: 2,
-                precioDetalle: producto.PVP * 2,
-                producto: producto.idProducto,
-                pedido: response.idPedido,
-            };
-            const responseDetalle = yield this._detalleService.crear(detalle);
-            console.log(responseDetalle);
-            const respon = yield this._detalleService.buscarTodo({ idDetalle: responseDetalle.idDetalle });
-            console.log("Detalles", respon);
+            const existePedidoPendiente = yield this._pedidoService.buscarPedidoIniciado({ estado: 'Iniciado' });
+            console.log(existePedidoPendiente);
+            if (existePedidoPendiente) {
+            }
+            else {
+                const pedido = {
+                    direccionCliente: "Barrio San Carlos",
+                    identificacion: "1723882039",
+                };
+                const response = yield this._pedidoService.crearPedido(pedido);
+                console.log(response.idPedido);
+            }
         });
     }
 };
