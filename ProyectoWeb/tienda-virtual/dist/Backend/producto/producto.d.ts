@@ -3,6 +3,7 @@ export interface Producto {
     nombreProducto: string;
     descripcion: string;
     codigoProducto: string;
-    PVP: number;
+    PVP: any | number;
     imagenProducto: any;
+    tipo?: 'Hombre' | 'Mujer' | 'Niño';
 }

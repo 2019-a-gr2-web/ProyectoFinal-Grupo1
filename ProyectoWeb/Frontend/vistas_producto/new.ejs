@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
     <script>
         function validarArchivos() {
             const archivo = document.getElementById('archivo');
@@ -34,7 +33,6 @@
                 reader.readAsDataURL(file);
             }
         }
-
     </script>
 
     <div>
@@ -48,46 +46,62 @@
     </div>
 
     <div class="container">
-        <form  action="/tiendavirtual/producto/create" method="post">
+        <form action="/tiendavirtual/producto/create" method="post">
             <div class="form-group">
                 <label for="nombreProducto">Nombre del Producto</label>
                 <input type="name" class="form-control" id="nombreProducto" name="nombreProducto"
                     placeholder="Nombre del producto">
             </div>
+
+            <div class="form-group">
+                <label id="tipo" for="tipo">
+                    Ropa Para :
+                </label>
+
+                <select name="tipo" id="tipo" class="form-control">
+                    <option value="0">Tipo de ropa para:</option>
+                    <option value="Hombre">Hombre</option>
+                    <option value="Mujer">Mujer</option>
+                    <option value="Niño">Niño</option>
+                </select>
+            </div>
             <div class="form-group">
                 <label for="descripcionProducto">Descripcion</label>
-                <input type="description" class="form-control" id="descripcion" name="descripcion"
-                    placeholder="Descripcion del producto">
+                <textarea 
+                class="form-control" 
+                aria-label="With textarea" 
+                id="descripcion" 
+                name="descripcion"
+                rows="5"
+                    placeholder="Descripcion del producto"></textarea>
             </div>
             <div class="form-group">
                 <label for="codigoProducto">Codigo</label>
-                <input type="code" class="form-control" id="codigoProducto" name="codigoProducto" placeholder="Codigo del producto">
+                <input type="code" class="form-control" id="codigoProducto" name="codigoProducto"
+                    placeholder="Codigo del producto">
             </div>
             <div class="form-group">
                 <label for="precioProducto">PVP</label>
-                <input type="number" 
-                class="form-control" 
-                id="precioProducto" 
-                name="PVP"
-                step="0.01"
-                placeholder="Precio de Venta al Publico">
+                <input type="number" class="form-control" id="precioProducto" name="PVP" step="0.01"
+                    placeholder="Precio de Venta al Publico">
             </div>
 
             <div class="form-group">
                 <label id="texto-archivo" for="archivo">
                     Seleccionar Archivo
                 </label>
-                <input id="archivo"  hidden type="file" accept=".jpg" onchange="validarArchivos()">
+                <input id="archivo" hidden type="file" accept=".jpg" onchange="validarArchivos()">
             </div>
             <div hidden>
-                <input id="imagenProducto" type="text" name="imagenProducto" >
+                <input id="imagenProducto" type="text" name="imagenProducto">
             </div>
 
             <div class="form-group">
                 <img id="imagen-muestra" name="imagenProducto" src="" width="300px" height="300px" alt="">
             </div>
-
-            <button id="create" type="submit" class="btn btn-primary">Crear</button>
+            <div>
+                <button id="create" type="submit" class="btn btn-primary">Crear</button>
+            </div>
         </form>
     </div>
 

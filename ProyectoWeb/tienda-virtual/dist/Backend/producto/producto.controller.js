@@ -43,6 +43,31 @@ let ProductoController = class ProductoController {
             });
         });
     }
+    getAllProductsHome(res, tipo) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (tipo !== "All") {
+                var productsList = yield this._productoService.buscarTodo();
+                var productsListFilter = yield this._productoService.buscarTodo({ tipo: tipo });
+                res.render('vistas_producto/home', {
+                    productos: productsList,
+                    productosFiltrados: productsListFilter,
+                });
+            }
+            else if (tipo === "All" || typeof (tipo) == undefined) {
+                const productsList = yield this._productoService.buscarTodo();
+                res.render('vistas_producto/home', {
+                    productos: productsList,
+                    productosFiltrados: productsList,
+                });
+            }
+        });
+    }
+    deleteProduct(res, producto) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield this._productoService.eliminar(producto);
+            res.redirect('/tiendavirtual/producto/all');
+        });
+    }
     deleteProductGet(res, req) {
         return __awaiter(this, void 0, void 0, function* () {
             yield this._productoService.eliminar(req.params.idProducto);
@@ -73,7 +98,6 @@ let ProductoController = class ProductoController {
     getProductDescription(res, req) {
         return __awaiter(this, void 0, void 0, function* () {
             const producto = yield this._productoService.getProductById({ idProducto: req.params.idProducto });
-            console.log(producto.nombreProducto);
             res.render('vistas_producto/description', {
                 producto: producto,
             });
@@ -106,6 +130,20 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], ProductoController.prototype, "getAllProducts", null);
+__decorate([
+    common_1.Get('/home'),
+    __param(0, common_1.Res()), __param(1, common_1.Query('tipo')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, String]),
+    __metadata("design:returntype", Promise)
+], ProductoController.prototype, "getAllProductsHome", null);
+__decorate([
+    common_1.Post('/delete'),
+    __param(0, common_1.Res()), __param(1, common_1.Body('producto')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], ProductoController.prototype, "deleteProduct", null);
 __decorate([
     common_1.Get('/delete/:idProducto'),
     __param(0, common_1.Res()), __param(1, common_1.Req()),

@@ -1,5 +1,5 @@
 import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
-import { ProductoPedidoEntity } from "../productoToPedido/producto_pedido.entity";
+import { DetalleEntity } from "../productoToPedido/producto_pedido.entity";
 
 @Entity('bd_producto') // Nombre tabla
 export class ProductoEntity {
@@ -36,7 +36,7 @@ export class ProductoEntity {
         scale: 2,
         default: '0',
     })
-    PVP: number;
+    PVP: any;
 
 
     @Column({
@@ -45,13 +45,20 @@ export class ProductoEntity {
     })
     imagenProducto: any;
 
+    @Column({
+        type: 'varchar',
+        length: "10",
+        name: 'tipo',
+    })
+    tipo: 'Hombre'|'Mujer'|'Niño';
+
    /* @ManyToOne(type => TipoEntity, tipo => tipo.producto)
     tipoId: TipoEntity; 
      @OneToMany(type => BodegaProductoEntity, bodegaProducto => bodegaProducto)
     bodegaProductos: BodegaProductoEntity[]
     */
-    @OneToMany(type => ProductoPedidoEntity, (productoPedido) => productoPedido.producto)
-    productoPedido: ProductoPedidoEntity[]
+    @OneToMany(type => DetalleEntity, (productoPedido) => productoPedido.producto)
+    productoPedido: DetalleEntity[]
 
    
 

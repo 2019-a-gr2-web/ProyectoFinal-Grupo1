@@ -1,30 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-
-    <title>Description</title>
-
+    <title>Tienda Virtual</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css "
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
 </head>
 
 <body>
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="<%=producto.imagenProducto%>" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title"><%=producto.nombreProducto%></h5>
-            <p class="card-text"><%=producto.descripcion%></p>
-            <p class="card-text"><%=producto.PVP%></p>
-            <p class="card-text"><%=producto.codigoProducto%></p>
-            <a href="#" class="btn btn-primary">Añadir al carrito</a>
+    <%- include('../partials/header') %>
+    <i class="fas fa-shopping-cart"></i>
+    <div class="container">
+        <br>
+        <br>
+        <div class="card text-center">
+            <h3>Informacion detallada Producto <i class="fas fa-leaf"></i> </h3>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="card text-center">
+                    <img src="<%=producto.imagenProducto%>" width="400px" height="400px">
+                </div>
+            </div>
+            <div class="col-sm-4  center">
+                <h5 class="card-title text-center"><%=producto.nombreProducto%></h5>
+                <h6> Descripcion:</h6>
+                <p class="card-text"><%=producto.descripcion%></p>
+                <h6> Precio:</h6>
+                <p class="card-text"> $ <%=producto.PVP%></p>
+                <h6> Codigo:</h6>
+                <p class="card-text"><%=producto.codigoProducto%></p>
+                <br>
+                <br>
+                <div class="text-center">
+                    <a href="/tiendavirtual/pedido/crear/<%=producto.idProducto%>">
+                        <button class="btn btn-danger center">
+                            Añadir al carrito
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3 center">
+                <div class="card-header bg-dark text-white">
+                    <h5><i class="far fa-chart-bar"></i> Tienda </h5>
+                </div>
+                <div class="card-body">
+                    <img src="https://i.blogs.es/c8ceab/movistar/450_1000.jpg" class="card-img-top mx-auto  ">
+                    <p>Promoción: Podrá promocionar todos sus servicios enfocado en el segmento objetivo.</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
-
 </html>

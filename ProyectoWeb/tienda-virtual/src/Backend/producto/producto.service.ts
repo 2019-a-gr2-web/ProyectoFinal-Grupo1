@@ -19,9 +19,10 @@ export class ProductoService {
       codigoProducto: 'Producto 1',
       PVP: 25.20,
       imagenProducto:'',
+      tipo:'Hombre'
     };
     this.crear(producto);
-    const respuestaUpdate = this.buscarTodo({ idProducto: "2" });
+    const respuestaUpdate = this.buscarTodo();
     respuestaUpdate
       .then(
         (datos) => {

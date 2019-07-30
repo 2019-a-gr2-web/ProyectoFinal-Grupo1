@@ -1,9 +1,9 @@
 import { Entity, Column, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
-import { ProductEntity } from "dist/Backend/producto/product.entity";
 import { PedidoEntity } from "../pedido/pedido.entity";
+import { ProductoEntity } from "../producto/producto.entity";
 
 @Entity('producto_pedido')
-export class ProductoPedidoEntity{
+export class DetalleEntity{
     @PrimaryGeneratedColumn({
         name:'id_detalle'
     })
@@ -29,8 +29,8 @@ export class ProductoPedidoEntity{
 
    
 
-    @ManyToOne(type => ProductEntity, producto => producto.productoPedido)
-    public producto!: ProductEntity;
+    @ManyToOne(type => ProductoEntity, producto => producto.productoPedido)
+    public producto!: ProductoEntity;
 
    
     @ManyToOne(type => PedidoEntity, pedido => pedido.productoPedido)
