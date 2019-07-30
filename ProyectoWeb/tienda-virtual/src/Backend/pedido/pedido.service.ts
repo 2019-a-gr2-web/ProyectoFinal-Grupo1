@@ -18,7 +18,7 @@ export class PedidoService {
   buscarPedidoIniciado(parametrosBusqueda?): Promise<PedidoEntity> {
     return this._pedidoRepository.findOne(parametrosBusqueda);
   }
-  crearPedido(nuevoPedido: Pedido): Promise<Pedido> {
+  crearPedido(nuevoPedido: Pedido): Promise<PedidoEntity> {
     const objetoEntidad = this._pedidoRepository.create(nuevoPedido);
     return this._pedidoRepository.save(objetoEntidad);
   }

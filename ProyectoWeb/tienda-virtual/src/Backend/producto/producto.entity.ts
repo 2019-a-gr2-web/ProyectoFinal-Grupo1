@@ -58,7 +58,7 @@ export class ProductoEntity {
     bodegaProductos: BodegaProductoEntity[]
     */
     @OneToMany(type => DetalleEntity, (productoPedido) => productoPedido.producto)
-    productoPedido: DetalleEntity[]
+    public productoPedido!: DetalleEntity[]
 
    
 

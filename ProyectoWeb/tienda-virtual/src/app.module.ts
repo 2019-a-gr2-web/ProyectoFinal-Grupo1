@@ -25,7 +25,7 @@ import { DetalleModule } from './Backend/productoToPedido/producto_pedido.module
       host: 'localhost',
       port: 3306,
       username: 'root',
-      password: '',
+      password: 'root',
       database: 'proyecto',
       entities: [
         ProductoEntity,

@@ -56,6 +56,6 @@ export class PedidoEntity {
     estado: 'PorDespachar'|'Iniciado'|'Despachado'|'Cancelado';
 
     @OneToMany(type => DetalleEntity, (productoPedido) => productoPedido.pedido)
-    productoPedido: DetalleEntity[]
+    public productoPedido!: DetalleEntity[]
 
 }

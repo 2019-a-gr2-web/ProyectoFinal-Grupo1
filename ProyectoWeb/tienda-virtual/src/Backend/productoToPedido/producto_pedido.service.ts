@@ -17,7 +17,7 @@ export class DetalleService {
     return 'Hello World!';
   }
 
-  crear(nuevoDetalle?: Detalle): Promise<DetalleEntity> {
+  crear(nuevoDetalle?: DetalleEntity): Promise<DetalleEntity> {
     const objetoEntidad = this._detalleRepository.create(nuevoDetalle);
     return this._detalleRepository.save(objetoEntidad);
   }

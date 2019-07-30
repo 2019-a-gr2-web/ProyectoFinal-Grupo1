@@ -7,7 +7,7 @@ export class DetalleEntity{
     @PrimaryGeneratedColumn({
         name:'id_detalle'
     })
-    public idDetalle!: number;
+    idDetalle: number;
 
     @Column({
         type: 'decimal',
