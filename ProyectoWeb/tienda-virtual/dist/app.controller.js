@@ -30,7 +30,6 @@ let AppController = class AppController {
         res.redirect('/tiendavirtual/producto/home?tipo=All');
     }
     protegida(session, res) {
-        console.log("Portegida", session);
         if (session.username) {
             res.redirect('/tiendavirtual/producto/home?tipo=All');
         }

@@ -32,4 +32,7 @@ export class PedidoService {
   buscarPedidoPorId(parametrosBusqueda?): Promise<PedidoEntity> {
     return this._pedidoRepository.findOne(parametrosBusqueda);
   }
+  buscarPedidoPorUsuario(parametrosBusqueda?): Promise<PedidoEntity[]> {
+    return this._pedidoRepository.find(parametrosBusqueda);
+  }
 }

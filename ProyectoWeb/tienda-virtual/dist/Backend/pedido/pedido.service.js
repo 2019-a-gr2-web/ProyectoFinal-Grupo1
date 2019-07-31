@@ -40,6 +40,9 @@ let PedidoService = class PedidoService {
     buscarPedidoPorId(parametrosBusqueda) {
         return this._pedidoRepository.findOne(parametrosBusqueda);
     }
+    buscarPedidoPorUsuario(parametrosBusqueda) {
+        return this._pedidoRepository.find(parametrosBusqueda);
+    }
 };
 PedidoService = __decorate([
     common_1.Injectable(),

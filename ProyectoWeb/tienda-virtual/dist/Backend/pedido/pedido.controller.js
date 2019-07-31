@@ -40,8 +40,8 @@ let PedidoController = class PedidoController {
             if (existePedidoPendiente) {
                 const detalle = {
                     idDetalle: 0,
-                    cantidadProducto: 2,
-                    precioDetalle: productoActual.PVP * 2,
+                    cantidadProducto: 1,
+                    precioDetalle: productoActual.PVP * 1,
                     producto: productoActual,
                     pedido: existePedidoPendiente,
                     productoId: productoActual.idProducto,
@@ -56,12 +56,15 @@ let PedidoController = class PedidoController {
                     identificacion: session.identificacion,
                     nombreCliente: session.nombre,
                     direccionCliente: session.direccion,
+                    idCliente: session.idUsuario,
+                    subtotal: 150,
+                    total: 168,
                 };
                 const response = yield this._pedidoService.crearPedido(pedido);
                 const detalle = {
                     idDetalle: 0,
-                    cantidadProducto: 2,
-                    precioDetalle: productoActual.PVP * 2,
+                    cantidadProducto: 1,
+                    precioDetalle: productoActual.PVP * 1,
                     producto: productoActual,
                     pedido: response,
                     productoId: productoActual.idProducto,
@@ -86,11 +89,17 @@ let PedidoController = class PedidoController {
                     productoPorDetalle.push(detalle.productoId);
                 });
                 const productos = yield this._productoService.buscarPorId(productoPorDetalle);
+                console.log(productos);
+                var total = productos.reduce((acumulado, actual) => {
+                    return acumulado + parseInt(actual.PVP);
+                }, 0);
+                console.log(total);
                 res.render('vistas_pedido/verCarrito', {
                     detalles: detallesDelPedidoActual,
                     listaDeProductos: productos,
                     usuario: session,
                     pedido: existePedidoPendiente,
+                    total: total,
                 });
             }
             else {
@@ -105,11 +114,18 @@ let PedidoController = class PedidoController {
         return __awaiter(this, void 0, void 0, function* () {
             const idPedido = req.params.idProducto;
             const responsePedido = yield this._pedidoService.buscarPedidoPorId({ idPedido: idPedido });
-            responsePedido.estado = 'PorDespachar';
+            responsePedido.estado = 'Despachado';
             responsePedido.usuario = session.idUsuario;
             const guardarPedido = yield this._pedidoService.actualizarPedido(responsePedido);
-            console.log(guardarPedido);
             res.redirect('/tiendavirtual/pedido/facturagenerada');
+        });
+    }
+    vercompras(res, session) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const listaPedidos = yield this._pedidoService.buscarPedidoPorUsuario({ idCliente: session.idUsuario });
+            res.render('vistas_pedido/listaPedidoPorUsuario', {
+                pedidos: listaPedidos,
+            });
         });
     }
 };
@@ -156,6 +172,13 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object, Object]),
     __metadata("design:returntype", Promise)
 ], PedidoController.prototype, "pagarFactura", null);
+__decorate([
+    common_1.Get('vercompras'),
+    __param(0, common_1.Res()), __param(1, common_1.Session()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], PedidoController.prototype, "vercompras", null);
 PedidoController = __decorate([
     common_1.Controller('/tiendavirtual/pedido'),
     __metadata("design:paramtypes", [pedido_service_1.PedidoService,

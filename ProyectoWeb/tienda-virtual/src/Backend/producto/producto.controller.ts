@@ -15,6 +15,7 @@ export class ProductoController {
   @Get('/all')
   async getAllProducts(@Res() res,@Session() session) {
     const productsList = await this._productoService.buscarTodo();
+    console.log(session);
     res.render('vistas_producto/main-view',
       {
         productos: productsList,

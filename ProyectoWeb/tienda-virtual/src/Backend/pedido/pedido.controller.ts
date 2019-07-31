@@ -33,8 +33,8 @@ export class PedidoController {
     if (existePedidoPendiente) {
       const detalle: DetalleEntity = {
         idDetalle: 0,
-        cantidadProducto: 2,
-        precioDetalle: productoActual.PVP * 2,
+        cantidadProducto: 1,
+        precioDetalle: productoActual.PVP * 1,
         producto: productoActual,
         pedido: existePedidoPendiente,
         productoId: productoActual.idProducto,
@@ -50,8 +50,9 @@ export class PedidoController {
         identificacion: session.identificacion,
         nombreCliente: session.nombre,
         direccionCliente: session.direccion,
-        //subtotal?: number;
-        //total?: number;
+        idCliente: session.idUsuario,
+        subtotal: 150,
+        total: 168,
         //fecha?: Date;
         //estado?: 'PorDespachar'|'Iniciado'|'Despachado'|'Cancelado';
       }
@@ -59,8 +60,8 @@ export class PedidoController {
 
       const detalle: DetalleEntity = {
         idDetalle: 0,
-        cantidadProducto: 2,
-        precioDetalle: productoActual.PVP * 2,
+        cantidadProducto: 1,
+        precioDetalle: productoActual.PVP * 1,
         producto: productoActual,
         pedido: response,
         productoId: productoActual.idProducto,
@@ -83,20 +84,32 @@ export class PedidoController {
   @Get('vercarrito')
   async verCarrito(@Res() res, @Session() session) {
     const existePedidoPendiente = await this._pedidoService.buscarPedidoIniciado({ estado: 'Iniciado' });
-   // console.log(existePedidoPendiente)
+    // console.log(existePedidoPendiente)
     if (existePedidoPendiente) {
       const detallesDelPedidoActual = await this._detalleService.buscarTodo({ pedido: existePedidoPendiente });
       const productoPorDetalle = [];
       detallesDelPedidoActual.forEach(detalle => {
         productoPorDetalle.push(detalle.productoId);
+
       });
 
       const productos = await this._productoService.buscarPorId(productoPorDetalle);
+
+      console.log(productos)
+
+      
+      var total = productos.reduce((acumulado, actual) => {
+        return acumulado + parseInt(actual.PVP)
+      },0)
+
+      console.log(total)
+
       res.render('vistas_pedido/verCarrito', {
         detalles: detallesDelPedidoActual,
         listaDeProductos: productos,
         usuario: session,
-        pedido: existePedidoPendiente, 
+        pedido: existePedidoPendiente,
+        total: total,
       })
     } else {
       return "No exiten Productos"
@@ -109,16 +122,24 @@ export class PedidoController {
   }
 
   @Get('pagarfactura/:idProducto')
-  async pagarFactura(@Res() res, @Req() req, @Session() session){
+  async pagarFactura(@Res() res, @Req() req, @Session() session) {
     const idPedido = req.params.idProducto
-    const responsePedido =  await this._pedidoService.buscarPedidoPorId({idPedido:idPedido})
-    responsePedido.estado = 'PorDespachar';
-    responsePedido.usuario =  session.idUsuario;
+    const responsePedido = await this._pedidoService.buscarPedidoPorId({ idPedido: idPedido })
+    responsePedido.estado = 'Despachado';
+    responsePedido.usuario = session.idUsuario;
 
     const guardarPedido = await this._pedidoService.actualizarPedido(responsePedido);
-    console.log(guardarPedido);
-
     res.redirect('/tiendavirtual/pedido/facturagenerada');
 
+  }
+
+  @Get('vercompras')
+  async vercompras(@Res() res, @Session() session) {
+
+    const listaPedidos = await this._pedidoService.buscarPedidoPorUsuario({ idCliente: session.idUsuario })
+
+    res.render('vistas_pedido/listaPedidoPorUsuario', {
+      pedidos: listaPedidos,
+    })
   }
 }

@@ -4,4 +4,5 @@ export declare class DetalleController {
     constructor(_detalleService: DetalleService);
     getAllProducts(res: any): Promise<void>;
     crearDetalle(): Promise<void>;
+    borrardetalle(res: any, req: any): Promise<void>;
 }

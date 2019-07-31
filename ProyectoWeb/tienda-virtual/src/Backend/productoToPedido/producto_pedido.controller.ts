@@ -16,4 +16,11 @@ export class DetalleController {
   async crearDetalle(){
 
   }
+  @Get('borrardetalle/:idDetalle')
+  async borrardetalle(@Res() res, @Req() req) {
+  
+    const buscarDetalle = await this._detalleService.buscarTodo({idDetalle:req.params.idDetalle})
+    const productsList = await this._detalleService.eliminar(buscarDetalle);
+    res.redirect('/tiendavirtual/pedido/vercarrito');
+  }
 }

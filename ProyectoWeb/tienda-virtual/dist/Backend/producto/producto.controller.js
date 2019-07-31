@@ -29,6 +29,7 @@ let ProductoController = class ProductoController {
     getAllProducts(res, session) {
         return __awaiter(this, void 0, void 0, function* () {
             const productsList = yield this._productoService.buscarTodo();
+            console.log(session);
             res.render('vistas_producto/main-view', {
                 productos: productsList,
                 usuario: session,

@@ -35,6 +35,13 @@ let DetalleController = class DetalleController {
         return __awaiter(this, void 0, void 0, function* () {
         });
     }
+    borrardetalle(res, req) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const buscarDetalle = yield this._detalleService.buscarTodo({ idDetalle: req.params.idDetalle });
+            const productsList = yield this._detalleService.eliminar(buscarDetalle);
+            res.redirect('/tiendavirtual/pedido/vercarrito');
+        });
+    }
 };
 __decorate([
     common_1.Get('/factura'),
@@ -49,6 +56,13 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], DetalleController.prototype, "crearDetalle", null);
+__decorate([
+    common_1.Get('borrardetalle/:idDetalle'),
+    __param(0, common_1.Res()), __param(1, common_1.Req()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], DetalleController.prototype, "borrardetalle", null);
 DetalleController = __decorate([
     common_1.Controller('tiendavirtual/detalle'),
     __metadata("design:paramtypes", [producto_pedido_service_1.DetalleService])

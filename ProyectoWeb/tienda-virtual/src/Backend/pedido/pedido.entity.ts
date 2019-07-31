@@ -49,16 +49,17 @@ export class PedidoEntity {
         default: '0',
     })
     total: number;
+
     @Column({
-        type: 'number',
-        name: 'id_usuario',
+        type: 'numeric',
+        name: 'id_cliente',
     })
-    idUsuario: number;
+    idCliente: number;
 
     @Column({
         type: 'date',
         name: 'fecha',
-        default: '2019-07-28'
+        default: '2019-07-31'
     })
     fecha: Date;
 

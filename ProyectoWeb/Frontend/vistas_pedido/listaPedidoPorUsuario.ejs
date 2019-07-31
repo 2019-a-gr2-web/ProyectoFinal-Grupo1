@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tienda Virtual</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+    <div class="container">
+
+    </div>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Resumen de Compras !</h1>
+            <p class="lead">A continuacion se visualizaran todas las compras realizadas por el usuario actual.</p>
+            <hr class="my-4">
+            <p></p>
+            <a class="btn btn-primary btn-lg" href="/tiendavirtual/producto/home?tipo=All" role="button">Home</a>
+        </div>
+
+        <div>
+            <a href="/tiendavirtual/producto/create">
+                <button class="btn btn-info"> Crear </button>
+            </a>
+        </div>
+        <br>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Id Pedido</th>
+                    <th>Direccion</th>
+                    <th>Identificacion</th>
+                    <th>Subtotal</th>
+                    <th>Total</th>
+                    <th>Fecha</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <% pedidos.forEach((pedido)=>{ %>
+            <tr>
+                <td> <%=pedido.idPedido%> </td>
+                <td> <%=pedido.direccionCliente%> </td>
+                <td> <%=pedido.identificacion%> </td>
+                <td> <%=pedido.subtotal%> </td>
+                <td> <%=pedido.total%> </td>
+                <td> <%=pedido.fecha%> </td>
+                <td> <%=pedido.estado%> </td>
+                <td>
+                
+            </tr>
+            <% })%>
+        </table>
+    </div>
+
+
+</body>
+
+</html>

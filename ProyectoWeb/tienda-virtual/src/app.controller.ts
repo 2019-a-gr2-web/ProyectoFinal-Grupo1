@@ -33,8 +33,6 @@ export class AppController {
         @Session() session,
         @Res() res,
     ) {
-      console.log("Portegida",session)
-
        if (session.username) {
             res.redirect('/tiendavirtual/producto/home?tipo=All');
         } else {

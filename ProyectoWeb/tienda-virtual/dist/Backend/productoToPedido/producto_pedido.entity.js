@@ -25,8 +25,7 @@ __decorate([
         type: 'decimal',
         name: 'cantidad_producto',
         precision: 10,
-        scale: 2,
-        default: '0',
+        default: 0,
     }),
     __metadata("design:type", Number)
 ], DetalleEntity.prototype, "cantidadProducto", void 0);
@@ -35,7 +34,6 @@ __decorate([
         type: 'decimal',
         name: 'precio_detalle',
         precision: 10,
-        scale: 2,
         default: '0',
     }),
     __metadata("design:type", Number)

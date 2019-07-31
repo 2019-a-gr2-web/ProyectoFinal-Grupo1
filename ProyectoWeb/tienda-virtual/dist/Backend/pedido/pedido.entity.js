@@ -66,16 +66,16 @@ __decorate([
 ], PedidoEntity.prototype, "total", void 0);
 __decorate([
     typeorm_1.Column({
-        type: 'number',
-        name: 'id_usuario',
+        type: 'numeric',
+        name: 'id_cliente',
     }),
     __metadata("design:type", Number)
-], PedidoEntity.prototype, "idUsuario", void 0);
+], PedidoEntity.prototype, "idCliente", void 0);
 __decorate([
     typeorm_1.Column({
         type: 'date',
         name: 'fecha',
-        default: '2019-07-28'
+        default: '2019-07-31'
     }),
     __metadata("design:type", Date)
 ], PedidoEntity.prototype, "fecha", void 0);

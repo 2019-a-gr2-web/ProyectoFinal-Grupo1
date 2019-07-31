@@ -13,8 +13,7 @@ export class DetalleEntity{
         type: 'decimal',
         name: 'cantidad_producto',
         precision: 10,
-        scale: 2,
-        default: '0',
+        default: 0,
     })
     cantidadProducto: number;
 
@@ -22,7 +21,6 @@ export class DetalleEntity{
         type: 'decimal',
         name: 'precio_detalle',
         precision: 10,
-        scale: 2,
         default: '0',
     })
     precioDetalle: number;

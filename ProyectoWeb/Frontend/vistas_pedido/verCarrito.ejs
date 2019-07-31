@@ -68,7 +68,7 @@
                     <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Total</label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" value="<%=total%>">
                         </div>
                     </div>
 
@@ -108,7 +108,7 @@
                             <td> <%=detalle.cantidadProducto%> </td>
                             <td> <%=detalle.precioDetalle%> </td>
                             <td>
-                                <a href="">
+                                <a href="/tiendavirtual/detalle/borrardetalle/<%=detalle.idDetalle%>">
                                     <button class="btn btn-danger"> X </button>
                                 </a>
                             </td>
