@@ -38,6 +38,16 @@ let AppController = class AppController {
             res.redirect('/tiendavirtual/login');
         }
     }
+    logout(res, session) {
+        session.idUsuario = undefined;
+        session.username = undefined;
+        session.nombre = undefined;
+        session.apellido = undefined;
+        session.direccion = undefined;
+        session.identificacion = undefined;
+        session.destroy();
+        res.redirect('/tiendavirtual/login');
+    }
 };
 __decorate([
     common_1.Get('login'),
@@ -68,6 +78,14 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "protegida", null);
+__decorate([
+    common_1.Get('logout'),
+    __param(0, common_1.Res()),
+    __param(1, common_1.Session()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "logout", null);
 AppController = __decorate([
     common_1.Controller('tiendavirtual'),
     __metadata("design:paramtypes", [app_service_1.AppService])

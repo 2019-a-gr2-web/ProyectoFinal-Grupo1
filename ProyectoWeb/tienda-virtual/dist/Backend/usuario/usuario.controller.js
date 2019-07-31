@@ -35,8 +35,8 @@ let UsuarioController = class UsuarioController {
             console.log(usuarioEncontrado);
             if (usuarioEncontrado) {
                 if (usuario.password === usuarioEncontrado.password) {
-                    console.log("SI");
-                    session.username = usuarioEncontrado.username;
+                    session.idUsuario = usuarioEncontrado.idUsuario,
+                        session.username = usuarioEncontrado.username;
                     session.nombre = usuarioEncontrado.nombre;
                     session.apellido = usuarioEncontrado.apellido;
                     session.direccion = usuarioEncontrado.direccion;

@@ -29,4 +29,7 @@ export class PedidoService {
   eliminarPedido(pedidoEliminado) {
     return this._pedidoRepository.delete(pedidoEliminado);
   }
+  buscarPedidoPorId(parametrosBusqueda?): Promise<PedidoEntity> {
+    return this._pedidoRepository.findOne(parametrosBusqueda);
+  }
 }

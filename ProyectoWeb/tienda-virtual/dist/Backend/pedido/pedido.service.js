@@ -37,6 +37,9 @@ let PedidoService = class PedidoService {
     eliminarPedido(pedidoEliminado) {
         return this._pedidoRepository.delete(pedidoEliminado);
     }
+    buscarPedidoPorId(parametrosBusqueda) {
+        return this._pedidoRepository.findOne(parametrosBusqueda);
+    }
 };
 PedidoService = __decorate([
     common_1.Injectable(),

@@ -10,4 +10,5 @@ export declare class PedidoService {
     crearPedido(nuevoPedido: Pedido): Promise<PedidoEntity>;
     actualizarPedido(pedidoActualizado: any): Promise<PedidoEntity>;
     eliminarPedido(pedidoEliminado: any): Promise<import("typeorm").DeleteResult>;
+    buscarPedidoPorId(parametrosBusqueda?: any): Promise<PedidoEntity>;
 }

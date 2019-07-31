@@ -23,7 +23,8 @@ export class UsuarioController {
 
         if (usuarioEncontrado) {
             if (usuario.password === usuarioEncontrado.password) {
-                console.log("SI")
+                
+                session.idUsuario = usuarioEncontrado.idUsuario,
                 session.username = usuarioEncontrado.username;
                 session.nombre = usuarioEncontrado.nombre;
                 session.apellido = usuarioEncontrado.apellido;
@@ -41,6 +42,8 @@ export class UsuarioController {
             res.redirect('/tiendavirtual/login?mensaje=El Usuario No existe')
         }
     }
+
+    
 
 
 }

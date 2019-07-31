@@ -41,4 +41,21 @@ export class AppController {
             res.redirect('/tiendavirtual/login');
         }
     }
+
+
+    @Get('logout')
+    logout(
+        @Res() res,
+        @Session() session,
+    ) {
+
+        session.idUsuario = undefined;
+        session.username = undefined;
+        session.nombre = undefined;
+        session.apellido = undefined;
+        session.direccion = undefined;
+        session.identificacion = undefined;
+        session.destroy();
+        res.redirect('/tiendavirtual/login');
+    }
 }

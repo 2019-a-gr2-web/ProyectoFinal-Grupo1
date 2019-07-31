@@ -6,4 +6,5 @@ export declare class AppController {
     helloWorld(): string;
     homeVista(res: any): void;
     protegida(session: any, res: any): void;
+    logout(res: any, session: any): void;
 }

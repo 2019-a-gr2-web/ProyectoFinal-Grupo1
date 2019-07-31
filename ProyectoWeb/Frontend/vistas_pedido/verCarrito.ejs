@@ -6,6 +6,11 @@
 <body>
     <%- include('../partials/header') %>
     <div class="container">
+        <br>
+        <br>
+        <br>
+        <br>
+
         <div class="card">
             <div class="row">
                 <!--Primera Columna-->
@@ -28,15 +33,17 @@
                         <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Identificacion</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" name="identificacion" value="<%=usuario.identificacion%>"">
+                                <input type="text" class="form-control" name="identificacion"
+                                    value="<%=usuario.identificacion%>"">
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label for="correo" class="col-sm-3 col-form-label">Direccion</label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" name="direccion" value="<%=usuario.direccion%>">
+                        <div class=" form-group row">
+                                <label for="correo" class="col-sm-3 col-form-label">Direccion</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" name="direccion"
+                                        value="<%=usuario.direccion%>">
+                                </div>
                             </div>
-                        </div>
                     </form>
 
                 </div>
@@ -46,7 +53,8 @@
                     <div class="form-group row">
                         <label class="col-sm-3 col-form-label ">Fecha</label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" placeholder="Calle las flores" name="fecha" value="<%=pedido.fecha%>">
+                            <input type="text" class="form-control" placeholder="Calle las flores" name="fecha"
+                                value="<%=pedido.fecha%>">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -63,18 +71,12 @@
                             <input type="text" class="form-control">
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="col-md-12 float-right">
 
-                            <div class="row justify-content-md-center">
-                                <button type="button" class="btn btn-success ">Guardar Datos</button>
-                            </div>
-                            <br>
-                            <div class="row justify-content-md-center">
-                                <button type="button" class="btn btn-secondary ">Añadir Item</button>
-                                </a>
-                            </div>
-                        </div>
+
+                    <div class="row justify-content-md-center">
+                        <a href='/tiendavirtual/pedido/pagarfactura/<%=pedido.idPedido%>'>
+                            <button class="btn btn-success ">Pagar Factura</button>
+                        </a>
                     </div>
                 </div>
                 <!--Fin de la Fila -->
@@ -137,10 +139,5 @@
         <br>
         <br>
         <br>
-        <div class="row justify-content-md-center">
-            <a href="facturagenerada">
-                <button type="button" class="btn btn-success ">Pagar Factura</button>
-            </a>
-        </div>
     </div>
 </body>

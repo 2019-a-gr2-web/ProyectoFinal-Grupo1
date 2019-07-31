@@ -101,6 +101,14 @@ let PedidoController = class PedidoController {
     facturaGenerada(res) {
         res.render('vistas_factura/facturaGenerada');
     }
+    pagarFactura(res, req) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const idPedido = req.params.idProducto;
+            const responsePedido = yield this._pedidoService.buscarPedidoPorId({ idPedido: idPedido });
+            responsePedido.estado = 'PorDespachar';
+            console.log(responsePedido);
+        });
+    }
 };
 __decorate([
     common_1.Get(),
@@ -138,6 +146,13 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], PedidoController.prototype, "facturaGenerada", null);
+__decorate([
+    common_1.Get('pagarfactura/:idProducto'),
+    __param(0, common_1.Res()), __param(1, common_1.Req()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], PedidoController.prototype, "pagarFactura", null);
 PedidoController = __decorate([
     common_1.Controller('/tiendavirtual/pedido'),
     __metadata("design:paramtypes", [pedido_service_1.PedidoService,

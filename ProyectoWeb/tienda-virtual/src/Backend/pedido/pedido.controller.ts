@@ -83,6 +83,7 @@ export class PedidoController {
   @Get('vercarrito')
   async verCarrito(@Res() res, @Session() session) {
     const existePedidoPendiente = await this._pedidoService.buscarPedidoIniciado({ estado: 'Iniciado' });
+   // console.log(existePedidoPendiente)
     if (existePedidoPendiente) {
       const detallesDelPedidoActual = await this._detalleService.buscarTodo({ pedido: existePedidoPendiente });
       const productoPorDetalle = [];
@@ -107,4 +108,13 @@ export class PedidoController {
     res.render('vistas_factura/facturaGenerada')
   }
 
+  @Get('pagarfactura/:idProducto')
+  async pagarFactura(@Res() res, @Req() req){
+    const idPedido = req.params.idProducto
+    const responsePedido =  await this._pedidoService.buscarPedidoPorId({idPedido:idPedido})
+    responsePedido.estado = 'PorDespachar';
+    
+    console.log(responsePedido)
+
+  }
 }
