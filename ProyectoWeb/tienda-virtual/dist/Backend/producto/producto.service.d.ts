@@ -8,6 +8,7 @@ export declare class ProductoService {
     getHello(): string;
     crear(nuevoProducto?: Producto): Promise<Producto>;
     buscarTodo(parametrosBusqueda?: any): Promise<ProductoEntity[]>;
+    buscarPorId(parametrosBusqueda?: any): Promise<ProductoEntity[]>;
     actualizar(productoActualizado: any): Promise<ProductoEntity>;
     eliminar(productoEliminado: any): Promise<import("typeorm").DeleteResult>;
     getProductById(idProducto: any): Promise<ProductoEntity>;

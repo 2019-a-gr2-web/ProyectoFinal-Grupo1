@@ -36,8 +36,19 @@ let PedidoController = class PedidoController {
     crearPedido(res, req) {
         return __awaiter(this, void 0, void 0, function* () {
             const existePedidoPendiente = yield this._pedidoService.buscarPedidoIniciado({ estado: 'Iniciado' });
-            console.log(existePedidoPendiente);
+            const productoActual = yield this._productoService.getProductById({ idProducto: req.params.idProducto });
             if (existePedidoPendiente) {
+                const detalle = {
+                    idDetalle: 0,
+                    cantidadProducto: 2,
+                    precioDetalle: productoActual.PVP * 2,
+                    producto: productoActual,
+                    pedido: existePedidoPendiente,
+                    productoId: productoActual.idProducto,
+                };
+                const respuestaDetalle = yield this._detalleService.crear(detalle);
+                console.log(respuestaDetalle);
+                res.redirect('/tiendavirtual/pedido/modal?pedido=' + existePedidoPendiente.idPedido);
             }
             else {
                 const pedido = {
@@ -45,16 +56,54 @@ let PedidoController = class PedidoController {
                     identificacion: "1723882039",
                 };
                 const response = yield this._pedidoService.crearPedido(pedido);
-                console.log(response.idPedido);
+                const detalle = {
+                    idDetalle: 0,
+                    cantidadProducto: 2,
+                    precioDetalle: productoActual.PVP * 2,
+                    producto: productoActual,
+                    pedido: response,
+                    productoId: productoActual.idProducto,
+                };
+                const respuestaDetalle = yield this._detalleService.crear(detalle);
+                res.redirect('/tiendavirtual/pedido/modal?pedido=' + response.idPedido);
             }
         });
+    }
+    mostartMesajeExito(res, pedido) {
+        res.render('vistas_pedido/confirmarCompra', {
+            idPedido: pedido,
+        });
+    }
+    verCarrito(res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const existePedidoPendiente = yield this._pedidoService.buscarPedidoIniciado({ estado: 'Iniciado' });
+            if (existePedidoPendiente) {
+                const detallesDelPedidoActual = yield this._detalleService.buscarTodo({ pedido: existePedidoPendiente });
+                const productoPorDetalle = [];
+                detallesDelPedidoActual.forEach(detalle => {
+                    productoPorDetalle.push(detalle.productoId);
+                });
+                console.log(productoPorDetalle);
+                const productos = yield this._productoService.buscarPorId(productoPorDetalle);
+                res.render('vistas_pedido/verCarrito', {
+                    detalles: detallesDelPedidoActual,
+                    listaDeProductos: productos,
+                });
+            }
+            else {
+                return "No exiten Productos";
+            }
+        });
+    }
+    facturaGenerada(res) {
+        res.render('vistas_factura/facturaGenerada');
     }
 };
 __decorate([
     common_1.Get(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
-    __metadata("design:returntype", String)
+    __metadata("design:returntype", void 0)
 ], PedidoController.prototype, "getHello", null);
 __decorate([
     common_1.Get('/crear/:idProducto'),
@@ -64,8 +113,29 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], PedidoController.prototype, "crearPedido", null);
+__decorate([
+    common_1.Get('modal'),
+    __param(0, common_1.Res()), __param(1, common_1.Query('pedido')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, String]),
+    __metadata("design:returntype", void 0)
+], PedidoController.prototype, "mostartMesajeExito", null);
+__decorate([
+    common_1.Get('vercarrito'),
+    __param(0, common_1.Res()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
+], PedidoController.prototype, "verCarrito", null);
+__decorate([
+    common_1.Get('facturagenerada'),
+    __param(0, common_1.Res()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], PedidoController.prototype, "facturaGenerada", null);
 PedidoController = __decorate([
-    common_1.Controller('tiendavirtual/pedido'),
+    common_1.Controller('/tiendavirtual/pedido'),
     __metadata("design:paramtypes", [pedido_service_1.PedidoService,
         producto_service_1.ProductoService,
         producto_pedido_service_1.DetalleService])

@@ -8,7 +8,7 @@ export class DetalleEntity{
         name:'id_detalle'
     })
     idDetalle: number;
-
+    
     @Column({
         type: 'decimal',
         name: 'cantidad_producto',
@@ -27,7 +27,11 @@ export class DetalleEntity{
     })
     precioDetalle: number;
 
-   
+    @Column({
+        type: 'int',
+        name: 'producto_id',
+    })
+    productoId: number;
 
     @ManyToOne(type => ProductoEntity, producto => producto.productoPedido)
     public producto!: ProductoEntity;

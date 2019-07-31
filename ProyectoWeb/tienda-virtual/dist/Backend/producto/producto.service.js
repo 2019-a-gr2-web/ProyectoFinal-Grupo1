@@ -20,23 +20,6 @@ let ProductoService = class ProductoService {
     constructor(_productosRepository) {
         this._productosRepository = _productosRepository;
         this.bddProductos = [];
-        const producto = {
-            nombreProducto: 'Producto 1',
-            descripcion: 'Producto 1',
-            codigoProducto: 'Producto 1',
-            PVP: 25.20,
-            imagenProducto: '',
-            tipo: 'Hombre'
-        };
-        this.crear(producto);
-        const respuestaUpdate = this.buscarTodo();
-        respuestaUpdate
-            .then((datos) => {
-            this.bddProductos = datos;
-        })
-            .catch((error) => {
-            console.error('Error:', error);
-        });
     }
     getHello() {
         return 'Hello World!';
@@ -47,6 +30,9 @@ let ProductoService = class ProductoService {
     }
     buscarTodo(parametrosBusqueda) {
         return this._productosRepository.find(parametrosBusqueda);
+    }
+    buscarPorId(parametrosBusqueda) {
+        return this._productosRepository.findByIds(parametrosBusqueda);
     }
     actualizar(productoActualizado) {
         return this._productosRepository.save(productoActualizado);

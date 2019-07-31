@@ -7,7 +7,7 @@ export declare class PedidoService {
     constructor(_pedidoRepository: Repository<PedidoEntity>);
     getHello(): string;
     buscarPedidoIniciado(parametrosBusqueda?: any): Promise<PedidoEntity>;
-    crearPedido(nuevoPedido: Pedido): Promise<Pedido>;
+    crearPedido(nuevoPedido: Pedido): Promise<PedidoEntity>;
     actualizarPedido(pedidoActualizado: any): Promise<PedidoEntity>;
     eliminarPedido(pedidoEliminado: any): Promise<import("typeorm").DeleteResult>;
 }

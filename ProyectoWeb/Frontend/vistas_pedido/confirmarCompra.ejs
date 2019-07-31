@@ -5,11 +5,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css "
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <title>Confirmar</title>
 </head>
 
 <body>
-    <h1><%=idPedido%></h1>
+
+    <%- include('../partials/header') %>
+    <div class="container">
+        <br>
+        <br>
+        
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-sm-9">
+
+                <div class="jumbotron">
+                    <h1 class="display-4">Producto Añadido al carrito!</h1>
+                    <p class="lead">Se añadio su producto al carrito de compraas, si desea ver sus productos
+                        dirigase al carrito de compras ubicado en la parte superior.</p>
+                    <hr class="my-4">
+                    <p>Elija una opcion.</p>
+                    <a href="http://localhost:3000/tiendavirtual/producto/home?tipo=All">
+                        <button class="btn btn-info btn-lg">
+                                Seguir Comprando
+                        </button>
+                    </a>
+                    <a href="vercarrito">
+                        <button class="btn btn-success btn-lg">
+                                Ir al carrito
+                        </button>
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-md-3 center">
+                <div class="card-header bg-dark text-white">
+                    <h5><i class="far fa-chart-bar"></i> Tienda </h5>
+                </div>
+                <div class="card-body">
+                    <img src="https://i.blogs.es/c8ceab/movistar/450_1000.jpg" class="card-img-top mx-auto  ">
+                    <p>Promoción: Podrá promocionar todos sus servicios enfocado en el segmento objetivo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 
 </html>

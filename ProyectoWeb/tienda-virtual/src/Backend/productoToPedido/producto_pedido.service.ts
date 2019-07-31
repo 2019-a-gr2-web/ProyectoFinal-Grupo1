@@ -22,7 +22,7 @@ export class DetalleService {
     return this._detalleRepository.save(objetoEntidad);
   }
 
-  buscarTodo(parametrosBusqueda?): Promise<DetalleEntity[]> {
+  buscarTodo(parametrosBusqueda?) {
     return this._detalleRepository.find(parametrosBusqueda);
   }
 

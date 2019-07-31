@@ -1,0 +1,146 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css"
+        integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+    <div class="container">
+        <div class="card">
+            <div class="row">
+                <!--Primera Columna-->
+                <div class="col-md-6">
+                    <h5>Datos del Cliente</h5>
+                    <br>
+                    <form>
+                        <div class="form-group row">
+                            <label for="nombre" class="col-sm-3 col-form-label">Nombre</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" name="nombre">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Apellido</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" name="Apellido">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Identificacion</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" name="identificacion">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="correo" class="col-sm-3 col-form-label">Direccion</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" name="direccion">
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <!--Segunda Columna-->
+                <div class="col-md-6">
+
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label ">Fecha</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" placeholder="Calle las flores" name="Fecha">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Estado</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" placeholder="En Compra/Pagado">
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Total</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="col-md-12 float-right">
+
+                            <div class="row justify-content-md-center">
+                                <button type="button" class="btn btn-success ">Guardar Datos</button>
+                            </div>
+                            <br>
+                            <div class="row justify-content-md-center">
+                                <button type="button" class="btn btn-secondary ">Añadir Item</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Fin de la Fila -->
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <!--Fila para Detalle de Factura -->
+            <h5>Detalle de factura </h5>
+            <div class="row justify-content-md-center">
+
+                <div class="col-md-8">
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Detalle #</th>
+                                <th>Cod Producto</th>
+                                <th>Cantidad</th>
+                                <th>Precio Total</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <% detalles.forEach((detalle)=>{ %>
+                        <tr>
+                            <td> <%=detalle.idDetalle%> </td>
+                            <td> <%=detalle.productoId%> </td>
+                            <td> <%=detalle.cantidadProducto%> </td>
+                            <td> <%=detalle.precioDetalle%> </td>
+                            <td>
+                                <a href="">
+                                    <button class="btn btn-danger"> X </button>
+                                </a>
+                            </td>
+                        </tr>
+                        <% })%>
+                    </table>
+                </div>
+                <div class="col-md-4">
+                    <br>
+                    <br>
+                    <ul class="list-unstyled">
+                        <% listaDeProductos.forEach((producto)=>{ %>
+                        <li class="media">
+                            <img src="<%=producto.imagenProducto%>" class="mr-3" alt="..." width="100px" height="100px">
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-3"><%=producto.nombreProducto%></h5>
+                                <h6 class="mt-0 mb-3"><%=producto.descripcion%></h5>
+                                    <h6 class="mt-0 mb-3"><%=producto.PVP%></h5>
+                            </div>
+                        </li>
+                        <% })%>
+                    </ul>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="row justify-content-md-center">
+            <a href="facturagenerada">
+                <button type="button" class="btn btn-success ">Pagar Factura</button>
+            </a>
+        </div>
+    </div>
+</body>

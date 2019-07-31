@@ -41,6 +41,13 @@ __decorate([
     __metadata("design:type", Number)
 ], DetalleEntity.prototype, "precioDetalle", void 0);
 __decorate([
+    typeorm_1.Column({
+        type: 'int',
+        name: 'producto_id',
+    }),
+    __metadata("design:type", Number)
+], DetalleEntity.prototype, "productoId", void 0);
+__decorate([
     typeorm_1.ManyToOne(type => producto_entity_1.ProductoEntity, producto => producto.productoPedido),
     __metadata("design:type", producto_entity_1.ProductoEntity)
 ], DetalleEntity.prototype, "producto", void 0);

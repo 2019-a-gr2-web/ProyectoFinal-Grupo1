@@ -12,7 +12,7 @@ export class ProductoService {
   constructor(@InjectRepository(ProductoEntity)
   private readonly _productosRepository: Repository<ProductoEntity>, ) {
 
-    const producto: Producto = {
+    /*const producto: Producto = {
       //idProducto: 2,
       nombreProducto: 'Producto 1',
       descripcion: 'Producto 1',
@@ -31,7 +31,7 @@ export class ProductoService {
         })
       .catch((error) => {
         console.error('Error:', error);
-      })
+      })*/
   }
 
   getHello(): string {
@@ -45,6 +45,9 @@ export class ProductoService {
 
   buscarTodo(parametrosBusqueda?): Promise<ProductoEntity[]> {
     return this._productosRepository.find(parametrosBusqueda);
+  }
+  buscarPorId(parametrosBusqueda?): Promise<ProductoEntity[]> {
+    return this._productosRepository.findByIds(parametrosBusqueda);
   }
 
   actualizar(productoActualizado): Promise<ProductoEntity> {

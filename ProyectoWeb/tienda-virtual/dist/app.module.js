@@ -35,7 +35,7 @@ AppModule = __decorate([
                 host: 'localhost',
                 port: 3306,
                 username: 'root',
-                password: '',
+                password: 'root',
                 database: 'proyecto',
                 entities: [
                     producto_entity_1.ProductoEntity,

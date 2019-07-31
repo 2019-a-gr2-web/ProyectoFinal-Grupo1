@@ -4,6 +4,7 @@ export declare class DetalleEntity {
     idDetalle: number;
     cantidadProducto: number;
     precioDetalle: number;
+    productoId: number;
     producto: ProductoEntity;
     pedido: PedidoEntity;
 }

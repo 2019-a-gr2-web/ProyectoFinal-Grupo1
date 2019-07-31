@@ -7,9 +7,10 @@ import { Detalle } from '../productoToPedido/producto_pedido';
 import { ProductoService } from '../producto/producto.service';
 import { DetalleEntity } from '../productoToPedido/producto_pedido.entity';
 import { PedidoEntity } from './pedido.entity';
+import { DetallePedido } from '../detallePedido';
 
 
-@Controller('tiendavirtual/pedido')
+@Controller('/tiendavirtual/pedido')
 export class PedidoController {
   constructor(private readonly _pedidoService: PedidoService,
     private readonly _productoService: ProductoService,
@@ -17,7 +18,7 @@ export class PedidoController {
   }
 
   @Get()
-  getHello(): string {
+  getHello() {
     return "Hola Producto";
   }
 
@@ -28,22 +29,21 @@ export class PedidoController {
   ) {
 
     const existePedidoPendiente = await this._pedidoService.buscarPedidoIniciado({ estado: 'Iniciado' });
-    const productoActual = await this._productoService.getProductById({idProducto: req.params.idProducto})
+    const productoActual = await this._productoService.getProductById({ idProducto: req.params.idProducto })
     if (existePedidoPendiente) {
-      const detalle : DetalleEntity = {
-        idDetalle:0,
+      const detalle: DetalleEntity = {
+        idDetalle: 0,
         cantidadProducto: 2,
         precioDetalle: productoActual.PVP * 2,
-        producto: productoActual ,
+        producto: productoActual,
         pedido: existePedidoPendiente,
-        }
+        productoId: productoActual.idProducto,
+      }
 
-        const respuestaDetalle = await this._detalleService.crear(detalle);
-        console.log(respuestaDetalle)
+      const respuestaDetalle = await this._detalleService.crear(detalle);
+      console.log(respuestaDetalle);
 
-        
-    res.redirect('/tiendavirtual/pedido/modal?pedido='+existePedidoPendiente.idPedido)
-
+      res.redirect('/tiendavirtual/pedido/modal?pedido=' + existePedidoPendiente.idPedido)
     } else {
       const pedido: Pedido = {
         direccionCliente: "Barrio San Carlos",
@@ -55,35 +55,55 @@ export class PedidoController {
       }
       const response = await this._pedidoService.crearPedido(pedido);
 
-      const detalle : DetalleEntity = {
-        idDetalle:0,
+      const detalle: DetalleEntity = {
+        idDetalle: 0,
         cantidadProducto: 2,
         precioDetalle: productoActual.PVP * 2,
-        producto: productoActual ,
+        producto: productoActual,
         pedido: response,
-        }
+        productoId: productoActual.idProducto,
+      }
 
-        const respuestaDetalle = await this._detalleService.crear(detalle);
-        console.log(respuestaDetalle)
-        
-    res.redirect('/tiendavirtual/pedido/modal?pedido='+response.idPedido)
+      const respuestaDetalle = await this._detalleService.crear(detalle);
+
+      res.redirect('/tiendavirtual/pedido/modal?pedido=' + response.idPedido)
     }
 
   }
 
-  @Get('/modal')
-  mostartMesajeExito(@Res() res, @Req() req,@Query('pedido') pedido) {
+  @Get('modal')
+  mostartMesajeExito(@Res() res, @Query('pedido') pedido: string) {
+    res.render('vistas_pedido/confirmarCompra', {
+      idPedido: pedido,
+    })
+  }
 
-    console.log("IdPedido",pedido)
-    res.render('vistas_pedido/confimarCompra',
-      {
-        idPedido: pedido,
+  @Get('vercarrito')
+  async verCarrito(@Res() res) {
+
+    
+    const existePedidoPendiente = await this._pedidoService.buscarPedidoIniciado({ estado: 'Iniciado' });
+    if (existePedidoPendiente) {
+      const detallesDelPedidoActual = await this._detalleService.buscarTodo({ pedido: existePedidoPendiente });
+      const productoPorDetalle = [];
+      detallesDelPedidoActual.forEach(detalle => {
+        productoPorDetalle.push(detalle.productoId);
+      });
+      console.log(productoPorDetalle)
+      const productos = await this._productoService.buscarPorId(productoPorDetalle);
+      res.render('vistas_pedido/verCarrito', {
+        detalles: detallesDelPedidoActual,
+        listaDeProductos: productos,
       })
+    } else { 
+      return "No exiten Productos"
+    }
+
   }
 
-  @Get('/modal1')
-  mostartMesajeExito1(@Res() res, @Req() req,@Query('pedido') pedido) {
-
-    res.render('vistas_pedido/confimarCompra')
+  @Get('facturagenerada')
+  facturaGenerada(@Res() res) {
+    res.render('vistas_factura/facturaGenerada')
   }
+
 }

@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from "@nestjs/typeorm";
-import { Repository } from "typeorm";
+import { Repository, createQueryBuilder } from "typeorm";
 import { Pedido } from './pedido';
 import { PedidoEntity } from './pedido.entity';
+import { userInfo } from 'os';
 
 @Injectable()
 export class PedidoService {
@@ -28,5 +29,4 @@ export class PedidoService {
   eliminarPedido(pedidoEliminado) {
     return this._pedidoRepository.delete(pedidoEliminado);
   }
-
 }
