@@ -66,6 +66,13 @@ __decorate([
 ], PedidoEntity.prototype, "total", void 0);
 __decorate([
     typeorm_1.Column({
+        type: 'number',
+        name: 'id_usuario',
+    }),
+    __metadata("design:type", Number)
+], PedidoEntity.prototype, "idUsuario", void 0);
+__decorate([
+    typeorm_1.Column({
         type: 'date',
         name: 'fecha',
         default: '2019-07-28'
@@ -75,7 +82,7 @@ __decorate([
 __decorate([
     typeorm_1.Column({
         type: 'varchar',
-        length: '10',
+        length: '50',
         default: 'Iniciado',
     }),
     __metadata("design:type", String)

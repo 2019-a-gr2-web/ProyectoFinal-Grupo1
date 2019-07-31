@@ -109,12 +109,16 @@ export class PedidoController {
   }
 
   @Get('pagarfactura/:idProducto')
-  async pagarFactura(@Res() res, @Req() req){
+  async pagarFactura(@Res() res, @Req() req, @Session() session){
     const idPedido = req.params.idProducto
     const responsePedido =  await this._pedidoService.buscarPedidoPorId({idPedido:idPedido})
     responsePedido.estado = 'PorDespachar';
-    
-    console.log(responsePedido)
+    responsePedido.usuario =  session.idUsuario;
+
+    const guardarPedido = await this._pedidoService.actualizarPedido(responsePedido);
+    console.log(guardarPedido);
+
+    res.redirect('/tiendavirtual/pedido/facturagenerada');
 
   }
 }

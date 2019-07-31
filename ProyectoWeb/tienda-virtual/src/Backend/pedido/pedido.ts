@@ -1,3 +1,5 @@
+import { UsuarioEntity } from "dist/Backend/cliente/cliente.entity";
+
 export interface Pedido {
     idPedido?: number;
     nombreCliente?: string;
@@ -7,4 +9,5 @@ export interface Pedido {
     total?: number;
     fecha?: Date;
     estado?: 'PorDespachar'|'Iniciado'|'Despachado'|'Cancelado';
+    idCliente?:number;
 }

@@ -7,4 +7,5 @@ export interface Pedido {
     total?: number;
     fecha?: Date;
     estado?: 'PorDespachar' | 'Iniciado' | 'Despachado' | 'Cancelado';
+    idCliente?: number;
 }

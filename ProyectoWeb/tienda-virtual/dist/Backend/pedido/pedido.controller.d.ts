@@ -11,5 +11,5 @@ export declare class PedidoController {
     mostartMesajeExito(res: any, pedido: string): void;
     verCarrito(res: any, session: any): Promise<string>;
     facturaGenerada(res: any): void;
-    pagarFactura(res: any, req: any): Promise<void>;
+    pagarFactura(res: any, req: any, session: any): Promise<void>;
 }

@@ -49,6 +49,11 @@ export class PedidoEntity {
         default: '0',
     })
     total: number;
+    @Column({
+        type: 'number',
+        name: 'id_usuario',
+    })
+    idUsuario: number;
 
     @Column({
         type: 'date',
@@ -59,7 +64,7 @@ export class PedidoEntity {
 
     @Column({
         type: 'varchar',
-        length:'10',
+        length:'50',
         default:'Iniciado',
     })
     estado: 'PorDespachar'|'Iniciado'|'Despachado'|'Cancelado';
