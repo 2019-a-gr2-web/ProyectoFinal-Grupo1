@@ -5,34 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
 
     <title>Tienda Virtual</title>
+    <style>
+    </style>
 
-    <!-- Bootstrap core CSS -->
-    <link href="../../css/editor.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- Custom styles for this template -->
-    <link href="narrow-jumbotron.css" rel="stylesheet">
-    <!-- BOOTSWATCH 4 MATERIA -->
-    <link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css">
     <!-- SWIPER CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
+
+
+
 </head>
 
 <body>
+
+
+
     <%- include('../partials/header') %>
+    <div class="row">
+            <div class="col md-4">
+          
+            </div>
+          
+            <div class="col sm-4">
+          
+                <div class="alert alert-primary" role="alert">
+                    <h3>Bienvenido <%=usuario.nombre%> !</h3> 
+                  </div>
+              </div>
+              <div class="col md-4">
+            
+              </div>
+          </div>
     <% const existenProductosFiltrados = productosFiltrados  %>
     <!-- MAIN CONTENT -->
     <div class="container p-4">
         <style>
             body {
-                background: #fff;
                 font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
                 font-size: 14px;
                 color: #000;
                 margin: 0;
                 padding: 0;
+                background: url('https://static.wixstatic.com/media/763a72_862e27de040b4735ab06ae2e81ff2ae3~mv2_d_2337_1200_s_2.jpg/v1/fill/w_630,h_323,al_c,q_80,usm_0.66_1.00_0.01/763a72_862e27de040b4735ab06ae2e81ff2ae3~mv2_d_2337_1200_s_2.jpg') no-repeat center top;
+                background-size: cover;
+                font-family: sans-serif;
+                height: 100vh;
             }
 
             .swiper-container {

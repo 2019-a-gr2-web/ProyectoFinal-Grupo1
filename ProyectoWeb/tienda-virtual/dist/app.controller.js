@@ -18,8 +18,10 @@ let AppController = class AppController {
     constructor(appService) {
         this.appService = appService;
     }
-    loginVista(res) {
-        res.render('vistas_login/login');
+    loginVista(res, mensaje) {
+        res.render('vistas_login/login', {
+            mensaje: mensaje,
+        });
     }
     helloWorld() {
         return 'Hello world';
@@ -27,12 +29,22 @@ let AppController = class AppController {
     homeVista(res) {
         res.redirect('/tiendavirtual/producto/home?tipo=All');
     }
+    protegida(session, res) {
+        console.log("Portegida", session);
+        if (session.username) {
+            res.redirect('/tiendavirtual/producto/home?tipo=All');
+        }
+        else {
+            res.redirect('/tiendavirtual/login');
+        }
+    }
 };
 __decorate([
-    common_1.Get('/login'),
+    common_1.Get('login'),
     __param(0, common_1.Res()),
+    __param(1, common_1.Query('mensaje')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
+    __metadata("design:paramtypes", [Object, String]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "loginVista", null);
 __decorate([
@@ -48,8 +60,16 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "homeVista", null);
+__decorate([
+    common_1.Get('protegida'),
+    __param(0, common_1.Session()),
+    __param(1, common_1.Res()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "protegida", null);
 AppController = __decorate([
-    common_1.Controller(''),
+    common_1.Controller('tiendavirtual'),
     __metadata("design:paramtypes", [app_service_1.AppService])
 ], AppController);
 exports.AppController = AppController;

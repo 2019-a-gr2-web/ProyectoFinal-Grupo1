@@ -1069,10 +1069,6 @@
         "version": "5d4242d50092a353e5ab1f06663a89dbc714c7d9d70072ea03c83c5b14750f05",
         "signature": "d8f4cb0109c1b399d657807fd6af504d74a9300325e0fc915abdbf658b464a97"
       },
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/app.controller.ts": {
-        "version": "ae37762fe22374e7f3145351503dec6ce69bf4814aa11254fea4e5b2b9e3ea58",
-        "signature": "431af6a46c811088f589ce4283f6b0a0be8318f6727597cca34df5e6382f5d33"
-      },
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/schema-builder/options/tablecolumnoptions.d.ts": {
         "version": "37350aa03991dfad308444531443272a47140d86cb0b0777832d21c62856ebd9",
         "signature": "37350aa03991dfad308444531443272a47140d86cb0b0777832d21c62856ebd9"
@@ -2041,6 +2037,34 @@
         "version": "87c5a433521c49fd7ded283bb3f6a1991976f0b44009751dd39ebea612b56a35",
         "signature": "87c5a433521c49fd7ded283bb3f6a1991976f0b44009751dd39ebea612b56a35"
       },
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/rol/rol.entity.ts": {
+        "version": "43c2b2fe8b1bec6992d6b94159a10e4838849a3d7d1650e203eede8cd56163e6",
+        "signature": "02c4e131ec95facafbb81ff5ae1b915729acae05c3fc88ff0293007c0791f070"
+      },
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.entity.ts": {
+        "version": "42f89f3b0b4890e8e71751375c6d90455c366da3f6da6fa20157d82dd20edb52",
+        "signature": "4211436b0dbc708abb3ab48c1235169605845ef161e1d7b21123ecb459b02581"
+      },
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts": {
+        "version": "73f3d52ab2ed7da10846195f6c62dd1d6581481ffec71e597fef5bedd4aa113f",
+        "signature": "bdbb2556c33b759a2ebaca0606d679a8064a67903ddca0779d5918ee6905f067"
+      },
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.entity.ts": {
+        "version": "785ba2e4de7f669eb4848025b22d3c5b01850b1f5299914c22167bf1fe275572",
+        "signature": "c6dc347bf5b809a4bb76c38303c087205d8379a99af3bd07b01f37c894303f5c"
+      },
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.entity.ts": {
+        "version": "028b3d0d680af9ddb3feb3b7d50c425b8b05dcc5979c2c77ba463ebb5ebb3c40",
+        "signature": "9ac96ac8f4de511a9f973423d53372ecda56e6590170c2ef61227d5983c79dcb"
+      },
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuariotorol/usuario_rol.entity.ts": {
+        "version": "abffaadb063ade3547658866be03baa61e4fa5d998b9dc780d159eca10c495f3",
+        "signature": "0b013b6830646fbe137ebf911a13f200950dc5cc2d8794fcd48cda606050482a"
+      },
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/app.controller.ts": {
+        "version": "9b78a63a93803a3f3d6a75b4cd7297a7ac63045fffb0b2204c0876706d8a484f",
+        "signature": "7f81a95b2b00fd08537710fbb3c63f1a2869ea672d87731f5d2820640632d6dd"
+      },
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/typeorm/dist/common/typeorm.decorators.d.ts": {
         "version": "41070599270ea1295c8855556f36c89af04d02c41c50f602870fd55dd988c83d",
         "signature": "41070599270ea1295c8855556f36c89af04d02c41c50f602870fd55dd988c83d"
@@ -2073,33 +2097,9 @@
         "version": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f"
       },
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.entity.ts": {
-        "version": "da4049d1e555339a8293793334d5570d2c1c0f4735950aa072c908ddf0874c6a",
-        "signature": "ac1f559ba9a4810b14e71cc6169b9897c6b9311c1508a1900bd7e6371a1945c3"
-      },
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts": {
-        "version": "73f3d52ab2ed7da10846195f6c62dd1d6581481ffec71e597fef5bedd4aa113f",
-        "signature": "bdbb2556c33b759a2ebaca0606d679a8064a67903ddca0779d5918ee6905f067"
-      },
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.entity.ts": {
-        "version": "42f89f3b0b4890e8e71751375c6d90455c366da3f6da6fa20157d82dd20edb52",
-        "signature": "4211436b0dbc708abb3ab48c1235169605845ef161e1d7b21123ecb459b02581"
-      },
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/bodega/bodega.entity.ts": {
         "version": "a389ab1f88489a4dabcbc7d694589750ed162d4556142598b47bc4312aa07195",
         "signature": "a39f790a05b3b4001df051e67e8cd074431471473d1e34cc07b7a7b789aebe81"
-      },
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/rol/rol.entity.ts": {
-        "version": "43c2b2fe8b1bec6992d6b94159a10e4838849a3d7d1650e203eede8cd56163e6",
-        "signature": "02c4e131ec95facafbb81ff5ae1b915729acae05c3fc88ff0293007c0791f070"
-      },
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuariotorol/usuario_rol.entity.ts": {
-        "version": "106e65cec08ad3e04bf1523b3e1bcf216a8c5acd284be8285b32c12801453b67",
-        "signature": "9386d60521a09cec520cd69e4d2d67efd5a312a069fdc20149f6718d799af1ae"
-      },
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/cliente/cliente.entity.ts": {
-        "version": "062760297a1f4e76c5adeadead8b1f94c36a6dba6f58ece0fd073b07b9c50ec1",
-        "signature": "29996579cb2039a07da4f6c3c5e5e337b8666340367feb0768251998b1f60970"
       },
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/proveedor/proveedor.entity.ts": {
         "version": "3d40cd7d1726e622861b47ff6c40480e997b6a510c20966747a61e9f6a8bc150",
@@ -2118,12 +2118,12 @@
         "signature": "09de3d2c4c4367c0db80ec9668443460aed766e09d4be0a8b139964f2a4f25b0"
       },
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.ts": {
-        "version": "1990a65d1aea174ea63f8d60a8476efe24e7c6aaa58083f919c519a3ffadceae",
-        "signature": "62605e111815dd6019ea1b97a9a230869eda9889586490a9561b43d3036fb8f1"
+        "version": "139e7f71491ac8242ae8126df17f69ca23a761dd5761952357cb13869dea6701",
+        "signature": "0d02e36d0c5fdb6902e751ba57c5d4a4cf706e7d4e218c9e98b373b4a0fdd050"
       },
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.controller.ts": {
-        "version": "0508e6abc35ab574a655362b357c566aff6dcc8c45d3ab49ec100e0921929861",
-        "signature": "ccf28b3edfa51a74680e9aed214ee57cc6286b49332bbf362f4d0151c2bf1f03"
+        "version": "75d04ed87d93b7e3662744dd28810096dd465e276194b1bd87afa77b0d5c47d5",
+        "signature": "84993a1bd17743515ea50e641457a0a23066fd754d6a2139a68f840e1154fbdf"
       },
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.module.ts": {
         "version": "eaf4b79972da6c915a770a566fd9ed4a3e2c196107e3c089bb342425f2c94599",
@@ -2146,8 +2146,8 @@
         "signature": "0478c67eb262f47a224edc420c2305fc2d96d1911d188bb1b2e8c4580240f1b9"
       },
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.controller.ts": {
-        "version": "e8bbe9770b8c24f68497a243370c5d8e31c9058df0e9fa761f18b47b02374246",
-        "signature": "5c8f905f25b1c69df654205d63c19a2f810e613167159af07cf36ef8c1262ad2"
+        "version": "d23a29b88aed22742c41721ebcb7896340beb9fdefebf2d61e74ba4ec235cb5d",
+        "signature": "a3d3e41572efc1cefea5b80fcec279cb5f471e5174ca4980e52700fefadbfa38"
       },
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.module.ts": {
         "version": "f15604c0a8db408c7d36c172d1ee95080cddeba9e99d93cd2706ca95d2ef777c",
@@ -2161,8 +2161,24 @@
         "version": "acfcaaf162690020c45d34e32d0776d1f6b1203bb2b48800177f75e78165ee76",
         "signature": "6f322b6ff408e2ad83f2065b8fcbdbdf011f504869af062cd80af949ec192238"
       },
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.ts": {
+        "version": "23bd6efcc775d95a8d6af2c6ec0f14506458d4f3395f17cff9dcd35da5f6d1ae",
+        "signature": "66a0397e1444d345e1b49f49b9f2165740107f7efde0160c4cc03703ae163ba3"
+      },
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.service.ts": {
+        "version": "ed0ec3a67a83a72947f65e6fed64fab620c9f8b1d11e02481e572f853b967912",
+        "signature": "e21e7c8fda6372224ed48aeb1a05b628fa37bf5ee281e14a1ebf74588d09930f"
+      },
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.controller.ts": {
+        "version": "f0cc113905f95500b26cfb3988dc15e3d649c2c293926228be5b15362bdc38a6",
+        "signature": "651139cee697405c7c0b6e78675732208153cee9018c9cb3522a2e2c9b022fbf"
+      },
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.module.ts": {
+        "version": "97e3f11d83b2743e6596e24358c7ebfaa31b9d9d08b30b9c87bdaf6370ab52f4",
+        "signature": "0abd7e5271059d7ef398c56b5a7be40e08cec1cbb7af29da0e90e8c8bcf2cf59"
+      },
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/app.module.ts": {
-        "version": "a75c4bafecc99a0ab83b36a9c6c4042647266d3c2e34f07d2d4c6bea8e01c9be",
+        "version": "9a20eb7fa670aeb50926b2de31cb2d95d4eae64ec79e89d3777266ea30db1bad",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88"
       },
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/core/adapters/http-adapter.d.ts": {
@@ -2334,7 +2350,7 @@
         "signature": "e3cd60be3c4f95c43420be67eaa21637585b7c1a8129f9b39983bbd294f9513c"
       },
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/main.ts": {
-        "version": "c665da31f05e1606d4881fbff1e3070e30612b61f0c8e8c6f49fb514b2173b32",
+        "version": "33cd9a441b3e74a6cc32f0426b0bc452c066623854ce9bdffebd64493964aaaf",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
       },
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/connect/index.d.ts": {
@@ -2394,12 +2410,12 @@
       "experimentalDecorators": true,
       "target": 2,
       "sourceMap": true,
-      "outDir": "c:/Users/jose1/Documents/GitHub/ProyectoFinal-Grupo1-Backup/ProyectoFinal-Grupo1/ProyectoWeb/tienda-virtual/dist",
-      "baseUrl": "c:/Users/jose1/Documents/GitHub/ProyectoFinal-Grupo1-Backup/ProyectoFinal-Grupo1/ProyectoWeb/tienda-virtual/",
+      "outDir": "C:/Users/jose1/Documents/GitHub/ProyectoFinal-Grupo1-Backup/ProyectoFinal-Grupo1/ProyectoWeb/tienda-virtual/dist",
+      "baseUrl": "C:/Users/jose1/Documents/GitHub/ProyectoFinal-Grupo1-Backup/ProyectoFinal-Grupo1/ProyectoWeb/tienda-virtual/",
       "incremental": true,
       "watch": true,
       "project": "tsconfig.build.json",
-      "configFilePath": "c:/Users/jose1/Documents/GitHub/ProyectoFinal-Grupo1-Backup/ProyectoFinal-Grupo1/ProyectoWeb/tienda-virtual/tsconfig.build.json"
+      "configFilePath": "C:/Users/jose1/Documents/GitHub/ProyectoFinal-Grupo1-Backup/ProyectoFinal-Grupo1/ProyectoWeb/tienda-virtual/tsconfig.build.json"
     },
     "referencedMap": {
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typescript/lib/lib.es6.d.ts": [
@@ -3979,12 +3995,6 @@
       ],
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/app.service.ts": [
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/common/index.d.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/app.controller.ts": [
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/common/index.d.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/app.service.ts",
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -5646,6 +5656,53 @@
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/rol/rol.entity.ts": [
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/index.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuariotorol/usuario_rol.entity.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.entity.ts": [
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/index.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts": [
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/index.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.entity.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.entity.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.entity.ts": [
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/index.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.entity.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.entity.ts": [
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/index.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuariotorol/usuario_rol.entity.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.entity.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuariotorol/usuario_rol.entity.ts": [
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/index.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/rol/rol.entity.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.entity.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/app.controller.ts": [
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/common/index.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/app.service.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuariotorol/usuario_rol.entity.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/typeorm/dist/common/typeorm.decorators.d.ts": [
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/index.d.ts",
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
@@ -5695,46 +5752,8 @@
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.entity.ts": [
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/index.d.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts": [
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/index.d.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.entity.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.entity.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.entity.ts": [
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/index.d.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/bodega/bodega.entity.ts": [
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/index.d.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/rol/rol.entity.ts": [
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/index.d.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuariotorol/usuario_rol.entity.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuariotorol/usuario_rol.entity.ts": [
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/index.d.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/cliente/cliente.entity.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/rol/rol.entity.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/cliente/cliente.entity.ts": [
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/index.d.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuariotorol/usuario_rol.entity.ts",
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -5855,6 +5874,34 @@
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.ts": [
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.service.ts": [
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/common/index.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/index.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.entity.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/typeorm/index.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.controller.ts": [
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/common/index.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.service.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.module.ts": [
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/common/index.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/typeorm/index.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.entity.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.controller.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.service.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/app.module.ts": [
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/common/index.d.ts",
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/app.controller.ts",
@@ -5862,7 +5909,6 @@
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/typeorm/index.d.ts",
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.entity.ts",
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/bodega/bodega.entity.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/cliente/cliente.entity.ts",
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.entity.ts",
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/proveedor/proveedor.entity.ts",
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/rol/rol.entity.ts",
@@ -5872,6 +5918,8 @@
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.module.ts",
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts",
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.module.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.module.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.entity.ts",
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -7803,9 +7851,6 @@
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/app.controller.ts": [
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/app.service.ts"
-      ],
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/schema-builder/options/tablecolumnoptions.d.ts": [
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
@@ -9464,6 +9509,31 @@
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/rol/rol.entity.ts": [
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuariotorol/usuario_rol.entity.ts"
+      ],
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.entity.ts": [
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts"
+      ],
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts": [
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.entity.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.entity.ts"
+      ],
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.entity.ts": [
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.entity.ts"
+      ],
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.entity.ts": [
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuariotorol/usuario_rol.entity.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.entity.ts"
+      ],
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuariotorol/usuario_rol.entity.ts": [
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.entity.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/rol/rol.entity.ts"
+      ],
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/app.controller.ts": [
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/app.service.ts"
+      ],
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/typeorm/dist/common/typeorm.decorators.d.ts": [
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/index.d.ts",
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
@@ -9513,26 +9583,6 @@
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/util.d.ts",
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.entity.ts": [
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts"
-      ],
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts": [
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.entity.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.entity.ts"
-      ],
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.entity.ts": [
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts"
-      ],
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/rol/rol.entity.ts": [
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuariotorol/usuario_rol.entity.ts"
-      ],
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuariotorol/usuario_rol.entity.ts": [
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/cliente/cliente.entity.ts",
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/rol/rol.entity.ts"
-      ],
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/cliente/cliente.entity.ts": [
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuariotorol/usuario_rol.entity.ts"
-      ],
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.service.ts": [
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/index.d.ts",
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.ts",
@@ -9566,6 +9616,13 @@
       ],
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.controller.ts": [
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.service.ts"
+      ],
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.service.ts": [
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/index.d.ts",
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.entity.ts"
+      ],
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.controller.ts": [
+        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.service.ts"
       ],
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/core/adapters/http-adapter.d.ts": [
         "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/common/index.d.ts",
@@ -10179,7 +10236,6 @@
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/common/utils/index.d.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/common/index.d.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/app.service.ts",
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/app.controller.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/schema-builder/options/tablecolumnoptions.d.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/schema-builder/table/tablecolumn.d.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/common/objectliteral.d.ts",
@@ -10422,6 +10478,13 @@
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/naming-strategy/defaultnamingstrategy.d.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/util/promiseutils.d.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/typeorm/index.d.ts",
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/rol/rol.entity.ts",
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.entity.ts",
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts",
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.entity.ts",
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.entity.ts",
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuariotorol/usuario_rol.entity.ts",
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/app.controller.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/typeorm/dist/common/typeorm.decorators.d.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/typeorm/dist/common/typeorm.utils.d.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/typeorm/dist/common/index.d.ts",
@@ -10430,13 +10493,7 @@
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/typeorm/dist/typeorm.module.d.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/typeorm/dist/index.d.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/typeorm/index.d.ts",
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.entity.ts",
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.entity.ts",
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.entity.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/bodega/bodega.entity.ts",
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/rol/rol.entity.ts",
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuariotorol/usuario_rol.entity.ts",
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/cliente/cliente.entity.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/proveedor/proveedor.entity.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/tipo/tipo.entity.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/producto/producto.ts",
@@ -10448,22 +10505,13 @@
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/dist/backend/producto/product.entity.d.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.service.ts",
-      [
-        "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.controller.ts",
-        [
-          {
-            "file": "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.controller.ts",
-            "start": 603,
-            "length": 18,
-            "messageText": "Cannot find module '../detallePedido'.",
-            "category": 1,
-            "code": 2307
-          }
-        ]
-      ],
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.module.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.controller.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/productotopedido/producto_pedido.module.ts",
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.ts",
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.service.ts",
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.controller.ts",
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/usuario/usuario.module.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/app.module.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@nestjs/core/adapters/index.d.ts",
@@ -10519,7 +10567,8 @@
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/jest/index.d.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/json5/index.d.ts",
       "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/superagent/index.d.ts",
-      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/supertest/index.d.ts"
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/node_modules/@types/supertest/index.d.ts",
+      "c:/users/jose1/documents/github/proyectofinal-grupo1-backup/proyectofinal-grupo1/proyectoweb/tienda-virtual/src/backend/pedido/pedido.controller.ts"
     ]
   },
   "version": "3.4.3"

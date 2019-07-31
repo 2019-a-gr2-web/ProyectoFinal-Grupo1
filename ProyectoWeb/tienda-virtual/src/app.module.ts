@@ -4,7 +4,6 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ProductoEntity } from './Backend/producto/producto.entity';
 import { BodegaEntity } from './Backend/bodega/bodega.entity';
-import { ClienteEntity } from './Backend/cliente/cliente.entity';
 import { PedidoEntity } from './Backend/pedido/pedido.entity';
 import { ProveedorEntity } from './Backend/proveedor/proveedor.entity';
 import { RolEntity } from './Backend/rol/rol.entity';
@@ -14,11 +13,14 @@ import { ProductoModule } from './Backend/producto/producto.module';
 import { PedidoModule } from './Backend/pedido/pedido.module';
 import { DetalleEntity } from './Backend/productoToPedido/producto_pedido.entity';
 import { DetalleModule } from './Backend/productoToPedido/producto_pedido.module';
+import { UsuarioModule } from './Backend/usuario/usuario.module';
+import { UsuarioEntity } from './Backend/usuario/usuario.entity';
 
 @Module({
   imports: [ProductoModule,
     PedidoModule,
     DetalleModule,
+    UsuarioModule,
     TypeOrmModule.forRoot({
       name: 'default', // Nombre cadena conex por defecto de TYPEORM
       type: 'mysql',
@@ -30,7 +32,7 @@ import { DetalleModule } from './Backend/productoToPedido/producto_pedido.module
       entities: [
         ProductoEntity,
         BodegaEntity,
-        ClienteEntity,
+        UsuarioEntity,
         PedidoEntity,
         ProveedorEntity,
         RolEntity,

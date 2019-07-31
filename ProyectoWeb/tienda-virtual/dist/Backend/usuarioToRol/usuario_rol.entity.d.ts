@@ -1,7 +1,7 @@
-import { ClienteEntity } from "../cliente/cliente.entity";
 import { RolEntity } from "../rol/rol.entity";
+import { UsuarioEntity } from "../usuario/usuario.entity";
 export declare class UsuarioRolEntity {
     id: number;
-    usuario: ClienteEntity;
+    usuario: UsuarioEntity;
     rol: RolEntity;
 }

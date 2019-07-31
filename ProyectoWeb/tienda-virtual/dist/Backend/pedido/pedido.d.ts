@@ -1,5 +1,6 @@
 export interface Pedido {
     idPedido?: number;
+    nombreCliente?: string;
     direccionCliente?: string;
     identificacion: string;
     subtotal?: number;

@@ -1,4 +1,4 @@
-import { Controller, Get, Res, Render, Post, Req, Body, Delete, Query } from '@nestjs/common';
+import { Controller, Get, Res, Render, Post, Req, Body, Delete, Session, Query } from '@nestjs/common';
 import { async } from 'rxjs/internal/scheduler/async';
 import { PedidoService } from './pedido.service';
 import { Pedido } from './pedido';
@@ -7,7 +7,6 @@ import { Detalle } from '../productoToPedido/producto_pedido';
 import { ProductoService } from '../producto/producto.service';
 import { DetalleEntity } from '../productoToPedido/producto_pedido.entity';
 import { PedidoEntity } from './pedido.entity';
-import { DetallePedido } from '../detallePedido';
 
 
 @Controller('/tiendavirtual/pedido')
@@ -26,6 +25,7 @@ export class PedidoController {
   async crearPedido(
     @Res() res,
     @Req() req,
+    @Session() session,
   ) {
 
     const existePedidoPendiente = await this._pedidoService.buscarPedidoIniciado({ estado: 'Iniciado' });
@@ -45,13 +45,15 @@ export class PedidoController {
 
       res.redirect('/tiendavirtual/pedido/modal?pedido=' + existePedidoPendiente.idPedido)
     } else {
+      console.log(session);
       const pedido: Pedido = {
-        direccionCliente: "Barrio San Carlos",
-        identificacion: "1723882039",
-        //subtotal: ;
-        //total ?: number;
-        //fecha ?: Date;
-        //estado ?: 'PorDespachar' | 'Iniciado' | 'Despachado' | 'Cancelado';
+        identificacion: session.identificacion,
+        nombreCliente: session.nombre,
+        direccionCliente: session.direccion,
+        //subtotal?: number;
+        //total?: number;
+        //fecha?: Date;
+        //estado?: 'PorDespachar'|'Iniciado'|'Despachado'|'Cancelado';
       }
       const response = await this._pedidoService.crearPedido(pedido);
 
@@ -79,9 +81,7 @@ export class PedidoController {
   }
 
   @Get('vercarrito')
-  async verCarrito(@Res() res) {
-
-    
+  async verCarrito(@Res() res, @Session() session) {
     const existePedidoPendiente = await this._pedidoService.buscarPedidoIniciado({ estado: 'Iniciado' });
     if (existePedidoPendiente) {
       const detallesDelPedidoActual = await this._detalleService.buscarTodo({ pedido: existePedidoPendiente });
@@ -89,16 +89,17 @@ export class PedidoController {
       detallesDelPedidoActual.forEach(detalle => {
         productoPorDetalle.push(detalle.productoId);
       });
-      console.log(productoPorDetalle)
+
       const productos = await this._productoService.buscarPorId(productoPorDetalle);
       res.render('vistas_pedido/verCarrito', {
         detalles: detallesDelPedidoActual,
         listaDeProductos: productos,
+        usuario: session,
+        pedido: existePedidoPendiente, 
       })
-    } else { 
+    } else {
       return "No exiten Productos"
     }
-
   }
 
   @Get('facturagenerada')

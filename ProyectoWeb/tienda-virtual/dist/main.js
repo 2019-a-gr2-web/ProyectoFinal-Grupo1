@@ -11,10 +11,24 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = require("@nestjs/core");
 const app_module_1 = require("./app.module");
 const path_1 = require("path");
+const cookieParser = require('cookie-parser');
+const session = require("express-session");
+const FileStore = require('session-file-store')(session);
 function bootstrap() {
     return __awaiter(this, void 0, void 0, function* () {
         const app = yield core_1.NestFactory
             .create(app_module_1.AppModule);
+        app.use(session({
+            name: 'server-session-id',
+            secret: 'tiendavirtual123',
+            resave: false,
+            saveUninitialized: true,
+            cookie: {
+                secure: false
+            },
+            store: new FileStore()
+        }));
+        app.use(cookieParser('Secreto'));
         app.setViewEngine('ejs');
         app.setBaseViewsDir(path_1.join(__dirname, '..', '..', 'Frontend'));
         yield app.listen(3000);

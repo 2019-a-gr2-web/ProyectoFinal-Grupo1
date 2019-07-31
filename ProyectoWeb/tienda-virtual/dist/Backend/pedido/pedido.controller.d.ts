@@ -7,8 +7,8 @@ export declare class PedidoController {
     private readonly _detalleService;
     constructor(_pedidoService: PedidoService, _productoService: ProductoService, _detalleService: DetalleService);
     getHello(): string;
-    crearPedido(res: any, req: any): Promise<void>;
+    crearPedido(res: any, req: any, session: any): Promise<void>;
     mostartMesajeExito(res: any, pedido: string): void;
-    verCarrito(res: any): Promise<string>;
+    verCarrito(res: any, session: any): Promise<string>;
     facturaGenerada(res: any): void;
 }

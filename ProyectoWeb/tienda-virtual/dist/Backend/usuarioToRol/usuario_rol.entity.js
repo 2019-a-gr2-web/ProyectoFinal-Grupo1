@@ -10,8 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
-const cliente_entity_1 = require("../cliente/cliente.entity");
 const rol_entity_1 = require("../rol/rol.entity");
+const usuario_entity_1 = require("../usuario/usuario.entity");
 let UsuarioRolEntity = class UsuarioRolEntity {
 };
 __decorate([
@@ -21,8 +21,8 @@ __decorate([
     __metadata("design:type", Number)
 ], UsuarioRolEntity.prototype, "id", void 0);
 __decorate([
-    typeorm_1.ManyToOne(type => cliente_entity_1.ClienteEntity, cliente => cliente.usuarioRol),
-    __metadata("design:type", cliente_entity_1.ClienteEntity)
+    typeorm_1.ManyToOne(type => usuario_entity_1.UsuarioEntity, usuario => usuario.usuarioRol),
+    __metadata("design:type", usuario_entity_1.UsuarioEntity)
 ], UsuarioRolEntity.prototype, "usuario", void 0);
 __decorate([
     typeorm_1.ManyToOne(type => rol_entity_1.RolEntity, rol => rol.usuarioRol),

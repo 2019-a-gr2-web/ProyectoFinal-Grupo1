@@ -12,7 +12,6 @@ const app_service_1 = require("./app.service");
 const typeorm_1 = require("@nestjs/typeorm");
 const producto_entity_1 = require("./Backend/producto/producto.entity");
 const bodega_entity_1 = require("./Backend/bodega/bodega.entity");
-const cliente_entity_1 = require("./Backend/cliente/cliente.entity");
 const pedido_entity_1 = require("./Backend/pedido/pedido.entity");
 const proveedor_entity_1 = require("./Backend/proveedor/proveedor.entity");
 const rol_entity_1 = require("./Backend/rol/rol.entity");
@@ -22,6 +21,8 @@ const producto_module_1 = require("./Backend/producto/producto.module");
 const pedido_module_1 = require("./Backend/pedido/pedido.module");
 const producto_pedido_entity_1 = require("./Backend/productoToPedido/producto_pedido.entity");
 const producto_pedido_module_1 = require("./Backend/productoToPedido/producto_pedido.module");
+const usuario_module_1 = require("./Backend/usuario/usuario.module");
+const usuario_entity_1 = require("./Backend/usuario/usuario.entity");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -29,6 +30,7 @@ AppModule = __decorate([
         imports: [producto_module_1.ProductoModule,
             pedido_module_1.PedidoModule,
             producto_pedido_module_1.DetalleModule,
+            usuario_module_1.UsuarioModule,
             typeorm_1.TypeOrmModule.forRoot({
                 name: 'default',
                 type: 'mysql',
@@ -40,7 +42,7 @@ AppModule = __decorate([
                 entities: [
                     producto_entity_1.ProductoEntity,
                     bodega_entity_1.BodegaEntity,
-                    cliente_entity_1.ClienteEntity,
+                    usuario_entity_1.UsuarioEntity,
                     pedido_entity_1.PedidoEntity,
                     proveedor_entity_1.ProveedorEntity,
                     rol_entity_1.RolEntity,

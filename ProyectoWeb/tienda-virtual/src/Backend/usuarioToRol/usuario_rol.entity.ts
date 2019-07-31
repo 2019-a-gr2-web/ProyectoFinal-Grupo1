@@ -1,6 +1,6 @@
 import { Entity, Column, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
-import { ClienteEntity } from "../cliente/cliente.entity";
 import { RolEntity } from "../rol/rol.entity";
+import { UsuarioEntity } from "../usuario/usuario.entity";
 
 @Entity('usuario_rol')
 export class UsuarioRolEntity{
@@ -10,8 +10,8 @@ export class UsuarioRolEntity{
     public id!: number;
 
     
-    @ManyToOne(type => ClienteEntity, cliente => cliente.usuarioRol)
-    public usuario!: ClienteEntity;
+    @ManyToOne(type => UsuarioEntity, usuario => usuario.usuarioRol)
+    public usuario!: UsuarioEntity;
 
    
     @ManyToOne(type => RolEntity, rol => rol.usuarioRol)

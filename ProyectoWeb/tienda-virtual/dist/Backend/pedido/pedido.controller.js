@@ -33,7 +33,7 @@ let PedidoController = class PedidoController {
     getHello() {
         return "Hola Producto";
     }
-    crearPedido(res, req) {
+    crearPedido(res, req, session) {
         return __awaiter(this, void 0, void 0, function* () {
             const existePedidoPendiente = yield this._pedidoService.buscarPedidoIniciado({ estado: 'Iniciado' });
             const productoActual = yield this._productoService.getProductById({ idProducto: req.params.idProducto });
@@ -51,9 +51,11 @@ let PedidoController = class PedidoController {
                 res.redirect('/tiendavirtual/pedido/modal?pedido=' + existePedidoPendiente.idPedido);
             }
             else {
+                console.log(session);
                 const pedido = {
-                    direccionCliente: "Barrio San Carlos",
-                    identificacion: "1723882039",
+                    identificacion: session.identificacion,
+                    nombreCliente: session.nombre,
+                    direccionCliente: session.direccion,
                 };
                 const response = yield this._pedidoService.crearPedido(pedido);
                 const detalle = {
@@ -74,7 +76,7 @@ let PedidoController = class PedidoController {
             idPedido: pedido,
         });
     }
-    verCarrito(res) {
+    verCarrito(res, session) {
         return __awaiter(this, void 0, void 0, function* () {
             const existePedidoPendiente = yield this._pedidoService.buscarPedidoIniciado({ estado: 'Iniciado' });
             if (existePedidoPendiente) {
@@ -83,11 +85,12 @@ let PedidoController = class PedidoController {
                 detallesDelPedidoActual.forEach(detalle => {
                     productoPorDetalle.push(detalle.productoId);
                 });
-                console.log(productoPorDetalle);
                 const productos = yield this._productoService.buscarPorId(productoPorDetalle);
                 res.render('vistas_pedido/verCarrito', {
                     detalles: detallesDelPedidoActual,
                     listaDeProductos: productos,
+                    usuario: session,
+                    pedido: existePedidoPendiente,
                 });
             }
             else {
@@ -109,8 +112,9 @@ __decorate([
     common_1.Get('/crear/:idProducto'),
     __param(0, common_1.Res()),
     __param(1, common_1.Req()),
+    __param(2, common_1.Session()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:paramtypes", [Object, Object, Object]),
     __metadata("design:returntype", Promise)
 ], PedidoController.prototype, "crearPedido", null);
 __decorate([
@@ -122,9 +126,9 @@ __decorate([
 ], PedidoController.prototype, "mostartMesajeExito", null);
 __decorate([
     common_1.Get('vercarrito'),
-    __param(0, common_1.Res()),
+    __param(0, common_1.Res()), __param(1, common_1.Session()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
+    __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], PedidoController.prototype, "verCarrito", null);
 __decorate([

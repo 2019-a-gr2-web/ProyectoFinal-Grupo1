@@ -12,33 +12,22 @@
 </head>
 
 <body>
-
+    <%- include('../partials/header') %>
     <div class="container">
-        <row backgroundcolor>
-            <col> Login </col>
 
-            <col> Ver </col>
-
-            <col> Nuevo </col>
-        </row>
     </div>
-
-
-    <div>
+    <div class="container">
         <div class="jumbotron">
-            <h1 class="display-4"></h1>
-            <p class="lead"></p>
+            <h1 class="display-4">Tienda Online !</h1>
+            <p class="lead">Productos en stock.</p>
             <hr class="my-4">
             <p></p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            <a class="btn btn-primary btn-lg" href="/tiendavirtual/producto/home?tipo=All" role="button">Home</a>
         </div>
-
-    </div>
-    <div class="container">
 
         <div>
             <a href="/tiendavirtual/producto/create">
-                <button type="button"> Crear </button>
+                <button class="btn btn-info"> Crear </button>
             </a>
         </div>
         <br>
@@ -61,18 +50,18 @@
                 <td> <%=producto.descripcion%> </td>
                 <td> <%=producto.codigoProducto%> </td>
                 <td> <%=producto.PVP%> </td>
-                <td> 
+                <td>
                     <img src="<%=producto.imagenProducto%>" alt="" width="300px" height="300px">
                 </td>
                 <td>
                     <a href="delete/<%=producto.idProducto%>">
-                        <button type="button">Borrar</button>
+                        <button class="btn btn-danger">Borrar</button>
                     </a>
                     <a href="update/<%=producto.idProducto%>">
-                        <button type="button">Editar</button>
+                        <button class="btn btn-warning">Editar</button>
                     </a>
                     <a href="ver/<%=producto.idProducto%>">
-                        <button type="button">Ver</button>
+                        <button class="btn btn-light">Ver</button>
                     </a>
                 </td>
             </tr>

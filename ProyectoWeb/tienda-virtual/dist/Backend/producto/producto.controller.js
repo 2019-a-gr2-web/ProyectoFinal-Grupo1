@@ -26,31 +26,25 @@ let ProductoController = class ProductoController {
     constructor(_productoService) {
         this._productoService = _productoService;
     }
-    getHello() {
-        return "Hola Producto";
-    }
-    loginVista(res) {
-        res.render('vistas_login/login');
-    }
-    helloWorld() {
-        return 'Hello world';
-    }
-    getAllProducts(res) {
+    getAllProducts(res, session) {
         return __awaiter(this, void 0, void 0, function* () {
             const productsList = yield this._productoService.buscarTodo();
             res.render('vistas_producto/main-view', {
                 productos: productsList,
+                usuario: session,
             });
         });
     }
-    getAllProductsHome(res, tipo) {
+    getAllProductsHome(res, session, tipo) {
         return __awaiter(this, void 0, void 0, function* () {
+            console.log(session.username);
             if (tipo !== "All") {
                 var productsList = yield this._productoService.buscarTodo();
                 var productsListFilter = yield this._productoService.buscarTodo({ tipo: tipo });
                 res.render('vistas_producto/home', {
                     productos: productsList,
                     productosFiltrados: productsListFilter,
+                    usuario: session,
                 });
             }
             else if (tipo === "All" || typeof (tipo) == undefined) {
@@ -58,6 +52,7 @@ let ProductoController = class ProductoController {
                 res.render('vistas_producto/home', {
                     productos: productsList,
                     productosFiltrados: productsList,
+                    usuario: session,
                 });
             }
         });
@@ -105,36 +100,17 @@ let ProductoController = class ProductoController {
     }
 };
 __decorate([
-    common_1.Get(),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
-    __metadata("design:returntype", String)
-], ProductoController.prototype, "getHello", null);
-__decorate([
-    common_1.Get('/login'),
-    __param(0, common_1.Res()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
-    __metadata("design:returntype", void 0)
-], ProductoController.prototype, "loginVista", null);
-__decorate([
-    common_1.Get('/hello-world'),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
-    __metadata("design:returntype", String)
-], ProductoController.prototype, "helloWorld", null);
-__decorate([
     common_1.Get('/all'),
-    __param(0, common_1.Res()),
+    __param(0, common_1.Res()), __param(1, common_1.Session()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
+    __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], ProductoController.prototype, "getAllProducts", null);
 __decorate([
     common_1.Get('/home'),
-    __param(0, common_1.Res()), __param(1, common_1.Query('tipo')),
+    __param(0, common_1.Res()), __param(1, common_1.Session()), __param(2, common_1.Query('tipo')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, String]),
+    __metadata("design:paramtypes", [Object, Object, String]),
     __metadata("design:returntype", Promise)
 ], ProductoController.prototype, "getAllProductsHome", null);
 __decorate([

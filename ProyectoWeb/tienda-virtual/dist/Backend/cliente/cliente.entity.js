@@ -11,52 +11,68 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
 const usuario_rol_entity_1 = require("../usuarioToRol/usuario_rol.entity");
-let ClienteEntity = class ClienteEntity {
+let UsuarioEntity = class UsuarioEntity {
 };
 __decorate([
     typeorm_1.PrimaryGeneratedColumn({
         name: 'id_cliente',
     }),
     __metadata("design:type", Number)
-], ClienteEntity.prototype, "idCliente", void 0);
+], UsuarioEntity.prototype, "idUsuario", void 0);
 __decorate([
     typeorm_1.Column({
         type: 'varchar',
         length: 32,
-        name: 'nombre_cliente',
+        name: 'nombre',
     }),
     __metadata("design:type", String)
-], ClienteEntity.prototype, "nombreCliente", void 0);
+], UsuarioEntity.prototype, "nombre", void 0);
 __decorate([
     typeorm_1.Column({
         type: 'varchar',
         length: 32,
-        name: 'apellido_cliente',
+        name: 'apellido',
     }),
     __metadata("design:type", String)
-], ClienteEntity.prototype, "apellidoCliente", void 0);
+], UsuarioEntity.prototype, "apellido", void 0);
 __decorate([
     typeorm_1.Column({
         type: 'varchar',
         length: 32,
-        name: 'nombre_usuario',
+        name: 'username',
     }),
     __metadata("design:type", String)
-], ClienteEntity.prototype, "nombreUsuario", void 0);
+], UsuarioEntity.prototype, "username", void 0);
 __decorate([
     typeorm_1.Column({
         type: 'varchar',
         length: 32,
-        name: 'contraseña',
+        name: 'identificacion',
     }),
     __metadata("design:type", String)
-], ClienteEntity.prototype, "contrase\u00F1a", void 0);
+], UsuarioEntity.prototype, "identificacion", void 0);
+__decorate([
+    typeorm_1.Column({
+        type: 'varchar',
+        length: 32,
+        name: 'direccion',
+    }),
+    __metadata("design:type", String)
+], UsuarioEntity.prototype, "direccion", void 0);
+__decorate([
+    typeorm_1.Column({
+        type: 'varchar',
+        length: 32,
+        name: 'password',
+    }),
+    __metadata("design:type", String)
+], UsuarioEntity.prototype, "password", void 0);
 __decorate([
     typeorm_1.OneToMany((type) => usuario_rol_entity_1.UsuarioRolEntity, (usuarioRol) => usuarioRol.usuario),
     __metadata("design:type", Array)
-], ClienteEntity.prototype, "usuarioRol", void 0);
-ClienteEntity = __decorate([
+], UsuarioEntity.prototype, "usuarioRol", void 0);
+UsuarioEntity = __decorate([
     typeorm_1.Entity('bd_cliente')
-], ClienteEntity);
-exports.ClienteEntity = ClienteEntity;
+], UsuarioEntity);
+exports.UsuarioEntity = UsuarioEntity;
 //# sourceMappingURL=cliente.entity.js.map

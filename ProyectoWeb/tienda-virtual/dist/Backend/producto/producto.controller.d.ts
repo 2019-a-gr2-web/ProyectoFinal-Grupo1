@@ -3,11 +3,8 @@ import { Producto } from './producto';
 export declare class ProductoController {
     private readonly _productoService;
     constructor(_productoService: ProductoService);
-    getHello(): string;
-    loginVista(res: any): void;
-    helloWorld(): string;
-    getAllProducts(res: any): Promise<void>;
-    getAllProductsHome(res: any, tipo?: string): Promise<void>;
+    getAllProducts(res: any, session: any): Promise<void>;
+    getAllProductsHome(res: any, session: any, tipo?: string): Promise<void>;
     deleteProduct(res: any, producto: any): Promise<void>;
     deleteProductGet(res: any, req: any): Promise<void>;
     editarProductGet(res: any, req: any): Promise<void>;

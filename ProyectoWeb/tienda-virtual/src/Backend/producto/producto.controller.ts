@@ -1,4 +1,4 @@
-import { Controller, Get, Res, Render, Post, Req, Body, Delete, Query } from '@nestjs/common';
+import { Controller, Get, Res, Render, Post, Req, Body, Delete, Query,Session } from '@nestjs/common';
 import { ProductoService } from './producto.service';
 import { async } from 'rxjs/internal/scheduler/async';
 import { Producto } from './producto';
@@ -11,33 +11,20 @@ export class ProductoController {
 
    }
 
-  @Get()
-  getHello(): string {
-    return "Hola Producto";
-  }
-
-  @Get('/login')
-  loginVista(
-    @Res() res
-  ) {
-    res.render('vistas_login/login');
-  }
-
-  @Get('/hello-world')  // METODO HTTP
-  helloWorld(): string {
-    return 'Hello world';
-  }
 
   @Get('/all')
-  async getAllProducts(@Res() res) {
+  async getAllProducts(@Res() res,@Session() session) {
     const productsList = await this._productoService.buscarTodo();
     res.render('vistas_producto/main-view',
       {
         productos: productsList,
+        usuario: session,
       });
   }
   @Get('/home')
-  async getAllProductsHome(@Res() res, @Query('tipo') tipo?: string, ) {
+  async getAllProductsHome(@Res() res,@Session() session, @Query('tipo') tipo?: string,) {
+    
+    console.log(session.username);
     if (tipo !== "All") {
       var productsList = await this._productoService.buscarTodo();
       var productsListFilter = await this._productoService.buscarTodo({ tipo: tipo });
@@ -45,6 +32,8 @@ export class ProductoController {
         {
           productos: productsList,
           productosFiltrados: productsListFilter,
+          usuario: session,
+          
         });
     }
     else if (tipo === "All" || typeof(tipo) == undefined) {
@@ -53,6 +42,7 @@ export class ProductoController {
         {
           productos: productsList,
           productosFiltrados: productsList,
+          usuario: session,
         });
     }
   }
@@ -76,7 +66,7 @@ export class ProductoController {
   }
 
   @Get('/create')
-  async createProductGet(@Res() res, @Req() req) {
+  async createProductGet(@Res() res, @Req() req,) {
     res.render('vistas_producto/new')
   }
 

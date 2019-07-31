@@ -1,9 +1,11 @@
 import { UsuarioRolEntity } from "../usuarioToRol/usuario_rol.entity";
-export declare class ClienteEntity {
-    idCliente: number;
-    nombreCliente: string;
-    apellidoCliente: string;
-    nombreUsuario: string;
-    contraseña: string;
+export declare class UsuarioEntity {
+    idUsuario: number;
+    nombre: string;
+    apellido: string;
+    username: string;
+    identificacion: string;
+    direccion: string;
+    password: string;
     usuarioRol: UsuarioRolEntity[];
 }
