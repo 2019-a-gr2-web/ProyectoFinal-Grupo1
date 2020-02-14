@@ -62,7 +62,7 @@ export class ProductoController {
   @Get('/update/:idProducto')
   async editarProductGet(@Res() res, @Req() req) {
 
-    //await this._productoService.eliminar(req.params.idProducto);
+    await this._productoService.actualizar(req.params.idProducto);
     res.redirect('/tiendavirtual/producto/all')
   }
 
